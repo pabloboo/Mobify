@@ -13,13 +13,14 @@ import com.example.mobify.MainActivity
 import com.example.mobify.R
 import com.example.mobify.utils.SharedPreferencesConstants
 import com.example.mobify.utils.SharedPreferencesFunctions
+import com.example.mobify.utils.TrainingPlanMap
 
 class SelectGoalsFragment : Fragment(), GoalClickListener {
 
     private lateinit var recyclerView: RecyclerView
     private lateinit var nextButton: Button
 
-    private val goals = arrayOf("Hip mobility", "Hamstring flexibility", "Shoulder mobility", "Posture mobility")
+    private val goals = TrainingPlanMap.trainingPlanMap.values.toTypedArray()
     private val selectedGoals = goals.associateWith { false }.toMutableMap()
 
     override fun onCreateView(
@@ -57,19 +58,9 @@ class SelectGoalsFragment : Fragment(), GoalClickListener {
         // Save selected goals to SharedPreferences
         val activity = activity ?: return
         for (goal in selectedGoals) {
-            when (goal) {
-                "Hip mobility" -> {
-                    SharedPreferencesFunctions.setSharedPreferencesValueBoolean(activity, SharedPreferencesConstants.HIP_MOBILITY_TRAINING_PLAN, true)
-                }
-                "Hamstring flexibility" -> {
-                    SharedPreferencesFunctions.setSharedPreferencesValueBoolean(activity, SharedPreferencesConstants.HAMSTRING_FLEXIBILITY_TRAINING_PLAN, true)
-                }
-                "Shoulder mobility" -> {
-                    SharedPreferencesFunctions.setSharedPreferencesValueBoolean(activity, SharedPreferencesConstants.SHOULDER_MOBILITY_TRAINING_PLAN, true)
-                }
-                "Posture mobility" -> {
-                    SharedPreferencesFunctions.setSharedPreferencesValueBoolean(activity, SharedPreferencesConstants.POSTURE_MOBILITY_TRAINING_PLAN, true)
-                }
+            val sharedPreferencesConstant = TrainingPlanMap.invertedMapTrainingPlan[goal]
+            if (sharedPreferencesConstant != null) {
+                SharedPreferencesFunctions.setSharedPreferencesValueBoolean(activity, sharedPreferencesConstant, true)
             }
         }
     }
