@@ -44,7 +44,7 @@ class HomeFragment : Fragment() {
         Log.d("HomeFragment", "Training plans: ${trainingPlans.size}")
 
         recyclerView.layoutManager = LinearLayoutManager(context)
-        recyclerView.adapter = TrainingPlanAdapter(trainingPlans)
+        recyclerView.adapter = TrainingPlanAdapter(trainingPlans, requireContext())
 
 
         return root
