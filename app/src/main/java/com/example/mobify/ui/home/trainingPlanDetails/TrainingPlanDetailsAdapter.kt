@@ -1,5 +1,6 @@
 package com.example.mobify.ui.home.trainingPlanDetails
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,6 +9,7 @@ import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mobify.R
 import com.example.mobify.model.Routine
+import com.example.mobify.ui.home.routine.RoutineActivity
 
 class TrainingPlanDetailsAdapter(private val routines: List<Pair<Routine, Int>>) : RecyclerView.Adapter<TrainingPlanDetailsAdapter.ViewHolder>() {
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -16,7 +18,9 @@ class TrainingPlanDetailsAdapter(private val routines: List<Pair<Routine, Int>>)
             val day = routine.second
             dayTextView.text = "$day"
             itemView.setOnClickListener {
-                Toast.makeText(itemView.context, "Click on day $day", Toast.LENGTH_SHORT).show()
+                val intent = Intent(itemView.context, RoutineActivity::class.java)
+                intent.putExtra("routine", routine.first.name)
+                itemView.context.startActivity(intent)
             }
         }
     }

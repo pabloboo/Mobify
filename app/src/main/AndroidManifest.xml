@@ -13,6 +13,9 @@
         android:theme="@style/Theme.Mobify"
         tools:targetApi="31">
         <activity
+            android:name=".ui.home.routine.RoutineActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.home.trainingPlanDetails.TrainingPlanDetailsActivity"
             android:exported="false" />
         <activity
@@ -22,7 +25,7 @@
             android:name=".MainActivity"
             android:exported="false"
             android:label="@string/app_name"
-            android:theme="@style/Theme.Mobify.NoActionBar"></activity>
+            android:theme="@style/Theme.Mobify.NoActionBar" />
         <activity
             android:name=".LaunchActivity"
             android:exported="true">
