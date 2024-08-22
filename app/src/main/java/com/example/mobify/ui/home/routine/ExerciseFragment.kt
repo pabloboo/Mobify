@@ -1,5 +1,6 @@
 package com.example.mobify.ui.home.routine
 
+import android.content.Intent
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.view.LayoutInflater
@@ -10,6 +11,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.widget.ViewPager2
+import com.example.mobify.MainActivity
 import com.example.mobify.R
 import com.example.mobify.model.Exercise
 
@@ -39,9 +41,19 @@ class ExerciseFragment(private val viewPager: ViewPager2, private val exercise: 
 
         exerciseNumberTextView.text = "Exercise $exerciseNumber/$totalExerciseNumber"
         exerciseImageView.setImageResource(exercise.photo)
+        countdownTextView.visibility = View.VISIBLE
 
-        nextButton.setOnClickListener {
-            viewPager.currentItem = viewPager.currentItem + 1
+        if (exerciseNumber == totalExerciseNumber) {
+            nextButton.text = "Finish"
+            nextButton.setOnClickListener {
+                val intent = Intent(requireContext(), MainActivity::class.java)
+                startActivity(intent)
+            }
+        } else {
+            nextButton.text = "Next"
+            nextButton.setOnClickListener {
+                viewPager.currentItem = viewPager.currentItem + 1
+            }
         }
     }
 
@@ -55,6 +67,7 @@ class ExerciseFragment(private val viewPager: ViewPager2, private val exercise: 
 
             override fun onFinish() {
                 countDownTimer?.cancel()
+                countdownTextView.visibility = View.GONE
                 nextButton.visibility = View.VISIBLE
             }
         }.start()
