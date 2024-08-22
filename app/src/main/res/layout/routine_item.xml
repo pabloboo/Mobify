@@ -7,7 +7,8 @@
     android:layout_margin="8dp"
     app:cardCornerRadius="8dp"
     app:cardElevation="8dp"
-    app:cardBackgroundColor="@color/colorPrimaryDark">
+    app:cardBackgroundColor="@color/colorPrimaryDark"
+    android:id="@+id/dayCardView">
 
     <TextView
         android:id="@+id/dayTextView"

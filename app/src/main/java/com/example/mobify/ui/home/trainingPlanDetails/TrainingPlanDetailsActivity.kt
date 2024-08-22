@@ -6,6 +6,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mobify.R
+import com.example.mobify.utils.SharedPreferencesFunctions.getUnlockedDays
 import com.example.mobify.utils.TrainingPlanConstants
 
 class TrainingPlanDetailsActivity : AppCompatActivity() {
@@ -20,8 +21,9 @@ class TrainingPlanDetailsActivity : AppCompatActivity() {
         trainingPlanTitle.text = trainingPlanName
 
         val trainingPlan = TrainingPlanConstants.trainingPlans.find { it.name == trainingPlanName }
+        val unlockedDays = getUnlockedDays(this, trainingPlanName)
 
         recyclerView.layoutManager = GridLayoutManager(this, 5)
-        recyclerView.adapter = trainingPlan?.let { TrainingPlanDetailsAdapter(it.routines) }
+        recyclerView.adapter = trainingPlan?.let { TrainingPlanDetailsAdapter(it.routines, unlockedDays) }
     }
 }

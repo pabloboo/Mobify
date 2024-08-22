@@ -3,6 +3,7 @@ package com.example.mobify.ui.home.routine
 import android.content.Intent
 import android.os.Bundle
 import android.os.CountDownTimer
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -14,8 +15,12 @@ import androidx.viewpager2.widget.ViewPager2
 import com.example.mobify.MainActivity
 import com.example.mobify.R
 import com.example.mobify.model.Exercise
+import com.example.mobify.utils.SharedPreferencesFunctions.getUnlockedDays
+import com.example.mobify.utils.SharedPreferencesFunctions.setUnlockedDays
+import com.example.mobify.utils.TrainingPlanConstants.getTrainingPlanNameFromRoutineName
+import com.example.mobify.utils.TrainingPlanConstants.trainingPlans
 
-class ExerciseFragment(private val viewPager: ViewPager2, private val exercise: Exercise, private val exerciseNumber: Int, private val totalExerciseNumber: Int) : Fragment() {
+class ExerciseFragment(private val viewPager: ViewPager2, private val routineName: String, private val exercise: Exercise, private val exerciseNumber: Int, private val totalExerciseNumber: Int) : Fragment() {
 
     private lateinit var exerciseNumberTextView: TextView
     private lateinit var exerciseImageView: ImageView
@@ -46,6 +51,7 @@ class ExerciseFragment(private val viewPager: ViewPager2, private val exercise: 
         if (exerciseNumber == totalExerciseNumber) {
             nextButton.text = "Finish"
             nextButton.setOnClickListener {
+                updateUnlockedDays()
                 val intent = Intent(requireContext(), MainActivity::class.java)
                 startActivity(intent)
             }
@@ -54,6 +60,28 @@ class ExerciseFragment(private val viewPager: ViewPager2, private val exercise: 
             nextButton.setOnClickListener {
                 viewPager.currentItem = viewPager.currentItem + 1
             }
+        }
+    }
+
+    fun updateUnlockedDays() {
+        val trainingPlanName = getTrainingPlanNameFromRoutineName(routineName)
+        val unlockedDays = getUnlockedDays(requireActivity(), trainingPlanName)
+        val trainingPlan = trainingPlans.firstOrNull { it.name == trainingPlanName }
+        var day = 0
+        for (routine in trainingPlan?.routines ?: emptyList()) {
+            if (routine.first.name == routineName) {
+                day = routine.second
+                break
+            }
+        }
+        Log.d("ExerciseFragment", "Training plan name: $trainingPlanName, routineName: $routineName, Day: $day, Unlocked days: $unlockedDays")
+        if (day+1 == unlockedDays) { // Update only if the day is equal than the current unlocked days
+            setUnlockedDays(requireActivity(), trainingPlanName, unlockedDays + 1)
+            /*if (getUnlockedDays(requireActivity(), trainingPlanName) == trainingPlan?.routines?.size) { // All days completed -> Reset unlocked days or unlock next training plan
+                setUnlockedDays(requireActivity(), trainingPlanName, 0)
+            }*/
+        } else if (unlockedDays == 0) {
+            setUnlockedDays(requireActivity(), trainingPlanName, 2)
         }
     }
 

@@ -30,4 +30,9 @@ object TrainingPlanConstants {
         TrainingPlan(name, getRoutines(name))
     }
 
+    fun getTrainingPlanNameFromRoutineName(routineName: String): String {
+        val splitRoutineName = routineName.split(" ")
+        return splitRoutineName.subList(0, splitRoutineName.size - 2).joinToString(" ")
+    }
+
 }

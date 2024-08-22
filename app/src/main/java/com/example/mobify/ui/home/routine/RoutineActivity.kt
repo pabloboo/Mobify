@@ -36,7 +36,7 @@ class RoutineActivity : AppCompatActivity() {
         viewPager.adapter = object : FragmentStateAdapter(this) {
             override fun getItemCount() = routine.exercises.size
 
-            override fun createFragment(position: Int) = ExerciseFragment(viewPager, routine.exercises[position], position + 1, itemCount)
+            override fun createFragment(position: Int) = ExerciseFragment(viewPager, routineName, routine.exercises[position], position + 1, itemCount)
         }
 
         viewPager.setPageTransformer { page, position ->
