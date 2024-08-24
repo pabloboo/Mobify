@@ -13,6 +13,7 @@
     <color name="colorAccent">#61e0d9</color> <!-- Call to action buttons, progress indicators, items requiring attention -->
     <color name="backgroundColor">#f7f9fc</color> <!-- Primary background and content sections -->
     <color name="secondaryBackgroundColor">#e2e8f0</color> <!-- Secondary background and content sections -->
+    <color name="primaryTextColor">#FF000000</color> <!-- Primary text, titles and headings -->
     <color name="secondaryTextColor">#4a5568</color> <!-- Secondary text, subtitles and descriptions -->
     <color name="successColor">#38a169</color> <!-- Success messages -->
     <color name="errorColor">#e53e3e</color> <!-- Error messages -->

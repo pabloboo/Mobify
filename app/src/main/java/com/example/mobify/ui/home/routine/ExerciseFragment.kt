@@ -29,6 +29,7 @@ class ExerciseFragment(private val viewPager: ViewPager2, private val routineNam
     private lateinit var nextButton: Button
 
     private lateinit var countDownTimer: CountDownTimer
+    private var isBothLegsDone: Boolean = false
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -51,7 +52,11 @@ class ExerciseFragment(private val viewPager: ViewPager2, private val routineNam
         exerciseImageView.setImageResource(exercise.photo)
         countdownTextView.visibility = View.VISIBLE
 
-        if (exerciseNumber == totalExerciseNumber) {
+        setNextButton()
+    }
+
+    private fun setNextButton() {
+        if (exerciseNumber == totalExerciseNumber && (isBothLegsDone || !exercise.singleLeg)) {
             nextButton.text = "Finish"
             nextButton.setOnClickListener {
                 updateUnlockedDays()
@@ -59,9 +64,20 @@ class ExerciseFragment(private val viewPager: ViewPager2, private val routineNam
                 startActivity(intent)
             }
         } else {
-            nextButton.text = "Next"
-            nextButton.setOnClickListener {
-                viewPager.currentItem = viewPager.currentItem + 1
+            Log.d("ExerciseFragment", "Single leg: ${exercise.singleLeg}, Both legs done: $isBothLegsDone")
+            if (isBothLegsDone || !exercise.singleLeg) {
+                nextButton.text = "Next"
+                nextButton.setOnClickListener {
+                    viewPager.currentItem = viewPager.currentItem + 1
+                }
+            } else {
+                nextButton.text = "Next leg"
+                nextButton.setOnClickListener {
+                    startCountDownTimer()
+                    nextButton.visibility = View.GONE
+                    countdownTextView.visibility = View.VISIBLE
+                    isBothLegsDone = true
+                }
             }
         }
     }
@@ -94,18 +110,23 @@ class ExerciseFragment(private val viewPager: ViewPager2, private val routineNam
             countdownTextView.textSize = 24f
             nextButton.visibility = View.VISIBLE
         } else {
-            countDownTimer = object : CountDownTimer((exercise.time * 1000).toLong(), 1000) {
-                override fun onTick(millisUntilFinished: Long) {
-                    countdownTextView.text = (millisUntilFinished / 1000).toString()
-                }
-
-                override fun onFinish() {
-                    countDownTimer?.cancel()
-                    countdownTextView.visibility = View.GONE
-                    nextButton.visibility = View.VISIBLE
-                }
-            }.start()
+            startCountDownTimer()
         }
+    }
+
+    private fun startCountDownTimer() {
+        countDownTimer = object : CountDownTimer((exercise.time * 1000).toLong(), 1000) {
+            override fun onTick(millisUntilFinished: Long) {
+                countdownTextView.text = (millisUntilFinished / 1000).toString()
+            }
+
+            override fun onFinish() {
+                countDownTimer?.cancel()
+                countdownTextView.visibility = View.GONE
+                nextButton.visibility = View.VISIBLE
+                setNextButton()
+            }
+        }.start()
     }
 
     override fun onPause() {

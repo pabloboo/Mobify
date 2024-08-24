@@ -1,11 +1,14 @@
 package com.example.mobify.ui.home.routine
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.animation.AnimationUtils
+import androidx.activity.addCallback
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import androidx.viewpager2.widget.ViewPager2
+import com.example.mobify.MainActivity
 import com.example.mobify.R
 import com.example.mobify.model.Routine
 import com.example.mobify.utils.RoutineConstants.findRoutineByName
@@ -48,6 +51,12 @@ class RoutineActivity : AppCompatActivity() {
                 position > 0 -> page.startAnimation(slideIn)
                 else -> page.clearAnimation()
             }
+        }
+
+        onBackPressedDispatcher.addCallback(this) {
+            val intent = Intent(this@RoutineActivity, MainActivity::class.java)
+            startActivity(intent)
+            finish()
         }
     }
 }
