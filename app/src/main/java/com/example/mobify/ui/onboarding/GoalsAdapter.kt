@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.CheckedTextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import com.example.mobify.R
 
 class GoalsAdapter(private val goals: Array<String>, private val listener: GoalClickListener) : RecyclerView.Adapter<GoalsAdapter.GoalsViewHolder>() {
 
@@ -25,6 +26,8 @@ class GoalsAdapter(private val goals: Array<String>, private val listener: GoalC
         val goal = goals[position]
         holder.checkedTextView.text = goal
         holder.checkedTextView.isChecked = checkedGoals[goal] ?: false
+        holder.checkedTextView.setTextColor(holder.view.context.resources.getColor(R.color.primaryTextColor, null))
+        holder.checkedTextView.checkMarkTintList = holder.view.context.resources.getColorStateList(R.color.primaryTextColor, null)
         holder.view.setOnClickListener {
             val isChecked = holder.checkedTextView.isChecked
             Log.d("SelectGoalsFragment", "Selected goals: ${getSelectedGoalsSize()}")

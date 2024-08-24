@@ -14,6 +14,7 @@ class OnboardingActivity : AppCompatActivity() {
         setContentView(R.layout.activity_onboarding)
 
         viewPager = findViewById(R.id.viewPager)
+        viewPager.isUserInputEnabled = false // Disable swipe
         viewPager.adapter = OnboardingAdapter(this)
     }
 }

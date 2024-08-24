@@ -24,6 +24,7 @@
                 android:layout_marginHorizontal="15dp"
                 android:textAlignment="center"
                 android:justificationMode="inter_word"
+                android:textColor="@color/primaryTextColor"
                 android:text="Welcome to Mobify, your personalized mobile app designed to enhance your flexibility and mobility. Whether you're aiming to overcome stiffness, improve your range of motion, or achieve specific fitness goals, Mobify offers tailored training programs and routines just for you. Start by identifying your areas of improvement, set your goals, and let Mobify guide you through a step-by-step journey to better movement. With easy-to-follow exercises, progress tracking, and daily reminders, Mobify is here to support your path to a more flexible and active lifestyle. Unlock your full potential with Mobify!"
                 android:layout_gravity="center" />
 

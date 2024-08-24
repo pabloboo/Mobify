@@ -2,6 +2,7 @@ package com.example.mobify.ui.onboarding
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -35,11 +36,24 @@ class SelectGoalsFragment : Fragment(), GoalClickListener {
         recyclerView.layoutManager = LinearLayoutManager(context)
         recyclerView.adapter = GoalsAdapter(goals, this)
 
-        nextButton.setOnClickListener {
-            saveSelectedGoals()
-            SharedPreferencesFunctions.setSharedPreferencesValueBoolean(requireActivity(), SharedPreferencesConstants.ONBOARDING_COMPLETED, true)
-            val intent = Intent(activity, MainActivity::class.java)
-            startActivity(intent)
+        // Check if onboarding is completed (if so, it means that the user is accessing from menu)
+        val isOnboadingCompleted = SharedPreferencesFunctions.getSharedPreferencesValueBoolean(requireActivity(), SharedPreferencesConstants.ONBOARDING_COMPLETED)
+
+        if (isOnboadingCompleted) {
+            initializeSelectedGoals()
+            nextButton.text = "Save"
+            nextButton.setOnClickListener {
+                saveAllGoals()
+                val intent = Intent(activity, MainActivity::class.java)
+                startActivity(intent)
+            }
+        } else {
+            nextButton.setOnClickListener {
+                saveSelectedGoals()
+                SharedPreferencesFunctions.setSharedPreferencesValueBoolean(requireActivity(), SharedPreferencesConstants.ONBOARDING_COMPLETED, true)
+                val intent = Intent(activity, MainActivity::class.java)
+                startActivity(intent)
+            }
         }
 
         return view
@@ -52,6 +66,20 @@ class SelectGoalsFragment : Fragment(), GoalClickListener {
         selectedGoals[goal] = isSelected
     }
 
+    // initialize selected goals state from SharedPreferences
+    private fun initializeSelectedGoals() {
+        val activity = activity ?: return
+        for (goal in goals) {
+            val sharedPreferencesConstant = TrainingPlanMap.invertedMapTrainingPlan[goal]
+            if (sharedPreferencesConstant != null) {
+                val isSelected = SharedPreferencesFunctions.getSharedPreferencesValueBoolean(activity, sharedPreferencesConstant)
+                selectedGoals[goal] = isSelected
+                (recyclerView.adapter as GoalsAdapter).checkedGoals[goal] = isSelected
+                Log.d("SelectGoalsFragment", "Goal: $goal, isSelected: $isSelected")
+            }
+        }
+    }
+
     fun saveSelectedGoals() {
         val selectedGoals = (recyclerView.adapter as GoalsAdapter).getSelectedGoals()
 
@@ -61,6 +89,16 @@ class SelectGoalsFragment : Fragment(), GoalClickListener {
             val sharedPreferencesConstant = TrainingPlanMap.invertedMapTrainingPlan[goal]
             if (sharedPreferencesConstant != null) {
                 SharedPreferencesFunctions.setSharedPreferencesValueBoolean(activity, sharedPreferencesConstant, true)
+            }
+        }
+    }
+
+    fun saveAllGoals() {
+        val activity = activity ?: return
+        for (goal in selectedGoals.keys) {
+            val sharedPreferencesConstant = TrainingPlanMap.invertedMapTrainingPlan[goal]
+            if (sharedPreferencesConstant != null) {
+                SharedPreferencesFunctions.setSharedPreferencesValueBoolean(activity, sharedPreferencesConstant, selectedGoals[goal] ?: false)
             }
         }
     }
