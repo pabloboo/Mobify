@@ -23,6 +23,7 @@ import com.example.mobify.utils.TrainingPlanConstants.trainingPlans
 class ExerciseFragment(private val viewPager: ViewPager2, private val routineName: String, private val exercise: Exercise, private val exerciseNumber: Int, private val totalExerciseNumber: Int) : Fragment() {
 
     private lateinit var exerciseNumberTextView: TextView
+    private lateinit var exerciseNameTextView: TextView
     private lateinit var exerciseImageView: ImageView
     private lateinit var countdownTextView: TextView
     private lateinit var nextButton: Button
@@ -40,11 +41,13 @@ class ExerciseFragment(private val viewPager: ViewPager2, private val routineNam
         super.onViewCreated(view, savedInstanceState)
 
         exerciseNumberTextView = view.findViewById(R.id.exerciseNumberTextView)
+        exerciseNameTextView = view.findViewById(R.id.exerciseNameTextView)
         exerciseImageView = view.findViewById(R.id.exerciseImageView)
         countdownTextView = view.findViewById(R.id.countdownTextView)
         nextButton = view.findViewById(R.id.nextButton)
 
         exerciseNumberTextView.text = "Exercise $exerciseNumber/$totalExerciseNumber"
+        exerciseNameTextView.text = exercise.name
         exerciseImageView.setImageResource(exercise.photo)
         countdownTextView.visibility = View.VISIBLE
 
@@ -75,39 +78,47 @@ class ExerciseFragment(private val viewPager: ViewPager2, private val routineNam
             }
         }
         Log.d("ExerciseFragment", "Training plan name: $trainingPlanName, routineName: $routineName, Day: $day, Unlocked days: $unlockedDays")
-        if (day+1 == unlockedDays) { // Update only if the day is equal than the current unlocked days
+        if (day-1 == unlockedDays) { // Update only if the day is equal than the current unlocked days
             setUnlockedDays(requireActivity(), trainingPlanName, unlockedDays + 1)
             /*if (getUnlockedDays(requireActivity(), trainingPlanName) == trainingPlan?.routines?.size) { // All days completed -> Reset unlocked days or unlock next training plan
                 setUnlockedDays(requireActivity(), trainingPlanName, 0)
             }*/
-        } else if (unlockedDays == 0) {
-            setUnlockedDays(requireActivity(), trainingPlanName, 2)
         }
     }
 
     override fun onResume() {
         super.onResume()
 
-        countDownTimer = object : CountDownTimer((exercise.time * 1000).toLong(), 1000) {
-            override fun onTick(millisUntilFinished: Long) {
-                countdownTextView.text = (millisUntilFinished / 1000).toString()
-            }
+        if (exercise.time == 0) {
+            countdownTextView.text = "${exercise.sets} sets x ${exercise.reps} reps"
+            countdownTextView.textSize = 24f
+            nextButton.visibility = View.VISIBLE
+        } else {
+            countDownTimer = object : CountDownTimer((exercise.time * 1000).toLong(), 1000) {
+                override fun onTick(millisUntilFinished: Long) {
+                    countdownTextView.text = (millisUntilFinished / 1000).toString()
+                }
 
-            override fun onFinish() {
-                countDownTimer?.cancel()
-                countdownTextView.visibility = View.GONE
-                nextButton.visibility = View.VISIBLE
-            }
-        }.start()
+                override fun onFinish() {
+                    countDownTimer?.cancel()
+                    countdownTextView.visibility = View.GONE
+                    nextButton.visibility = View.VISIBLE
+                }
+            }.start()
+        }
     }
 
     override fun onPause() {
         super.onPause()
-        countDownTimer?.cancel()
+        if (exercise.time != 0) {
+            countDownTimer?.cancel()
+        }
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
-        countDownTimer.cancel()
+        if (exercise.time != 0) {
+            countDownTimer.cancel()
+        }
     }
 }

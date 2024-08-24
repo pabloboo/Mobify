@@ -9,11 +9,17 @@ object TrainingPlanConstants {
         return if (trainingPlanName == "Hip mobility") {
             listOf(
                 Pair(RoutineConstants.getHipMobilityDay01(), 1),
-                Pair(RoutineConstants.getHipMobilityDay01(), 2),
-                Pair(RoutineConstants.getHipMobilityDay01(), 3),
-                Pair(RoutineConstants.getHipMobilityDay01(), 4),
-                Pair(RoutineConstants.getHipMobilityDay01(), 5),
-                Pair(RoutineConstants.getHipMobilityDay01(), 6)
+                Pair(RoutineConstants.getHipMobilityDay02(), 2),
+                Pair(RoutineConstants.getHipMobilityDay03(), 3),
+                Pair(RoutineConstants.getHipMobilityDay04(), 4),
+                Pair(RoutineConstants.getHipMobilityDay05(), 5),
+                Pair(RoutineConstants.getHipMobilityDay06(), 6),
+                Pair(RoutineConstants.getHipMobilityDay07(), 7),
+                Pair(RoutineConstants.getHipMobilityDay08(), 8),
+                Pair(RoutineConstants.getHipMobilityDay09(), 9),
+                Pair(RoutineConstants.getHipMobilityDay10(), 10),
+                Pair(RoutineConstants.getHipMobilityDay11(), 11),
+                Pair(RoutineConstants.getHipMobilityDay12(), 12)
             )
         } else if (trainingPlanName == "Shoulder mobility") {
             listOf(

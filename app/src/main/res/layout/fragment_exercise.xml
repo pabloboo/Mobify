@@ -16,13 +16,22 @@
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true" />
 
+        <TextView
+            android:id="@+id/exerciseNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/exerciseNumberTextView"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_centerHorizontal="true" />
+
         <ImageView
             android:id="@+id/exerciseImageView"
             android:layout_width="match_parent"
             android:layout_height="350dp"
-            android:layout_below="@id/exerciseNumberTextView"
+            android:layout_below="@id/exerciseNameTextView"
             android:layout_marginTop="16dp"
-            android:scaleType="centerCrop" />
+            android:scaleType="fitCenter" />
 
         <TextView
             android:id="@+id/countdownTextView"
