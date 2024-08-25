@@ -34,6 +34,18 @@ object ExerciseConstants {
         exercises.add(Exercise(23, "Modified horse stance stretch", R.drawable.modified_horse_stance_stretch, 30, false, 0, 0))
         exercises.add(Exercise(24, "Flat back hamstring stretch", R.drawable.flat_back_hamstring_stretch, 30, false, 0, 0))
 
+        // Hamstring flexibility exercises
+        exercises.add(Exercise(25, "Hamstring kicks", R.drawable.hamstring_kicks, 0, false, 1, 15))
+        exercises.add(Exercise(26, "Toe touch", R.drawable.toe_touch, 30, false, 0, 0))
+        exercises.add(Exercise(27, "Good morning", R.drawable.good_morning, 0, false, 1, 10))
+        exercises.add(Exercise(28, "Single leg hamstring stretch", R.drawable.single_leg_hamstring_stretch, 30, true, 0, 0))
+        exercises.add(Exercise(29, "Sit and reach (reps)", R.drawable.sit_and_reach, 0, false, 1, 10))
+        exercises.add(Exercise(30, "Sit and reach (hold)", R.drawable.sit_and_reach, 30, false, 0, 0))
+        exercises.add(Exercise(31, "Crossbody leg swings", R.drawable.crossbody_leg_swings, 0, false, 1, 15))
+        exercises.add(Exercise(32, "Hamstring chokes", R.drawable.hamstring_chokes, 0, false, 1, 15))
+        exercises.add(Exercise(33, "Roll down", R.drawable.roll_down, 0, false, 1, 10))
+        exercises.add(Exercise(34, "Crossbody hamstring stretch", R.drawable.crossbody_hamstring_stretch, 30, true, 0, 0))
+
         return exercises.find { it.id == exerciseId } ?: exercises.find { it.name == exerciseName } ?: Exercise(0, "Unknown", R.drawable.logo, 0, false, 0, 0)
     }
 }

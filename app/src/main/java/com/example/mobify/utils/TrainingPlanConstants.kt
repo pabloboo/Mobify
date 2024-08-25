@@ -21,6 +21,21 @@ object TrainingPlanConstants {
                 Pair(RoutineConstants.getHipMobilityDay11(), 11),
                 Pair(RoutineConstants.getHipMobilityDay12(), 12)
             )
+        } else if (trainingPlanName == "Hamstring flexibility") {
+            listOf(
+                Pair(RoutineConstants.getHamstringFlexibilityDay01(), 1),
+                Pair(RoutineConstants.getHamstringFlexibilityDay02(), 2),
+                Pair(RoutineConstants.getHamstringFlexibilityDay03(), 3),
+                Pair(RoutineConstants.getHamstringFlexibilityDay04(), 4),
+                Pair(RoutineConstants.getHamstringFlexibilityDay05(), 5),
+                Pair(RoutineConstants.getHamstringFlexibilityDay06(), 6),
+                Pair(RoutineConstants.getHamstringFlexibilityDay07(), 7),
+                Pair(RoutineConstants.getHamstringFlexibilityDay08(), 8),
+                Pair(RoutineConstants.getHamstringFlexibilityDay09(), 9),
+                Pair(RoutineConstants.getHamstringFlexibilityDay10(), 10),
+                Pair(RoutineConstants.getHamstringFlexibilityDay11(), 11),
+                Pair(RoutineConstants.getHamstringFlexibilityDay12(), 12)
+            )
         } else if (trainingPlanName == "Shoulder mobility") {
             listOf(
                 Pair(RoutineConstants.getShoulderMobilityDay01(), 1),
