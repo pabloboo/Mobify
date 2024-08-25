@@ -19,12 +19,15 @@ class TrainingPlanDetailsActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
 
         val trainingPlanTitle = findViewById<TextView>(R.id.trainingPlanTitle)
+        val trainingPlanDescription = findViewById<TextView>(R.id.trainingPlanDescription)
         val recyclerView = findViewById<RecyclerView>(R.id.routineRecyclerView)
 
         val trainingPlanName = intent.getStringExtra("trainingPlan")
         trainingPlanTitle.text = trainingPlanName
 
         val trainingPlan = TrainingPlanConstants.trainingPlans.find { it.name == trainingPlanName }
+        trainingPlanDescription.text = trainingPlan?.description
+
         val unlockedDays = getUnlockedDays(this, trainingPlanName)
 
         recyclerView.layoutManager = GridLayoutManager(this, 5)

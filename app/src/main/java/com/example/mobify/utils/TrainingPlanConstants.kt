@@ -71,8 +71,18 @@ object TrainingPlanConstants {
         }
     }
 
+    private fun getDescription(trainingPlanName: String): String {
+        return when (trainingPlanName) {
+            "Hip mobility" -> "This training plan will help you improve your hip mobility. It is designed to do three workouts per week for four weeks."
+            "Hamstring flexibility" -> "This training plan will help you improve your hamstring flexibility. It is designed to do three workouts per week for four weeks."
+            "Shoulder mobility" -> "This training plan will help you improve your shoulder mobility. It is designed to do three workouts per week for four weeks."
+            "Posture mobility" -> "This training plan will help you improve your posture and spinal mobility. It is designed to do three workouts per week for four weeks."
+            else -> ""
+        }
+    }
+
     val trainingPlans = TrainingPlanMap.trainingPlanMap.values.map { name ->
-        TrainingPlan(name, getRoutines(name))
+        TrainingPlan(name, getDescription(name), getRoutines(name))
     }
 
     fun getTrainingPlanNameFromRoutineName(routineName: String): String {
