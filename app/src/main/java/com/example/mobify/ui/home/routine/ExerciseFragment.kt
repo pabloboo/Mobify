@@ -28,7 +28,7 @@ class ExerciseFragment(private val viewPager: ViewPager2, private val routineNam
     private lateinit var countdownTextView: TextView
     private lateinit var nextButton: Button
 
-    private lateinit var countDownTimer: CountDownTimer
+    private var countDownTimer: CountDownTimer? = null
     private var isBothLegsDone: Boolean = false
 
     override fun onCreateView(
@@ -139,7 +139,7 @@ class ExerciseFragment(private val viewPager: ViewPager2, private val routineNam
     override fun onDestroyView() {
         super.onDestroyView()
         if (exercise.time != 0) {
-            countDownTimer.cancel()
+            countDownTimer?.cancel()
         }
     }
 }
