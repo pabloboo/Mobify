@@ -8,6 +8,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
@@ -26,10 +27,11 @@ class ExerciseFragment(private val viewPager: ViewPager2, private val routineNam
     private lateinit var exerciseNameTextView: TextView
     private lateinit var exerciseImageView: ImageView
     private lateinit var countdownTextView: TextView
+    private lateinit var playButton: ImageButton
     private lateinit var nextButton: Button
 
     private var countDownTimer: CountDownTimer? = null
-    private var isBothLegsDone: Boolean = false
+    private var isBothSidesDone: Boolean = false
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -45,6 +47,7 @@ class ExerciseFragment(private val viewPager: ViewPager2, private val routineNam
         exerciseNameTextView = view.findViewById(R.id.exerciseNameTextView)
         exerciseImageView = view.findViewById(R.id.exerciseImageView)
         countdownTextView = view.findViewById(R.id.countdownTextView)
+        playButton = view.findViewById(R.id.playButton)
         nextButton = view.findViewById(R.id.nextButton)
 
         exerciseNumberTextView.text = "Exercise $exerciseNumber/$totalExerciseNumber"
@@ -56,7 +59,7 @@ class ExerciseFragment(private val viewPager: ViewPager2, private val routineNam
     }
 
     private fun setNextButton() {
-        if (exerciseNumber == totalExerciseNumber && (isBothLegsDone || !exercise.singleLeg)) {
+        if (exerciseNumber == totalExerciseNumber && (isBothSidesDone || !exercise.unilateral)) {
             nextButton.text = "Finish"
             nextButton.setOnClickListener {
                 updateUnlockedDays()
@@ -64,19 +67,18 @@ class ExerciseFragment(private val viewPager: ViewPager2, private val routineNam
                 startActivity(intent)
             }
         } else {
-            Log.d("ExerciseFragment", "Single leg: ${exercise.singleLeg}, Both legs done: $isBothLegsDone")
-            if (isBothLegsDone || !exercise.singleLeg) {
+            if (isBothSidesDone || !exercise.unilateral) {
                 nextButton.text = "Next"
                 nextButton.setOnClickListener {
                     viewPager.currentItem = viewPager.currentItem + 1
                 }
             } else {
-                nextButton.text = "Next leg"
+                nextButton.text = "Next side"
                 nextButton.setOnClickListener {
                     startCountDownTimer()
                     nextButton.visibility = View.GONE
                     countdownTextView.visibility = View.VISIBLE
-                    isBothLegsDone = true
+                    isBothSidesDone = true
                 }
             }
         }
@@ -110,7 +112,16 @@ class ExerciseFragment(private val viewPager: ViewPager2, private val routineNam
             countdownTextView.textSize = 24f
             nextButton.visibility = View.VISIBLE
         } else {
+            showPlayButton()
+        }
+    }
+
+    private fun showPlayButton() {
+        playButton.visibility = View.VISIBLE
+        playButton.setOnClickListener {
             startCountDownTimer()
+            playButton.visibility = View.GONE
+            countdownTextView.visibility = View.VISIBLE
         }
     }
 
