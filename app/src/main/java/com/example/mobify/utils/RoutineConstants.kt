@@ -45,6 +45,19 @@ object RoutineConstants {
             "Shoulder mobility Day 11" -> getShoulderMobilityDay11()
             "Shoulder mobility Day 12" -> getShoulderMobilityDay12()
 
+            "Posture mobility Day 1" -> getPostureMobilityDay01()
+            "Posture mobility Day 2" -> getPostureMobilityDay02()
+            "Posture mobility Day 3" -> getPostureMobilityDay03()
+            "Posture mobility Day 4" -> getPostureMobilityDay04()
+            "Posture mobility Day 5" -> getPostureMobilityDay05()
+            "Posture mobility Day 6" -> getPostureMobilityDay06()
+            "Posture mobility Day 7" -> getPostureMobilityDay07()
+            "Posture mobility Day 8" -> getPostureMobilityDay08()
+            "Posture mobility Day 9" -> getPostureMobilityDay09()
+            "Posture mobility Day 10" -> getPostureMobilityDay10()
+            "Posture mobility Day 11" -> getPostureMobilityDay11()
+            "Posture mobility Day 12" -> getPostureMobilityDay12()
+
             else -> null
         }
     }
@@ -504,6 +517,165 @@ object RoutineConstants {
                 ExerciseConstants.getExercise(exerciseName = "Cherry pickers"),
                 ExerciseConstants.getExercise(exerciseName = "Side stretch"),
                 ExerciseConstants.getExercise(exerciseName = "Broomstick chest opener")
+            )
+        )
+    }
+
+    // Posture mobility
+
+    fun getPostureMobilityDay01(): Routine {
+        return Routine(
+            "Posture mobility Day 1",
+            listOf(
+                ExerciseConstants.getExercise(exerciseName = "Wall extension"),
+                ExerciseConstants.getExercise(exerciseName = "Wall extension"),
+                ExerciseConstants.getExercise(exerciseName = "Pike"),
+                ExerciseConstants.getExercise(exerciseName = "Wall lat stretch"),
+                ExerciseConstants.getExercise(exerciseName = "Wall angels")
+            )
+        )
+    }
+
+    fun getPostureMobilityDay02(): Routine {
+        return Routine(
+            "Posture mobility Day 2",
+            listOf(
+                ExerciseConstants.getExercise(exerciseName = "Seated twists"),
+                ExerciseConstants.getExercise(exerciseName = "Cat-cow"),
+                ExerciseConstants.getExercise(exerciseName = "Basic back lift"),
+                ExerciseConstants.getExercise(exerciseName = "Lateral neck stretch")
+            )
+        )
+    }
+
+    fun getPostureMobilityDay03(): Routine {
+        return Routine(
+            "Posture mobility Day 3",
+            listOf(
+                ExerciseConstants.getExercise(exerciseName = "Wall extension"),
+                ExerciseConstants.getExercise(exerciseName = "Wall extension"),
+                ExerciseConstants.getExercise(exerciseName = "Pike"),
+                ExerciseConstants.getExercise(exerciseName = "Wall lat stretch"),
+                ExerciseConstants.getExercise(exerciseName = "Wall angels")
+            )
+        )
+    }
+
+    fun getPostureMobilityDay04(): Routine {
+        return Routine(
+            "Posture mobility Day 4",
+            listOf(
+                ExerciseConstants.getExercise(exerciseName = "Seated twists"),
+                ExerciseConstants.getExercise(exerciseName = "Cat-cow"),
+                ExerciseConstants.getExercise(exerciseName = "Basic back lift"),
+                ExerciseConstants.getExercise(exerciseName = "Lateral neck stretch")
+            )
+        )
+    }
+
+    fun getPostureMobilityDay05(): Routine {
+        return Routine(
+            "Posture mobility Day 5",
+            listOf(
+                ExerciseConstants.getExercise(exerciseName = "Wall back bend walkdown"),
+                ExerciseConstants.getExercise(exerciseName = "Roll down"),
+                ExerciseConstants.getExercise(exerciseName = "Wall chest stretch"),
+                ExerciseConstants.getExercise(exerciseName = "Wall angels")
+            )
+        )
+    }
+
+    fun getPostureMobilityDay06(): Routine {
+        return Routine(
+            "Posture mobility Day 6",
+            listOf(
+                ExerciseConstants.getExercise(exerciseName = "Active twist hold"),
+                ExerciseConstants.getExercise(exerciseName = "Lateral stretch"),
+                ExerciseConstants.getExercise(exerciseName = "Cat"),
+                ExerciseConstants.getExercise(exerciseName = "Cat"),
+                ExerciseConstants.getExercise(exerciseName = "Cow"),
+                ExerciseConstants.getExercise(exerciseName = "Cow")
+            )
+        )
+    }
+
+    fun getPostureMobilityDay07(): Routine {
+        return Routine(
+            "Posture mobility Day 7",
+            listOf(
+                ExerciseConstants.getExercise(exerciseName = "Wall back bend walkdown"),
+                ExerciseConstants.getExercise(exerciseName = "Roll down"),
+                ExerciseConstants.getExercise(exerciseName = "Wall chest stretch"),
+                ExerciseConstants.getExercise(exerciseName = "Wall angels")
+            )
+        )
+    }
+
+    fun getPostureMobilityDay08(): Routine {
+        return Routine(
+            "Posture mobility Day 8",
+            listOf(
+                ExerciseConstants.getExercise(exerciseName = "Active twist hold"),
+                ExerciseConstants.getExercise(exerciseName = "Lateral stretch"),
+                ExerciseConstants.getExercise(exerciseName = "Cat"),
+                ExerciseConstants.getExercise(exerciseName = "Cat"),
+                ExerciseConstants.getExercise(exerciseName = "Cow"),
+                ExerciseConstants.getExercise(exerciseName = "Cow")
+            )
+        )
+    }
+
+    fun getPostureMobilityDay09(): Routine {
+        return Routine(
+            "Posture mobility Day 9",
+            listOf(
+                ExerciseConstants.getExercise(exerciseName = "Wall extension"),
+                ExerciseConstants.getExercise(exerciseName = "Wall extension"),
+                ExerciseConstants.getExercise(exerciseName = "Sit and reach (hold)"),
+                ExerciseConstants.getExercise(exerciseName = "Shoulder external rotation"),
+                ExerciseConstants.getExercise(exerciseName = "Wall angels")
+            )
+        )
+    }
+
+    fun getPostureMobilityDay10(): Routine {
+        return Routine(
+            "Posture mobility Day 10",
+            listOf(
+                ExerciseConstants.getExercise(exerciseName = "Thread the needle"),
+                ExerciseConstants.getExercise(exerciseName = "Lunging lateral stretch"),
+                ExerciseConstants.getExercise(exerciseName = "Shoulder internal rotation"),
+                ExerciseConstants.getExercise(exerciseName = "Cat-cow")
+            )
+        )
+    }
+
+    fun getPostureMobilityDay11(): Routine {
+        return Routine(
+            "Posture mobility Day 11",
+            listOf(
+                ExerciseConstants.getExercise(exerciseName = "Wall extension"),
+                ExerciseConstants.getExercise(exerciseName = "Wall extension"),
+                ExerciseConstants.getExercise(exerciseName = "Sit and reach (hold)"),
+                ExerciseConstants.getExercise(exerciseName = "Sit and reach (hold)"),
+                ExerciseConstants.getExercise(exerciseName = "Shoulder external rotation"),
+                ExerciseConstants.getExercise(exerciseName = "Shoulder external rotation"),
+                ExerciseConstants.getExercise(exerciseName = "Wall angels")
+            )
+        )
+    }
+
+    fun getPostureMobilityDay12(): Routine {
+        return Routine(
+            "Posture mobility Day 12",
+            listOf(
+                ExerciseConstants.getExercise(exerciseName = "Thread the needle"),
+                ExerciseConstants.getExercise(exerciseName = "Thread the needle"),
+                ExerciseConstants.getExercise(exerciseName = "Lunging lateral stretch"),
+                ExerciseConstants.getExercise(exerciseName = "Lunging lateral stretch"),
+                ExerciseConstants.getExercise(exerciseName = "Shoulder internal rotation"),
+                ExerciseConstants.getExercise(exerciseName = "Shoulder internal rotation"),
+                ExerciseConstants.getExercise(exerciseName = "Cat-cow")
             )
         )
     }

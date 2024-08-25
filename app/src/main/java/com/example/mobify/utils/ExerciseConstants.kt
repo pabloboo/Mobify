@@ -62,6 +62,28 @@ object ExerciseConstants {
         exercises.add(Exercise(47, "Side stretch", R.drawable.side_stretch, 30, true, 0, 0))
         exercises.add(Exercise(48, "Broomstick chest opener", R.drawable.broomstick_chest_opener, 30, false, 0, 0))
 
+        // Posture mobility exercises
+        exercises.add(Exercise(49, "Wall extension", R.drawable.wall_extension, 30, false, 0, 0))
+        exercises.add(Exercise(50, "Pike", R.drawable.pike, 30, false, 0, 0))
+        exercises.add(Exercise(51, "Wall lat stretch", R.drawable.wall_lat_stretch, 30, false, 0, 0))
+        exercises.add(Exercise(52, "Wall angels", R.drawable.wall_angels, 0, false, 1, 10))
+        exercises.add(Exercise(53, "Seated twists", R.drawable.seated_twist, 30, false, 0, 0))
+        exercises.add(Exercise(54, "Cat-cow", R.drawable.cat_cow, 0, false, 1, 10))
+        exercises.add(Exercise(55, "Basic back lift", R.drawable.basic_back_lift, 0, false, 2, 10))
+        exercises.add(Exercise(56, "Lateral neck stretch", R.drawable.lateral_neck_stretch, 30, true, 0, 0))
+        exercises.add(Exercise(57, "Wall back bend walkdown", R.drawable.wall_back_bend_walkdown, 0, false, 2, 10))
+        exercises.add(Exercise(58, "Wall chest stretch", R.drawable.wall_chest_stretch, 30, false, 0, 0))
+        exercises.add(Exercise(59, "Active twist hold", R.drawable.active_twist_hold, 30, true, 0, 0))
+        exercises.add(Exercise(60, "Lateral stretch", R.drawable.lateral_stretch, 30, true, 0, 0))
+        exercises.add(Exercise(61, "Cat", R.drawable.cat, 30, false, 0, 0))
+        exercises.add(Exercise(62, "Cow", R.drawable.cow, 30, false, 0, 0))
+        exercises.add(Exercise(63, "Wall extension", R.drawable.wall_extension, 30, false, 0, 0))
+        exercises.add(Exercise(64, "Shoulder external rotation", R.drawable.shoulder_external_rotation, 30, false, 0, 0))
+        exercises.add(Exercise(65, "Thread the needle", R.drawable.thread_the_needle, 30, true, 0, 0))
+        exercises.add(Exercise(66, "Lunging lateral stretch", R.drawable.lunging_lateral_stretch, 30, true, 0, 0))
+        exercises.add(Exercise(67, "Shoulder internal rotation", R.drawable.shoulder_internal_rotation, 30, true, 0, 0))
+
+
         return exercises.find { it.id == exerciseId } ?: exercises.find { it.name == exerciseName } ?: Exercise(0, "Unknown", R.drawable.logo, 0, false, 0, 0)
     }
 }
