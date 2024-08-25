@@ -33,6 +33,18 @@ object RoutineConstants {
             "Hamstring flexibility Day 12" -> getHamstringFlexibilityDay12()
 
             "Shoulder mobility Day 1" -> getShoulderMobilityDay01()
+            "Shoulder mobility Day 2" -> getShoulderMobilityDay02()
+            "Shoulder mobility Day 3" -> getShoulderMobilityDay03()
+            "Shoulder mobility Day 4" -> getShoulderMobilityDay04()
+            "Shoulder mobility Day 5" -> getShoulderMobilityDay05()
+            "Shoulder mobility Day 6" -> getShoulderMobilityDay06()
+            "Shoulder mobility Day 7" -> getShoulderMobilityDay07()
+            "Shoulder mobility Day 8" -> getShoulderMobilityDay08()
+            "Shoulder mobility Day 9" -> getShoulderMobilityDay09()
+            "Shoulder mobility Day 10" -> getShoulderMobilityDay10()
+            "Shoulder mobility Day 11" -> getShoulderMobilityDay11()
+            "Shoulder mobility Day 12" -> getShoulderMobilityDay12()
+
             else -> null
         }
     }
@@ -351,11 +363,147 @@ object RoutineConstants {
         )
     }
 
+    // Shoulder mobility
     fun getShoulderMobilityDay01(): Routine {
         return Routine(
             "Shoulder mobility Day 1",
             listOf(
-                ExerciseConstants.getExercise(exerciseName = "Shoulder internal rotation")
+                ExerciseConstants.getExercise(exerciseName = "Crossbody arm swings"),
+                ExerciseConstants.getExercise(exerciseName = "Chair dips"),
+                ExerciseConstants.getExercise(exerciseName = "Dip hold"),
+                ExerciseConstants.getExercise(exerciseName = "Box shoulder stretch")
+            )
+        )
+    }
+
+    fun getShoulderMobilityDay02(): Routine {
+        return Routine(
+            "Shoulder mobility Day 2",
+            listOf(
+                ExerciseConstants.getExercise(exerciseName = "Arm circles"),
+                ExerciseConstants.getExercise(exerciseName = "Chest pulses"),
+                ExerciseConstants.getExercise(exerciseName = "Behind the back bicep stretch"),
+                ExerciseConstants.getExercise(exerciseName = "Door frame chest stretch")
+            )
+        )
+    }
+
+    fun getShoulderMobilityDay03(): Routine {
+        return Routine(
+            "Shoulder mobility Day 3",
+            listOf(
+                ExerciseConstants.getExercise(exerciseName = "Crossbody arm swings"),
+                ExerciseConstants.getExercise(exerciseName = "Chair dips"),
+                ExerciseConstants.getExercise(exerciseName = "Dip hold"),
+                ExerciseConstants.getExercise(exerciseName = "Box shoulder stretch")
+            )
+        )
+    }
+
+    fun getShoulderMobilityDay04(): Routine {
+        return Routine(
+            "Shoulder mobility Day 4",
+            listOf(
+                ExerciseConstants.getExercise(exerciseName = "Arm circles"),
+                ExerciseConstants.getExercise(exerciseName = "Chest pulses"),
+                ExerciseConstants.getExercise(exerciseName = "Behind the back bicep stretch"),
+                ExerciseConstants.getExercise(exerciseName = "Door frame chest stretch")
+            )
+        )
+    }
+
+    fun getShoulderMobilityDay05(): Routine {
+        return Routine(
+            "Shoulder mobility Day 5",
+            listOf(
+                ExerciseConstants.getExercise(exerciseName = "Crossbody arm swings"),
+                ExerciseConstants.getExercise(exerciseName = "Shoulder dislocations"),
+                ExerciseConstants.getExercise(exerciseName = "Loaded lat stretch"),
+                ExerciseConstants.getExercise(exerciseName = "Bicep stretch")
+            )
+        )
+    }
+
+    fun getShoulderMobilityDay06(): Routine {
+        return Routine(
+            "Shoulder mobility Day 6",
+            listOf(
+                ExerciseConstants.getExercise(exerciseName = "Arm circles"),
+                ExerciseConstants.getExercise(exerciseName = "Chest pulses"),
+                ExerciseConstants.getExercise(exerciseName = "Behind the back bicep stretch"),
+                ExerciseConstants.getExercise(exerciseName = "Door frame chest stretch")
+            )
+        )
+    }
+
+    fun getShoulderMobilityDay07(): Routine {
+        return Routine(
+            "Shoulder mobility Day 7",
+            listOf(
+                ExerciseConstants.getExercise(exerciseName = "Crossbody arm swings"),
+                ExerciseConstants.getExercise(exerciseName = "Shoulder dislocations"),
+                ExerciseConstants.getExercise(exerciseName = "Loaded lat stretch"),
+                ExerciseConstants.getExercise(exerciseName = "Bicep stretch")
+            )
+        )
+    }
+
+    fun getShoulderMobilityDay08(): Routine {
+        return Routine(
+            "Shoulder mobility Day 8",
+            listOf(
+                ExerciseConstants.getExercise(exerciseName = "Chest pulses"),
+                ExerciseConstants.getExercise(exerciseName = "Cherry pickers"),
+                ExerciseConstants.getExercise(exerciseName = "Side stretch"),
+                ExerciseConstants.getExercise(exerciseName = "Broomstick chest opener")
+            )
+        )
+    }
+
+    fun getShoulderMobilityDay09(): Routine {
+        return Routine(
+            "Shoulder mobility Day 9",
+            listOf(
+                ExerciseConstants.getExercise(exerciseName = "Crossbody arm swings"),
+                ExerciseConstants.getExercise(exerciseName = "Shoulder dislocations"),
+                ExerciseConstants.getExercise(exerciseName = "Loaded lat stretch"),
+                ExerciseConstants.getExercise(exerciseName = "Bicep stretch")
+            )
+        )
+    }
+
+    fun getShoulderMobilityDay10(): Routine {
+        return Routine(
+            "Shoulder mobility Day 10",
+            listOf(
+                ExerciseConstants.getExercise(exerciseName = "Chest pulses"),
+                ExerciseConstants.getExercise(exerciseName = "Cherry pickers"),
+                ExerciseConstants.getExercise(exerciseName = "Side stretch"),
+                ExerciseConstants.getExercise(exerciseName = "Broomstick chest opener")
+            )
+        )
+    }
+
+    fun getShoulderMobilityDay11(): Routine {
+        return Routine(
+            "Shoulder mobility Day 11",
+            listOf(
+                ExerciseConstants.getExercise(exerciseName = "Crossbody arm swings"),
+                ExerciseConstants.getExercise(exerciseName = "Chair dips"),
+                ExerciseConstants.getExercise(exerciseName = "Dip hold"),
+                ExerciseConstants.getExercise(exerciseName = "Lat stretch")
+            )
+        )
+    }
+
+    fun getShoulderMobilityDay12(): Routine {
+        return Routine(
+            "Shoulder mobility Day 12",
+            listOf(
+                ExerciseConstants.getExercise(exerciseName = "Chest pulses"),
+                ExerciseConstants.getExercise(exerciseName = "Cherry pickers"),
+                ExerciseConstants.getExercise(exerciseName = "Side stretch"),
+                ExerciseConstants.getExercise(exerciseName = "Broomstick chest opener")
             )
         )
     }

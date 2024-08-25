@@ -39,8 +39,17 @@ object TrainingPlanConstants {
         } else if (trainingPlanName == "Shoulder mobility") {
             listOf(
                 Pair(RoutineConstants.getShoulderMobilityDay01(), 1),
-                Pair(RoutineConstants.getShoulderMobilityDay01(), 2),
-                Pair(RoutineConstants.getShoulderMobilityDay01(), 3),
+                Pair(RoutineConstants.getShoulderMobilityDay02(), 2),
+                Pair(RoutineConstants.getShoulderMobilityDay03(), 3),
+                Pair(RoutineConstants.getShoulderMobilityDay04(), 4),
+                Pair(RoutineConstants.getShoulderMobilityDay05(), 5),
+                Pair(RoutineConstants.getShoulderMobilityDay06(), 6),
+                Pair(RoutineConstants.getShoulderMobilityDay07(), 7),
+                Pair(RoutineConstants.getShoulderMobilityDay08(), 8),
+                Pair(RoutineConstants.getShoulderMobilityDay09(), 9),
+                Pair(RoutineConstants.getShoulderMobilityDay10(), 10),
+                Pair(RoutineConstants.getShoulderMobilityDay11(), 11),
+                Pair(RoutineConstants.getShoulderMobilityDay12(), 12)
             )
         } else {
             emptyList()

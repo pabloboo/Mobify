@@ -46,6 +46,22 @@ object ExerciseConstants {
         exercises.add(Exercise(33, "Roll down", R.drawable.roll_down, 0, false, 1, 10))
         exercises.add(Exercise(34, "Crossbody hamstring stretch", R.drawable.crossbody_hamstring_stretch, 30, true, 0, 0))
 
+        // Shoulder mobility exercises
+        exercises.add(Exercise(35, "Crossbody arm swings", R.drawable.crossbody_arm_swings, 0, false, 1, 20))
+        exercises.add(Exercise(36, "Chair dips", R.drawable.chair_dips, 0, false, 1, 10))
+        exercises.add(Exercise(37, "Dip hold", R.drawable.dip_hold, 30, false, 0, 0))
+        exercises.add(Exercise(38, "Box shoulder stretch", R.drawable.box_shoulder_stretch, 30, false, 0, 0))
+        exercises.add(Exercise(39, "Arm circles", R.drawable.arm_circles, 0, false, 1, 20))
+        exercises.add(Exercise(40, "Chest pulses", R.drawable.chest_pulses, 0, false, 1, 20))
+        exercises.add(Exercise(41, "Behind the back bicep stretch", R.drawable.behind_the_back_bicep_stretch, 30, false, 0, 0))
+        exercises.add(Exercise(42, "Door frame chest stretch", R.drawable.door_frame_chest_stretch, 30, false, 0, 0))
+        exercises.add(Exercise(43, "Shoulder dislocations", R.drawable.shoulder_dislocations, 0, false, 1, 10))
+        exercises.add(Exercise(44, "Loaded lat stretch", R.drawable.loaded_lat_stretch, 0, false, 1, 30))
+        exercises.add(Exercise(45, "Bicep stretch", R.drawable.bicep_stretch, 30, false, 0, 0))
+        exercises.add(Exercise(46, "Cherry pickers", R.drawable.cherry_pickers, 0, false, 1, 20))
+        exercises.add(Exercise(47, "Side stretch", R.drawable.side_stretch, 30, true, 0, 0))
+        exercises.add(Exercise(48, "Broomstick chest opener", R.drawable.broomstick_chest_opener, 30, false, 0, 0))
+
         return exercises.find { it.id == exerciseId } ?: exercises.find { it.name == exerciseName } ?: Exercise(0, "Unknown", R.drawable.logo, 0, false, 0, 0)
     }
 }
