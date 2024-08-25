@@ -12,5 +12,9 @@
             android:id="@+id/nav_training_plans"
             android:icon="@drawable/ic_menu_training_plans"
             android:title="@string/menu_training_plans" />
+        <item
+            android:id="@+id/nav_quick_mobility_test"
+            android:icon="@drawable/ic_quick_mobility_test_icon"
+            android:title="@string/quick_mobility_test" />
     </group>
 </menu>

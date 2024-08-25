@@ -16,4 +16,10 @@
         android:name="com.example.mobify.ui.onboarding.SelectGoalsFragment"
         android:label="@string/menu_training_plans"
         tools:layout="@layout/fragment_select_goals" />
+
+    <fragment
+        android:id="@+id/nav_quick_mobility_test"
+        android:name="com.example.mobify.ui.quickMobilityTest.IntroductionScreenFragment"
+        android:label="@string/quick_mobility_test"
+        tools:layout="@layout/fragment_introduction_screen" />
 </navigation>
