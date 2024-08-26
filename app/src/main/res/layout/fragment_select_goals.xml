@@ -28,14 +28,33 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1" />
 
-            <Button
-                android:id="@+id/button_next"
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/colorAccent"
-                android:text="Next"
-                android:layout_gravity="bottom|end"
-                android:layout_margin="16dp" />
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/button_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/white"
+                    android:textColor="@color/primaryTextColor"
+                    android:text="Back"
+                    android:layout_marginHorizontal="20dp"
+                    android:visibility="gone"
+                    android:layout_gravity="bottom|start" />
+
+                <Button
+                    android:id="@+id/button_next"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorAccent"
+                    android:text="Next"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_gravity="bottom|end" />
+
+            </LinearLayout>
 
         </LinearLayout>
 

@@ -24,6 +24,9 @@ class OnboardingActivity : AppCompatActivity() {
         viewPager.isUserInputEnabled = false // Disable swipe
         viewPager.adapter = OnboardingAdapter(this)
 
+        val page = intent.getIntExtra("page", 0)
+        viewPager.currentItem = page
+
         viewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
             override fun onPageSelected(position: Int) {
                 // Scroll to the top of the ScrollView when page changes

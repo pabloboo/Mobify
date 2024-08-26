@@ -10,6 +10,7 @@ import android.widget.Button
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import androidx.viewpager2.widget.ViewPager2
 import com.example.mobify.MainActivity
 import com.example.mobify.R
 import com.example.mobify.utils.SharedPreferencesConstants
@@ -19,6 +20,7 @@ import com.example.mobify.utils.TrainingPlanMap
 class SelectGoalsFragment : Fragment(), GoalClickListener {
 
     private lateinit var recyclerView: RecyclerView
+    private lateinit var backButton: Button
     private lateinit var nextButton: Button
 
     private val goals = TrainingPlanMap.trainingPlanMap.values.toTypedArray()
@@ -31,16 +33,18 @@ class SelectGoalsFragment : Fragment(), GoalClickListener {
         val view = inflater.inflate(R.layout.fragment_select_goals, container, false)
 
         recyclerView = view.findViewById(R.id.goalsRecyclerView)
+        backButton = view.findViewById(R.id.button_back)
         nextButton = view.findViewById(R.id.button_next)
 
         recyclerView.layoutManager = LinearLayoutManager(context)
         recyclerView.adapter = GoalsAdapter(goals, this)
 
+        initializeSelectedGoals()
+
         // Check if onboarding is completed (if so, it means that the user is accessing from menu)
         val isOnboadingCompleted = SharedPreferencesFunctions.getSharedPreferencesValueBoolean(requireActivity(), SharedPreferencesConstants.ONBOARDING_COMPLETED)
 
         if (isOnboadingCompleted) {
-            initializeSelectedGoals()
             nextButton.text = "Save"
             nextButton.setOnClickListener {
                 saveAllGoals()
@@ -48,6 +52,11 @@ class SelectGoalsFragment : Fragment(), GoalClickListener {
                 startActivity(intent)
             }
         } else {
+            backButton.visibility = View.VISIBLE
+            backButton.setOnClickListener {
+                val viewPager = activity?.findViewById<ViewPager2>(R.id.viewPager)
+                viewPager?.currentItem = 1
+            }
             nextButton.setOnClickListener {
                 saveSelectedGoals()
                 SharedPreferencesFunctions.setSharedPreferencesValueBoolean(requireActivity(), SharedPreferencesConstants.ONBOARDING_COMPLETED, true)

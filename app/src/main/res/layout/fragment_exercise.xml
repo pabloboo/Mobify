@@ -60,6 +60,7 @@
             android:id="@+id/nextButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorAccent"
             android:text="Next"
             android:layout_below="@id/countdownTextView"
             android:layout_centerHorizontal="true"

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.onboarding.MobilityCheckSuggestionFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/mobilityCheckSuggestionTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Do you want to choose your goals or perform a quick mobility check if you are not clear about them?"
+                android:textSize="18sp"
+                android:textColor="@color/primaryTextColor"
+                android:gravity="center"
+                android:layout_marginVertical="20dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/chooseGoalsBtn"/>
+
+            <Button
+                android:id="@+id/chooseGoalsBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Choose Goals"
+                android:layout_marginVertical="15dp"
+                android:backgroundTint="@color/white"
+                android:textColor="@color/primaryTextColor"
+                app:layout_constraintTop_toBottomOf="@id/mobilityCheckSuggestionTv"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/quickMobilityCheckBtn"/>
+
+            <Button
+                android:id="@+id/quickMobilityCheckBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Quick Mobility Check"
+                android:layout_marginVertical="15dp"
+                android:backgroundTint="@color/colorAccent"
+                app:layout_constraintTop_toBottomOf="@id/chooseGoalsBtn"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</FrameLayout>
