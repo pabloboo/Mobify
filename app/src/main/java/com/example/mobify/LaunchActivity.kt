@@ -10,6 +10,7 @@ import com.example.mobify.utils.SharedPreferencesFunctions
 class LaunchActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        setTheme(R.style.Theme_Mobify)
         super.onCreate(savedInstanceState)
 
         val completedOnboarding = SharedPreferencesFunctions.getSharedPreferencesValueBoolean(this, SharedPreferencesConstants.ONBOARDING_COMPLETED)

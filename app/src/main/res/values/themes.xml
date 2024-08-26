@@ -20,4 +20,8 @@
     <style name="Theme.Mobify.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="Theme.Mobify.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="Theme.Mobify.SplashScreen" parent="Theme.Mobify">
+        <item name="android:windowBackground">@drawable/splash_screen</item>
+    </style>
 </resources>
