@@ -37,7 +37,7 @@ class HomeFragment : Fragment() {
 
         val recyclerView: RecyclerView = binding.trainingPlanRecyclerView
 
-        val trainingPlans = TrainingPlanConstants.trainingPlans.filter { plan ->
+        val trainingPlans = TrainingPlanConstants.getTrainingPlans(requireContext()).filter { plan ->
             SharedPreferencesFunctions.getSharedPreferencesValueBoolean(requireActivity(), TrainingPlanMap.invertedMapTrainingPlan[plan.name] ?: "")
         }
 

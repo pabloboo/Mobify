@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.mobify.R
 import com.example.mobify.model.TrainingPlan
 import com.example.mobify.ui.home.trainingPlanDetails.TrainingPlanDetailsActivity
+import com.example.mobify.utils.TrainingPlanConstants
 
 class TrainingPlanAdapter(private val trainingPlans: List<TrainingPlan>, private val context: Context) : RecyclerView.Adapter<TrainingPlanAdapter.TrainingPlanViewHolder>() {
 
@@ -23,7 +24,7 @@ class TrainingPlanAdapter(private val trainingPlans: List<TrainingPlan>, private
     override fun onBindViewHolder(holder: TrainingPlanViewHolder, position: Int) {
         val trainingPlan = trainingPlans[position]
         val textView: TextView = holder.view.findViewById(R.id.trainingPlanName)
-        textView.text = trainingPlan.name
+        textView.text = TrainingPlanConstants.getTrainingPlanName(context, trainingPlan.name)
         holder.view.setOnClickListener {
             val intent = Intent(context, TrainingPlanDetailsActivity::class.java)
             intent.putExtra("trainingPlan", trainingPlan.name)

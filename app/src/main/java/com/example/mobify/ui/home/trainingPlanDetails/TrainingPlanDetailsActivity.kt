@@ -23,9 +23,9 @@ class TrainingPlanDetailsActivity : AppCompatActivity() {
         val recyclerView = findViewById<RecyclerView>(R.id.routineRecyclerView)
 
         val trainingPlanName = intent.getStringExtra("trainingPlan")
-        trainingPlanTitle.text = trainingPlanName
+        trainingPlanTitle.text = TrainingPlanConstants.getTrainingPlanName(this, trainingPlanName!!)
 
-        val trainingPlan = TrainingPlanConstants.trainingPlans.find { it.name == trainingPlanName }
+        val trainingPlan = TrainingPlanConstants.getTrainingPlans(this).find { it.name == trainingPlanName }
         trainingPlanDescription.text = trainingPlan?.description
 
         val unlockedDays = getUnlockedDays(this, trainingPlanName)

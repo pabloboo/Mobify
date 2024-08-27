@@ -45,7 +45,7 @@ class SelectGoalsFragment : Fragment(), GoalClickListener {
         val isOnboadingCompleted = SharedPreferencesFunctions.getSharedPreferencesValueBoolean(requireActivity(), SharedPreferencesConstants.ONBOARDING_COMPLETED)
 
         if (isOnboadingCompleted) {
-            nextButton.text = "Save"
+            nextButton.text = getText(R.string.save)
             nextButton.setOnClickListener {
                 saveAllGoals()
                 val intent = Intent(activity, MainActivity::class.java)

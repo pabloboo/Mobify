@@ -31,7 +31,7 @@ class RoutineActivity : AppCompatActivity() {
 
         // Supongamos que obtienes la rutina de alguna manera, por ejemplo, a través de un Intent
         routineName = intent.getStringExtra("routine") ?: ""
-        routine = findRoutineByName(routineName) ?: run {
+        routine = findRoutineByName(this, routineName) ?: run {
             Log.e("RoutineActivity", "Routine not found")
             finish()
             return

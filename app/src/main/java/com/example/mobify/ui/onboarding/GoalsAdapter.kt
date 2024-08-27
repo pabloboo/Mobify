@@ -8,6 +8,7 @@ import android.widget.CheckedTextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mobify.R
+import com.example.mobify.utils.TrainingPlanConstants
 
 class GoalsAdapter(private val goals: Array<String>, private val listener: GoalClickListener) : RecyclerView.Adapter<GoalsAdapter.GoalsViewHolder>() {
 
@@ -24,7 +25,7 @@ class GoalsAdapter(private val goals: Array<String>, private val listener: GoalC
 
     override fun onBindViewHolder(holder: GoalsViewHolder, position: Int) {
         val goal = goals[position]
-        holder.checkedTextView.text = goal
+        holder.checkedTextView.text = TrainingPlanConstants.getTrainingPlanName(holder.view.context, goal)
         holder.checkedTextView.isChecked = checkedGoals[goal] ?: false
         holder.checkedTextView.setTextColor(holder.view.context.resources.getColor(R.color.primaryTextColor, null))
         holder.checkedTextView.checkMarkTintList = holder.view.context.resources.getColorStateList(R.color.primaryTextColor, null)

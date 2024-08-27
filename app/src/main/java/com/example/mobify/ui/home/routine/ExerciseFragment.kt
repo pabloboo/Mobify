@@ -18,8 +18,8 @@ import com.example.mobify.R
 import com.example.mobify.model.Exercise
 import com.example.mobify.utils.SharedPreferencesFunctions.getUnlockedDays
 import com.example.mobify.utils.SharedPreferencesFunctions.setUnlockedDays
+import com.example.mobify.utils.TrainingPlanConstants
 import com.example.mobify.utils.TrainingPlanConstants.getTrainingPlanNameFromRoutineName
-import com.example.mobify.utils.TrainingPlanConstants.trainingPlans
 
 class ExerciseFragment(private val viewPager: ViewPager2, private val routineName: String, private val exercise: Exercise, private val exerciseNumber: Int, private val totalExerciseNumber: Int) : Fragment() {
 
@@ -50,7 +50,8 @@ class ExerciseFragment(private val viewPager: ViewPager2, private val routineNam
         playButton = view.findViewById(R.id.playButton)
         nextButton = view.findViewById(R.id.nextButton)
 
-        exerciseNumberTextView.text = "Exercise $exerciseNumber/$totalExerciseNumber"
+        val exerciseText = getString(R.string.exercise)
+        exerciseNumberTextView.text = "$exerciseText $exerciseNumber/$totalExerciseNumber"
         exerciseNameTextView.text = exercise.name
         exerciseImageView.setImageResource(exercise.photo)
         countdownTextView.visibility = View.VISIBLE
@@ -60,7 +61,7 @@ class ExerciseFragment(private val viewPager: ViewPager2, private val routineNam
 
     private fun setNextButton() {
         if (exerciseNumber == totalExerciseNumber && (isBothSidesDone || !exercise.unilateral)) {
-            nextButton.text = "Finish"
+            nextButton.text = getText(R.string.finish)
             nextButton.setOnClickListener {
                 updateUnlockedDays()
                 val intent = Intent(requireContext(), MainActivity::class.java)
@@ -68,12 +69,12 @@ class ExerciseFragment(private val viewPager: ViewPager2, private val routineNam
             }
         } else {
             if (isBothSidesDone || !exercise.unilateral) {
-                nextButton.text = "Next"
+                nextButton.text = getText(R.string.next)
                 nextButton.setOnClickListener {
                     viewPager.currentItem = viewPager.currentItem + 1
                 }
             } else {
-                nextButton.text = "Next side"
+                nextButton.text = getText(R.string.next_side)
                 nextButton.setOnClickListener {
                     startCountDownTimer()
                     nextButton.visibility = View.GONE
@@ -87,7 +88,7 @@ class ExerciseFragment(private val viewPager: ViewPager2, private val routineNam
     fun updateUnlockedDays() {
         val trainingPlanName = getTrainingPlanNameFromRoutineName(routineName)
         val unlockedDays = getUnlockedDays(requireActivity(), trainingPlanName)
-        val trainingPlan = trainingPlans.firstOrNull { it.name == trainingPlanName }
+        val trainingPlan = TrainingPlanConstants.getTrainingPlans(requireContext()).firstOrNull { it.name == trainingPlanName }
         var day = 0
         for (routine in trainingPlan?.routines ?: emptyList()) {
             if (routine.first.name == routineName) {

@@ -1,5 +1,6 @@
 package com.example.mobify.ui.quickMobilityTest
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -13,13 +14,15 @@ import android.widget.Spinner
 import android.widget.TextView
 import androidx.appcompat.widget.Toolbar
 import com.example.mobify.R
+import com.example.mobify.model.QuickMobilityTestExercise
 import com.example.mobify.model.QuickMobilityTestResponse
 import com.example.mobify.utils.QuickMobilityTestExerciseConstants
+import com.example.mobify.utils.TrainingPlanConstants
 
 class MobilityCheckScreenActivity : AppCompatActivity() {
 
     private var currentExerciseIndex = 0
-    private val quickMobilityTestExercises = QuickMobilityTestExerciseConstants.getQuickMobilityTestExercises()
+    private lateinit var quickMobilityTestExercises: List<QuickMobilityTestExercise>
     private val quickMobilityTestResponse = QuickMobilityTestResponse(0, 0, 0, 0)
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,6 +32,7 @@ class MobilityCheckScreenActivity : AppCompatActivity() {
         val toolbar: Toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
 
+        quickMobilityTestExercises = QuickMobilityTestExerciseConstants.getQuickMobilityTestExercises(this)
         updateExercise()
 
         val difficultySpinner = findViewById<Spinner>(R.id.difficultySpinner)
@@ -51,14 +55,8 @@ class MobilityCheckScreenActivity : AppCompatActivity() {
             if (currentExerciseIndex < quickMobilityTestExercises.size) {
                 updateExercise()
             } else {
-                val result = "Hip Mobility: ${quickMobilityTestResponse.hipMobilityResponse}, " +
-                        "Hamstring Flexibility: ${quickMobilityTestResponse.hamstringFlexibilityResponse}, " +
-                        "Shoulder Mobility: ${quickMobilityTestResponse.shoulderMobilityResponse}, " +
-                        "Posture Mobility: ${quickMobilityTestResponse.postureMobilityResponse}"
-
-                Log.d("MobilityCheckScreenActivity", "Results: $result")
                 val intent = Intent(this, ResultsScreenActivity::class.java)
-                intent.putExtra("results", generateQuickMobilityTestResults())
+                intent.putExtra("results", generateQuickMobilityTestResults(this))
                 startActivity(intent)
                 finish()
             }
@@ -76,7 +74,7 @@ class MobilityCheckScreenActivity : AppCompatActivity() {
         difficultySpinner.adapter = adapter
     }
 
-    private fun generateQuickMobilityTestResults(): String {
+    private fun generateQuickMobilityTestResults(context: Context): String {
         val scores = mutableMapOf(
             "Hip mobility" to quickMobilityTestResponse.hipMobilityResponse,
             "Hamstring flexibility" to quickMobilityTestResponse.hamstringFlexibilityResponse,
@@ -86,7 +84,7 @@ class MobilityCheckScreenActivity : AppCompatActivity() {
 
         val frequencyMap = scores.values.groupingBy { it }.eachCount()
         if (frequencyMap.any() { it.value >= 3}) {
-            return "Based on your results, we haven't been able to determine a clear recommendation since you scored the same on three or more exercises, feel free to choose the objective that best suits your preferences."
+            return context.getString(R.string.quick_mobility_test_no_recommendation)
         }
 
         // Take the two highest scores of the map
@@ -94,6 +92,10 @@ class MobilityCheckScreenActivity : AppCompatActivity() {
         scores.remove(highestScore?.key)
         val secondHighestScore = scores.maxByOrNull { it.value }
 
-        return "Based on your results, we recommend focusing on ${highestScore?.key} and ${secondHighestScore?.key}."
+        val responseText = context.getString(R.string.quick_mobility_test_results)
+        val andText = context.getString(R.string.and)
+        val highestScoreKey = TrainingPlanConstants.getTrainingPlanName(context, highestScore?.key!!)
+        val secondHighestScoreKey = TrainingPlanConstants.getTrainingPlanName(context, secondHighestScore?.key!!)
+        return "$responseText $highestScoreKey $andText $secondHighestScoreKey."
     }
 }

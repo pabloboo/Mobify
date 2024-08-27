@@ -16,7 +16,7 @@
                 android:id="@+id/title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Select 1 or 2 goals"
+                android:text="@string/select_goals_title"
                 android:textSize="24sp"
                 android:textColor="@color/primaryTextColor"
                 android:layout_gravity="center_horizontal"
@@ -40,7 +40,7 @@
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/white"
                     android:textColor="@color/primaryTextColor"
-                    android:text="Back"
+                    android:text="@string/back"
                     android:layout_marginHorizontal="20dp"
                     android:visibility="gone"
                     android:layout_gravity="bottom|start" />
@@ -50,7 +50,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/colorAccent"
-                    android:text="Next"
+                    android:text="@string/next"
                     android:layout_marginHorizontal="20dp"
                     android:layout_gravity="bottom|end" />
 
