@@ -2,6 +2,7 @@ package com.example.mobify.ui.home.trainingPlanDetails
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MenuItem
 import android.widget.TextView
 import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.GridLayoutManager
@@ -17,6 +18,8 @@ class TrainingPlanDetailsActivity : AppCompatActivity() {
 
         val toolbar: Toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
+        val actionBar = supportActionBar
+        actionBar?.setDisplayHomeAsUpEnabled(true)
 
         val trainingPlanTitle = findViewById<TextView>(R.id.trainingPlanTitle)
         val trainingPlanDescription = findViewById<TextView>(R.id.trainingPlanDescription)
@@ -32,5 +35,15 @@ class TrainingPlanDetailsActivity : AppCompatActivity() {
 
         recyclerView.layoutManager = GridLayoutManager(this, 5)
         recyclerView.adapter = trainingPlan?.let { TrainingPlanDetailsAdapter(it.routines, unlockedDays) }
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            android.R.id.home -> {
+                onBackPressedDispatcher.onBackPressed()
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
     }
 }

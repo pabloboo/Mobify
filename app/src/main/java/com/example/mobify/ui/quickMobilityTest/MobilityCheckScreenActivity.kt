@@ -5,6 +5,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.MenuItem
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
@@ -31,6 +32,8 @@ class MobilityCheckScreenActivity : AppCompatActivity() {
 
         val toolbar: Toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
+        val actionBar = supportActionBar
+        actionBar?.setDisplayHomeAsUpEnabled(true)
 
         quickMobilityTestExercises = QuickMobilityTestExerciseConstants.getQuickMobilityTestExercises(this)
         updateExercise()
@@ -97,5 +100,15 @@ class MobilityCheckScreenActivity : AppCompatActivity() {
         val highestScoreKey = TrainingPlanConstants.getTrainingPlanName(context, highestScore?.key!!)
         val secondHighestScoreKey = TrainingPlanConstants.getTrainingPlanName(context, secondHighestScore?.key!!)
         return "$responseText $highestScoreKey $andText $secondHighestScoreKey."
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            android.R.id.home -> {
+                onBackPressedDispatcher.onBackPressed()
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
     }
 }

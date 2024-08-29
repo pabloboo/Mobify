@@ -3,6 +3,7 @@ package com.example.mobify.ui.home.routine
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.view.MenuItem
 import android.view.animation.AnimationUtils
 import androidx.activity.addCallback
 import androidx.appcompat.app.AppCompatActivity
@@ -26,6 +27,8 @@ class RoutineActivity : AppCompatActivity() {
 
         val toolbar: Toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
+        val actionBar = supportActionBar
+        actionBar?.setDisplayHomeAsUpEnabled(true)
 
         viewPager = findViewById(R.id.viewPager)
 
@@ -61,6 +64,16 @@ class RoutineActivity : AppCompatActivity() {
             val intent = Intent(this@RoutineActivity, MainActivity::class.java)
             startActivity(intent)
             finish()
+        }
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId) {
+            android.R.id.home -> {
+                onBackPressedDispatcher.onBackPressed()
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
         }
     }
 }
