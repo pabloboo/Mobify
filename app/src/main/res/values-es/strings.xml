@@ -8,7 +8,7 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Ajustes</string>
     <string name="menu_home">Inicio</string>
-    <string name="menu_training_plans">Planes de entrenamiento</string>
+    <string name="menu_training_plans">Objetivos</string>
     <string name="quick_mobility_test_introduction">Bienvenido al chequeo rápido de movilidad. Esta rápida evaluación le ayudará a identificar las zonas de su cuerpo que pueden necesitar más atención en términos de flexibilidad y movilidad.\nSe le guiará a través de una serie de ejercicios sencillos que ponen a prueba la movilidad de las caderas, los isquiotibiales, los hombros y la postura. Cada ejercicio es fácil de realizar y sólo le llevará unos minutos. En función de sus resultados, le recomendaremos los objetivos de flexibilidad y movilidad más adecuados en los que centrarse.\n¡Empecemos y descubra cómo puede mejorar su movimiento y su bienestar general!</string>
     <string name="quick_mobility_test">Test de movilidad</string>
     <string name="next">Siguiente</string>
@@ -22,6 +22,7 @@
     <string name="next_side">Siguiente lado</string>
     <string name="exercise">Ejercicio</string>
     <string name="back">Atrás</string>
+    <string name="maximum_goals_selection_error">Sólo puedes seleccionar 2 objetivos</string>
 
     <!-- Quick mobility test -->
     <string name="hip_rotation_test">Test de rotación de cadera</string>

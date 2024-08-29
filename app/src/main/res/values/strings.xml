@@ -7,7 +7,7 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
     <string name="menu_home">Home</string>
-    <string name="menu_training_plans">Training Plans</string>
+    <string name="menu_training_plans">Goals</string>
     <string name="quick_mobility_test_introduction">Welcome to the Quick Mobility Check! This quick assessment will help you identify areas of your body that may need more attention in terms of flexibility and mobility.\n\nYou’ll be guided through a series of simple exercises that test the mobility of your hips, hamstrings, shoulders, and posture. Each exercise is easy to perform and only takes a few minutes. Based on your results, we’ll recommend the most suitable flexibility and mobility goals for you to focus on.\n\nLet’s get started and discover how you can improve your movement and overall well-being!</string>
     <string name="quick_mobility_test">Quick mobility test</string>
     <string name="next">Next</string>
@@ -21,6 +21,7 @@
     <string name="next_side">Next side</string>
     <string name="exercise">Exercise</string>
     <string name="back">Back</string>
+    <string name="maximum_goals_selection_error">You can only select up to 2 goals</string>
 
     <!-- Quick mobility test -->
     <string name="hip_rotation_test">Hip rotation test</string>
