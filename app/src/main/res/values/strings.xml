@@ -22,6 +22,9 @@
     <string name="exercise">Exercise</string>
     <string name="back">Back</string>
     <string name="maximum_goals_selection_error">You can only select up to 2 goals</string>
+    <string name="language_title">Language of the app</string>
+    <string name="english">English</string>
+    <string name="spanish">Spanish</string>
 
     <!-- Quick mobility test -->
     <string name="hip_rotation_test">Hip rotation test</string>

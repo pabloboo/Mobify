@@ -23,6 +23,9 @@
     <string name="exercise">Ejercicio</string>
     <string name="back">Atrás</string>
     <string name="maximum_goals_selection_error">Sólo puedes seleccionar 2 objetivos</string>
+    <string name="language_title">Idioma de la aplicación</string>
+    <string name="english">Inglés</string>
+    <string name="spanish">Español</string>
 
     <!-- Quick mobility test -->
     <string name="hip_rotation_test">Test de rotación de cadera</string>
