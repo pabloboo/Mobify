@@ -8,7 +8,8 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/scroll_view_bottom_margin">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -22,7 +23,7 @@
                 android:textSize="18sp"
                 android:textColor="@color/primaryTextColor"
                 android:gravity="center"
-                android:layout_marginVertical="20dp"
+                android:layout_marginVertical="@dimen/activity_vertical_margin"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -33,7 +34,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/choose_goals"
-                android:layout_marginVertical="15dp"
+                android:layout_marginVertical="@dimen/activity_vertical_margin"
                 android:backgroundTint="@color/white"
                 android:textColor="@color/primaryTextColor"
                 app:layout_constraintTop_toBottomOf="@id/mobilityCheckSuggestionTv"
@@ -46,7 +47,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/quick_mobility_test"
-                android:layout_marginVertical="15dp"
+                android:layout_marginVertical="@dimen/activity_vertical_margin"
                 android:backgroundTint="@color/colorAccent"
                 app:layout_constraintTop_toBottomOf="@id/chooseGoalsBtn"
                 app:layout_constraintStart_toStartOf="parent"
