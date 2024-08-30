@@ -10,6 +10,8 @@ import androidx.activity.addCallback
 import androidx.appcompat.widget.Toolbar
 import com.example.mobify.MainActivity
 import com.example.mobify.R
+import com.example.mobify.utils.SharedPreferencesConstants
+import com.example.mobify.utils.SharedPreferencesFunctions
 import java.util.Locale
 
 class SettingsActivity : AppCompatActivity() {
@@ -47,6 +49,7 @@ class SettingsActivity : AppCompatActivity() {
         val config = Configuration()
         config.setLocale(locale)
         baseContext.resources.updateConfiguration(config, baseContext.resources.displayMetrics)
+        SharedPreferencesFunctions.setSharedPreferencesValueString(this, SharedPreferencesConstants.LANGUAGE, lang)
     }
 
     private fun restartApp() {
