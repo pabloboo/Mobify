@@ -9,14 +9,12 @@ import com.example.mobify.R
 
 class OnboardingActivity : AppCompatActivity() {
 
-    private lateinit var scrollView: ScrollView
     private lateinit var viewPager: ViewPager2
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_onboarding)
 
-        scrollView = findViewById(R.id.scrollViewOnboarding)
         val toolbar: Toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
 
@@ -26,12 +24,5 @@ class OnboardingActivity : AppCompatActivity() {
 
         val page = intent.getIntExtra("page", 0)
         viewPager.currentItem = page
-
-        viewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
-            override fun onPageSelected(position: Int) {
-                // Scroll to the top of the ScrollView when page changes
-                scrollView.scrollTo(0, 0)
-            }
-        })
     }
 }
