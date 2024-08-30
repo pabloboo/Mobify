@@ -4,13 +4,14 @@ import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.MenuItem
 import android.view.View
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.ImageView
+import android.widget.RadioButton
+import android.widget.RadioGroup
 import android.widget.Spinner
 import android.widget.TextView
 import androidx.appcompat.widget.Toolbar
@@ -38,18 +39,21 @@ class MobilityCheckScreenActivity : AppCompatActivity() {
         quickMobilityTestExercises = QuickMobilityTestExerciseConstants.getQuickMobilityTestExercises(this)
         updateExercise()
 
-        val difficultySpinner = findViewById<Spinner>(R.id.difficultySpinner)
-        difficultySpinner.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
-            override fun onItemSelected(parent: AdapterView<*>, view: View, position: Int, id: Long) {
-                when (currentExerciseIndex) {
-                    0 -> quickMobilityTestResponse.hipMobilityResponse = position
-                    1 -> quickMobilityTestResponse.hamstringFlexibilityResponse = position
-                    2 -> quickMobilityTestResponse.shoulderMobilityResponse = position
-                    3 -> quickMobilityTestResponse.postureMobilityResponse = position
-                }
-            }
+        val difficultyRadioGroup = findViewById<RadioGroup>(R.id.difficultyRadioGroup)
+        difficultyRadioGroup.setOnCheckedChangeListener { group, checkedId ->
+            // Get the RadioButton using the checkedId
+            val radioButton = group.findViewById<RadioButton>(checkedId)
 
-            override fun onNothingSelected(parent: AdapterView<*>) {}
+            // Get the index of the selected RadioButton
+            val index = group.indexOfChild(radioButton)
+
+            // Use the index in your logic
+            when (currentExerciseIndex) {
+                0 -> quickMobilityTestResponse.hipMobilityResponse = index
+                1 -> quickMobilityTestResponse.hamstringFlexibilityResponse = index
+                2 -> quickMobilityTestResponse.shoulderMobilityResponse = index
+                3 -> quickMobilityTestResponse.postureMobilityResponse = index
+            }
         }
 
         val nextButton = findViewById<Button>(R.id.nextButton)
@@ -71,10 +75,18 @@ class MobilityCheckScreenActivity : AppCompatActivity() {
         findViewById<ImageView>(R.id.exerciseImage).setImageResource(exercise.photo)
         findViewById<TextView>(R.id.exerciseInstructions).text = exercise.description
 
-        // Update the Spinner options
-        val difficultySpinner = findViewById<Spinner>(R.id.difficultySpinner)
-        val adapter = ArrayAdapter(this, R.layout.spinner_item, exercise.selectionOptions)
-        difficultySpinner.adapter = adapter
+        // Update the RadioGroup options
+        val difficultyRadioGroup = findViewById<RadioGroup>(R.id.difficultyRadioGroup)
+        difficultyRadioGroup.removeAllViews() // Remove all existing RadioButtons
+
+        // Add a RadioButton for each selection option
+        for (option in exercise.selectionOptions) {
+            val radioButton = RadioButton(this)
+            radioButton.text = option
+            radioButton.setTextColor(resources.getColor(R.color.black, null))
+            radioButton.buttonTintList = resources.getColorStateList(R.color.black, null)
+            difficultyRadioGroup.addView(radioButton)
+        }
     }
 
     private fun generateQuickMobilityTestResults(context: Context): String {
