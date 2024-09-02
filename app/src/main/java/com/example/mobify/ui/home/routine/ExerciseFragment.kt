@@ -25,6 +25,7 @@ class ExerciseFragment(private val viewPager: ViewPager2, private val routineNam
 
     private lateinit var exerciseNumberTextView: TextView
     private lateinit var exerciseNameTextView: TextView
+    private lateinit var exerciseDescriptionTextView: TextView
     private lateinit var exerciseImageView: ImageView
     private lateinit var countdownTextView: TextView
     private lateinit var playButton: ImageButton
@@ -45,6 +46,7 @@ class ExerciseFragment(private val viewPager: ViewPager2, private val routineNam
 
         exerciseNumberTextView = view.findViewById(R.id.exerciseNumberTextView)
         exerciseNameTextView = view.findViewById(R.id.exerciseNameTextView)
+        exerciseDescriptionTextView = view.findViewById(R.id.exerciseDescriptionTextView)
         exerciseImageView = view.findViewById(R.id.exerciseImageView)
         countdownTextView = view.findViewById(R.id.countdownTextView)
         playButton = view.findViewById(R.id.playButton)
@@ -52,6 +54,7 @@ class ExerciseFragment(private val viewPager: ViewPager2, private val routineNam
 
         val exerciseText = getString(R.string.exercise)
         exerciseNumberTextView.text = "$exerciseText $exerciseNumber/$totalExerciseNumber"
+        exerciseDescriptionTextView.text = exercise.description
         exerciseNameTextView.text = exercise.name
         exerciseImageView.setImageResource(exercise.photo)
         countdownTextView.visibility = View.VISIBLE

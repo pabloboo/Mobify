@@ -29,7 +29,7 @@ object ExerciseConstants {
         exercises.add(Exercise(17, context.getString(R.string.duck_walks), R.drawable.duck_walks, 60, false, 0, 0))
         exercises.add(Exercise(18, context.getString(R.string.standing_pancake_good_morning), R.drawable.standing_pancake_good_morning, 0, false, 1, 10))
         exercises.add(Exercise(19, context.getString(R.string.extensions_90_90), R.drawable.extensions_90_90, 0, false, 1, 10))
-        exercises.add(Exercise(20, context.getString(R.string.wall_deep_squat), R.drawable.wall_deep_squat, 0, false, 0, 0))
+        exercises.add(Exercise(20, context.getString(R.string.wall_deep_squat), R.drawable.wall_deep_squat, 30, false, 0, 0))
         exercises.add(Exercise(21, context.getString(R.string.cossack_squat), R.drawable.cossack_squat, 0, false, 1, 8))
         exercises.add(Exercise(22, context.getString(R.string.hip_circles), R.drawable.hip_circles, 0, false, 1, 10))
         exercises.add(Exercise(23, context.getString(R.string.modified_horse_stance_stretch), R.drawable.modified_horse_stance_stretch, 30, false, 0, 0))
@@ -84,6 +84,22 @@ object ExerciseConstants {
         exercises.add(Exercise(66, context.getString(R.string.lunging_lateral_stretch), R.drawable.lunging_lateral_stretch, 30, true, 0, 0))
         exercises.add(Exercise(67, context.getString(R.string.shoulder_internal_rotation), R.drawable.shoulder_internal_rotation, 30, true, 0, 0))
 
+        // Improve squat exercises
+        exercises.add(Exercise(68, context.getString(R.string.ankle_band_mobilization), R.drawable.ankle_band_mobilization, 30, true, 0, 0, context.getString(R.string.ankle_band_mobilization_description)))
+        exercises.add(Exercise(69, context.getString(R.string.ankle_foam_rolling), R.drawable.ankle_foam_rolling, 60, true, 0, 0, context.getString(R.string.ankle_foam_rolling_description)))
+        exercises.add(Exercise(70, context.getString(R.string.ankle_stretch), R.drawable.ankle_stretch, 30, true, 0, 0, context.getString(R.string.ankle_stretch_description)))
+        exercises.add(Exercise(71, context.getString(R.string.knee_touchdown_progression), R.drawable.knee_touchdown_progression, 0, false, 1, 10, context.getString(R.string.knee_touchdown_progression_description)))
+        exercises.add(Exercise(72, context.getString(R.string.hip_band_mobilitazion), R.drawable.hip_band_mobilitazion, 0, false, 1, 10, context.getString(R.string.hip_band_mobilitazion_description)))
+        exercises.add(Exercise(73, context.getString(R.string.hip_foam_rolling), R.drawable.hip_foam_rolling, 60, false, 0, 0, context.getString(R.string.hip_foam_rolling_description)))
+        exercises.add(Exercise(74, context.getString(R.string.worlds_greatest_stretch), R.drawable.worlds_greatest_stretch, 30, false, 0, 0, context.getString(R.string.worlds_greatest_stretch_description)))
+        exercises.add(Exercise(75, context.getString(R.string.unilateral_adbuction), R.drawable.unilateral_abduction, 0, false, 1, 10, context.getString(R.string.unilateral_adbuction_description)))
+        exercises.add(Exercise(76, context.getString(R.string.squat_bracing_process), R.drawable.squat_bracing_process, 0, false, 3, 10, context.getString(R.string.squat_bracing_process_description)))
+        exercises.add(Exercise(77, context.getString(R.string.bird_dog_progression), R.drawable.bird_dog_progression, 0, false, 2, 10, context.getString(R.string.bird_dog_progression_description)))
+        exercises.add(Exercise(78, context.getString(R.string.zombie_front_squat), R.drawable.zombie_front_squat, 0, false, 2, 5, context.getString(R.string.zombie_front_squat_description)))
+        exercises.add(Exercise(79, context.getString(R.string.prayer_stretch), R.drawable.prayer_stretch, 30, false, 0, 0, context.getString(R.string.prayer_stretch_description)))
+        exercises.add(Exercise(80, context.getString(R.string.corner_stretch), R.drawable.corner_stretch, 30, false, 0, 0, context.getString(R.string.corner_stretch_description)))
+        exercises.add(Exercise(81, context.getString(R.string.upper_posterior_chain_activation), R.drawable.upper_posterior_chain_activation, 0, false, 1, 10, context.getString(R.string.upper_posterior_chain_activation_description)))
+        exercises.add(Exercise(82, context.getString(R.string.external_rotation_press), R.drawable.external_rotation_press, 0, false, 1, 10, context.getString(R.string.external_rotation_press_description)))
 
         return exercises.find { it.id == exerciseId } ?: exercises.find { it.name == exerciseName } ?: Exercise(0, "Unknown", R.drawable.logo, 0, false, 0, 0)
     }

@@ -7,5 +7,6 @@ data class Exercise(
     val time: Int,
     val unilateral: Boolean,
     val sets: Int,
-    val reps: Int
+    val reps: Int,
+    val description: String? = null
 )

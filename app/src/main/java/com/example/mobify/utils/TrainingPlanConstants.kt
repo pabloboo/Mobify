@@ -68,6 +68,10 @@ object TrainingPlanConstants {
                 Pair(RoutineConstants.getPostureMobilityDay11(context), 11),
                 Pair(RoutineConstants.getPostureMobilityDay12(context), 12)
             )
+        } else if (trainingPlanName == "Improve squat") {
+            listOf(
+                Pair(RoutineConstants.getImproveSquatDay01(context), 1)
+            )
         } else {
             emptyList()
         }
@@ -79,6 +83,7 @@ object TrainingPlanConstants {
             "Hamstring flexibility" -> context.getString(R.string.hamstring_flexibility_description)
             "Shoulder mobility" -> context.getString(R.string.shoulder_mobility_description)
             "Posture mobility" -> context.getString(R.string.posture_mobility_description)
+            "Improve squat" -> context.getString(R.string.improve_squat_description)
             else -> ""
         }
     }
@@ -89,6 +94,7 @@ object TrainingPlanConstants {
             "Hamstring flexibility" -> context.getString(R.string.hamstring_flexibility)
             "Shoulder mobility" -> context.getString(R.string.shoulder_mobility)
             "Posture mobility" -> context.getString(R.string.posture_mobility)
+            "Improve squat" -> context.getString(R.string.improve_squat)
             else -> ""
         }
     }

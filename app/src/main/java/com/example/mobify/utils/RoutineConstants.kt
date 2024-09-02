@@ -60,6 +60,8 @@ object RoutineConstants {
             "Posture mobility Day 11" -> getPostureMobilityDay11(context)
             "Posture mobility Day 12" -> getPostureMobilityDay12(context)
 
+            "Improve squat Day 1" -> getImproveSquatDay01(context)
+
             else -> null
         }
     }
@@ -678,6 +680,29 @@ object RoutineConstants {
                 ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.shoulder_internal_rotation)),
                 ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.shoulder_internal_rotation)),
                 ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.cat_cow))
+            )
+        )
+    }
+
+    // Improve squat
+    fun getImproveSquatDay01(context: Context): Routine {
+        return Routine(
+            "Improve squat Day 1",
+            listOf(
+                ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.ankle_band_mobilization)),
+                ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.ankle_foam_rolling)),
+                ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.ankle_stretch)),
+                ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.knee_touchdown_progression)),
+                ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.hip_band_mobilitazion)),
+                ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.worlds_greatest_stretch)),
+                ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.unilateral_adbuction)),
+                ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.squat_bracing_process)),
+                ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.bird_dog_progression)),
+                ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.zombie_front_squat)),
+                ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.prayer_stretch)),
+                ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.corner_stretch)),
+                ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.upper_posterior_chain_activation)),
+                ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.external_rotation_press))
             )
         )
     }
