@@ -101,6 +101,12 @@ object ExerciseConstants {
         exercises.add(Exercise(81, context.getString(R.string.upper_posterior_chain_activation), R.drawable.upper_posterior_chain_activation, 0, false, 1, 10, context.getString(R.string.upper_posterior_chain_activation_description)))
         exercises.add(Exercise(82, context.getString(R.string.external_rotation_press), R.drawable.external_rotation_press, 0, false, 1, 10, context.getString(R.string.external_rotation_press_description)))
 
+        // Office worker daily mobility Plan exercises
+        exercises.add(Exercise(83, context.getString(R.string.seated_figure_four_stretch), R.drawable.seated_figure_four_stretch, 30, true, 0, 0, context.getString(R.string.seated_figure_four_stretch_description)))
+        exercises.add(Exercise(84, context.getString(R.string.elevated_hip_flexor_stretch), R.drawable.elevated_hip_flexor_stretch, 45, true, 0, 0, context.getString(R.string.elevated_hip_flexor_stretch_description)))
+        exercises.add(Exercise(85, context.getString(R.string.prone_scapular_rotation), R.drawable.prone_scapular_rotation, 0, false, 1, 10, context.getString(R.string.prone_scapular_rotation_description)))
+        exercises.add(Exercise(86, context.getString(R.string.kneeling_hip_flexor_stretch_with_knee_flexion), R.drawable.kneeling_hip_flexor_stretch_with_knee_flexion, 30, true, 0, 0, context.getString(R.string.kneeling_hip_flexor_stretch_with_knee_flexion_description)))
+
         return exercises.find { it.id == exerciseId } ?: exercises.find { it.name == exerciseName } ?: Exercise(0, "Unknown", R.drawable.logo, 0, false, 0, 0)
     }
 }

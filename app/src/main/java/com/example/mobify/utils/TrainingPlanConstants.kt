@@ -72,6 +72,10 @@ object TrainingPlanConstants {
             listOf(
                 Pair(RoutineConstants.getImproveSquatDay01(context), 1)
             )
+        } else if (trainingPlanName == "Office worker daily mobility") {
+            listOf(
+                Pair(RoutineConstants.getOfficeWorkerDailyMobilityDay01(context), 1)
+            )
         } else {
             emptyList()
         }
@@ -84,6 +88,7 @@ object TrainingPlanConstants {
             "Shoulder mobility" -> context.getString(R.string.shoulder_mobility_description)
             "Posture mobility" -> context.getString(R.string.posture_mobility_description)
             "Improve squat" -> context.getString(R.string.improve_squat_description)
+            "Office worker daily mobility" -> context.getString(R.string.office_worker_daily_mobility_description)
             else -> ""
         }
     }
@@ -95,6 +100,7 @@ object TrainingPlanConstants {
             "Shoulder mobility" -> context.getString(R.string.shoulder_mobility)
             "Posture mobility" -> context.getString(R.string.posture_mobility)
             "Improve squat" -> context.getString(R.string.improve_squat)
+            "Office worker daily mobility" -> context.getString(R.string.office_worker_daily_mobility)
             else -> ""
         }
     }

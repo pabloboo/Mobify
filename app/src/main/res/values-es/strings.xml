@@ -58,12 +58,14 @@
     <string name="shoulder_mobility">Movilidad de hombros</string>
     <string name="posture_mobility">Movilidad de postura</string>
     <string name="improve_squat">Mejora la sentadilla</string>
+    <string name="office_worker_daily_mobility">Movilidad diaria para trabajadores de oficina</string>
 
     <string name="hip_mobility_description">Este plan de entrenamiento te ayudará a mejorar la movilidad de la cadera. Está diseñado para realizar tres entrenamientos por semana durante cuatro semanas.</string>
     <string name="hamstring_flexibility_description">Este plan de entrenamiento te ayudará a mejorar la flexibilidad de isquiotibiales. Está diseñado para realizar tres entrenamientos por semana durante cuatro semanas.</string>
     <string name="shoulder_mobility_description">Este plan de entrenamiento te ayudará a mejorar la movilidad de hombros. Está diseñado para realizar tres entrenamientos por semana durante cuatro semanas.</string>
     <string name="posture_mobility_description">Este plan de entrenamiento te ayudará a mejorar la movilidad postural. Está diseñado para realizar tres entrenamientos por semana durante cuatro semanas.</string>
     <string name="improve_squat_description">Este plan de entrenamiento te ayudará a mejorar tu sentadilla. Realizalo antes de tu entrenamiento de sentadilla o de patrón de sentadilla.</string>
+    <string name="office_worker_daily_mobility_description">Este plan de movilidad está diseñado para personas que pasan mucho tiempo sentadas y buscan mejorar la flexibilidad y la salud de sus cuádriceps, caderas, hombros y espalda. Con solo 8 minutos al día, 3-4 veces por semana, estos ejercicios específicos ayudan a aliviar la tensión muscular, mejorar la postura y prevenir dolores comunes asociados con el sedentarismo. Ideal para incorporar en la rutina diaria, este plan contribuye a mantener una buena movilidad general y bienestar físico.</string>
 
     <!-- Exercises -->
     <string name="single_leg_rdl">PM rumano a una pierna</string>
@@ -163,4 +165,12 @@
     <string name="upper_posterior_chain_activation_description">Comienza acostado boca abajo con los brazos en una posición de L hacia los lados. Mientras te concentras en tu espalda media, realiza una pequeña retracción del mentón y levanta la cabeza del suelo. Mantén esta posición mientras te enfocas en activar los músculos entre los omóplatos durante diez segundos.</string>
     <string name="external_rotation_press">Press con rotación externa</string>
     <string name="external_rotation_press_description">Paso 1: (Remo) Agarra una banda de resistencia con tu mano derecha. Tira de la banda hacia ti en un movimiento de remo. Tu mano debe terminar directamente frente a tu codo con el brazo paralelo al suelo. Esto activa los músculos que estabilizan el omóplato. Paso 2: (Rotación externa) Desde esta posición, rota el hombro hacia atrás. Tu mano ahora debería estar mirando hacia el techo con el codo doblado a noventa grados como una L. Paso 3: (Press) A continuación, empuja tu mano hacia arriba y mantén la posición durante cinco segundos. Los músculos que estabilizan el omóplato deberían trabajar duro para evitar que tu brazo se caiga hacia adelante. Paso 4: Luego, invierte el patrón y regresa a la posición inicial. Baja el brazo a la posición de L. Rota hacia adelante hasta que tu brazo esté paralelo al suelo. Finalmente, empuja tu brazo hacia adelante para terminar el movimiento.</string>
+    <string name="seated_figure_four_stretch">Estiramiento de cadera sentado</string>
+    <string name="seated_figure_four_stretch_description">Sentado en una silla, pon tu tobillo sobre tu rodilla opuesta, manteniendo la espalda recta. Baja el torso hacia adelante y agarra la pata de la silla con las manos para ayudarte a bajar. También puedes añadir peso en las manos para aumentar la intensidad.</string>
+    <string name="elevated_hip_flexor_stretch">Estiramiento de flexores de cadera elevado</string>
+    <string name="elevated_hip_flexor_stretch_description">Coloca tu rodilla y tu tobillo en una misma línea sobre una silla, mientras que el otro pie está apoyado en el suelo, con la pierna lo más abajo posible. Realiza repeticiones inclinándote hacia atrás y hacia abajo, y luego hacia adelante en diagonal. Realiza 10 repeticiones y luego aguanta en la posición adelantada durante 10-30 segundos.</string>
+    <string name="prone_scapular_rotation">Rotación escapular acostado boca abajo</string>
+    <string name="prone_scapular_rotation_description">Acostado boca abajo con los brazos extendidos por encima de la cabeza. Eleva los brazos y llévalos en rotación interna hacia la espalda, luego vuelve a la posición inicial mediante rotación externa.</string>
+    <string name="kneeling_hip_flexor_stretch_with_knee_flexion">Estiramiento de flexores de cadera con flexión de rodilla</string>
+    <string name="kneeling_hip_flexor_stretch_with_knee_flexion_description">Coloca tu rodilla sobre una superficie cómoda. Inclínate hacia adelante y flexiona la rodilla, sujetándola con la mano del mismo lado. Aplica presión como si quisieras extender la rodilla, y ve abriendo más la cadera poco a poco.</string>
 </resources>

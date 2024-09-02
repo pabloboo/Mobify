@@ -48,6 +48,8 @@ object SharedPreferencesFunctions {
             "Hamstring flexibility" -> SharedPreferencesConstants.HAMSTRING_FLEXIBILITY_TRAINING_PLAN_DAY
             "Shoulder mobility" -> SharedPreferencesConstants.SHOULDER_MOBILITY_TRAINING_PLAN_DAY
             "Posture mobility" -> SharedPreferencesConstants.POSTURE_MOBILITY_TRAINING_PLAN_DAY
+            "Improve squat" -> SharedPreferencesConstants.IMPROVE_SQUAT_TRAINING_PLAN_DAY
+            "Office worker daily mobility" -> SharedPreferencesConstants.OFFICE_WORKER_DAILY_MOBILITY_TRAINING_PLAN_DAY
             else -> ""
         }
         return getSharedPreferencesValueInt(activity, key)
@@ -60,6 +62,8 @@ object SharedPreferencesFunctions {
             "Hamstring flexibility" -> SharedPreferencesConstants.HAMSTRING_FLEXIBILITY_TRAINING_PLAN_DAY
             "Shoulder mobility" -> SharedPreferencesConstants.SHOULDER_MOBILITY_TRAINING_PLAN_DAY
             "Posture mobility" -> SharedPreferencesConstants.POSTURE_MOBILITY_TRAINING_PLAN_DAY
+            "Improve squat" -> SharedPreferencesConstants.IMPROVE_SQUAT_TRAINING_PLAN_DAY
+            "Office worker daily mobility" -> SharedPreferencesConstants.OFFICE_WORKER_DAILY_MOBILITY_TRAINING_PLAN_DAY
             else -> ""
         }
         setSharedPreferencesValueInt(activity, key, value)

@@ -7,7 +7,8 @@ object TrainingPlanMap {
         SharedPreferencesConstants.HAMSTRING_FLEXIBILITY_TRAINING_PLAN to "Hamstring flexibility",
         SharedPreferencesConstants.SHOULDER_MOBILITY_TRAINING_PLAN to "Shoulder mobility",
         SharedPreferencesConstants.POSTURE_MOBILITY_TRAINING_PLAN to "Posture mobility",
-        SharedPreferencesConstants.IMPROVE_SQUAT_TRAINING_PLAN to "Improve squat"
+        SharedPreferencesConstants.IMPROVE_SQUAT_TRAINING_PLAN to "Improve squat",
+        SharedPreferencesConstants.OFFICE_WORKER_DAILY_MOBILITY_TRAINING_PLAN to "Office worker daily mobility"
     )
 
     val invertedMapTrainingPlan = trainingPlanMap.entries.associateBy({ it.value }) { it.key }

@@ -35,8 +35,7 @@
             android:layout_below="@id/exerciseNameTextView"
             android:textSize="14sp"
             android:textAlignment="center"
-            android:textColor="@color/primaryTextColor"
-            android:layout_marginVertical="@dimen/activity_vertical_margin"/>
+            android:textColor="@color/primaryTextColor" />
 
         <ImageView
             android:id="@+id/exerciseImageView"

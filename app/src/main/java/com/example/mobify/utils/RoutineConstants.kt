@@ -62,6 +62,8 @@ object RoutineConstants {
 
             "Improve squat Day 1" -> getImproveSquatDay01(context)
 
+            "Office worker daily mobility Day 1" -> getOfficeWorkerDailyMobilityDay01(context)
+
             else -> null
         }
     }
@@ -703,6 +705,19 @@ object RoutineConstants {
                 ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.corner_stretch)),
                 ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.upper_posterior_chain_activation)),
                 ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.external_rotation_press))
+            )
+        )
+    }
+
+    // Office Worker Mobility
+    fun getOfficeWorkerDailyMobilityDay01(context: Context): Routine {
+        return Routine(
+            "Office worker daily mobility Day 1",
+            listOf(
+                ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.seated_figure_four_stretch)),
+                ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.elevated_hip_flexor_stretch)),
+                ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.prone_scapular_rotation)),
+                ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.kneeling_hip_flexor_stretch_with_knee_flexion))
             )
         )
     }

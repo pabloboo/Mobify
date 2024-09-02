@@ -57,12 +57,14 @@
     <string name="shoulder_mobility">Shoulder mobility</string>
     <string name="posture_mobility">Posture mobility</string>
     <string name="improve_squat">Improve squat</string>
+    <string name="office_worker_daily_mobility">Office worker daily mobility</string>
 
     <string name="hip_mobility_description">This training plan will help you improve your hip mobility. It is designed to do three workouts per week for four weeks.</string>
     <string name="hamstring_flexibility_description">This training plan will help you improve your hamstring flexibility. It is designed to do three workouts per week for four weeks.</string>
     <string name="shoulder_mobility_description">This training plan will help you improve your shoulder mobility. It is designed to do three workouts per week for four weeks.</string>
     <string name="posture_mobility_description">This training plan will help you improve your posture and spinal mobility. It is designed to do three workouts per week for four weeks.</string>
     <string name="improve_squat_description">This training plan will help you improve your squat. Do a workout before your squat or squat pattern training.</string>
+    <string name="office_worker_daily_mobility_description">This mobility plan is designed for individuals who spend long hours sitting and are looking to improve the flexibility and health of their quads, hips, shoulders, and back. In just 8 minutes a day, 3-4 times per week, these targeted exercises help to relieve muscle tension, improve posture, and prevent common aches associated with a sedentary lifestyle. Perfect for incorporating into your daily routine, this plan helps maintain overall mobility and physical well-being.</string>
 
     <!-- Exercises -->
     <string name="single_leg_rdl">Single leg RDL</string>
@@ -162,4 +164,12 @@
     <string name="upper_posterior_chain_activation_description">Start by lying on your stomach with your arms in an L position out to the side. While focusing on your midback, perform a small chin tuck and lift your head off the ground. Hold this position while focusing on activating the muscles in between your shoulder blades for ten seconds.</string>
     <string name="external_rotation_press">External rotation press</string>
     <string name="external_rotation_press_description">Step 1: (Row) Grab a resistance band with your right hand. Pull the band toward you in a rowing motion. Your hand should finish directly in front of your elbow with your arm parallel to the ground. This engages the muscles that stabilize the shoulder blade. Step 2: (External rotation) From this position, rotate the shoulder backward. Your hand should now be facing the ceiling with your elbow bent to ninety degrees like an L. Step 3: (Press) Next, push your hand overhead and hold for five seconds. The muscles that stabilize the shoulder blade should be working hard to keep your arm from falling forward. Step 4: Next, reverse the pattern and return to the start position. Lower the arm to the L position. Rotate forward until your arm is parallel to the ground. Finally, press your arm forward to end the movement.</string>
+    <string name="seated_figure_four_stretch">Seated figure four stretch</string>
+    <string name="seated_figure_four_stretch_description">While seated in a chair, place your ankle over your opposite knee, keeping your back straight. Lean forward and grab the leg of the chair with your hands to assist in lowering your torso. You can also add weight to your hands to increase the intensity.</string>
+    <string name="elevated_hip_flexor_stretch">Elevated hip flexor stretch</string>
+    <string name="elevated_hip_flexor_stretch_description">Place your knee and ankle in a straight line on a chair, with the other foot grounded and the leg as low as possible. Perform repetitions by leaning backward and downward, then forward diagonally. Do 10 repetitions and then hold at the forward position 10-30 seconds.</string>
+    <string name="prone_scapular_rotation">Prone scapular rotation</string>
+    <string name="prone_scapular_rotation_description">While lying face down with your arms extended overhead, lift your arms and move them in an internal rotation towards your back, then return to the starting position through external rotation.</string>
+    <string name="kneeling_hip_flexor_stretch_with_knee_flexion">Kneeling Hip Flexor Stretch with Knee Flexion</string>
+    <string name="kneeling_hip_flexor_stretch_with_knee_flexion_description">Place your knee on a comfortable surface. Lean forward and bend your knee, holding it with your hand on the same side. Apply pressure as if you were trying to extend the knee, and gradually open up the hip.</string>
 </resources>
