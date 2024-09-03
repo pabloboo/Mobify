@@ -16,8 +16,10 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:padding="20dp"
+        android:minWidth="80dp"
         tools:text="1"
         android:textColor="@android:color/white"
+        android:textAlignment="center"
         android:textSize="24sp" />
 
 </androidx.cardview.widget.CardView>
