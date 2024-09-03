@@ -105,6 +105,18 @@ object TrainingPlanConstants {
         }
     }
 
+    fun getTrainingPlanImage(trainingPlanName: String): Int {
+        return when (trainingPlanName) {
+            "Hip mobility" -> R.drawable.training_plan_hip_mobility
+            "Hamstring flexibility" -> R.drawable.training_plan_hamstring_flexibility
+            "Shoulder mobility" -> R.drawable.training_plan_shoulder_mobility
+            "Posture mobility" -> R.drawable.training_plan_posture_mobility
+            "Improve squat" -> R.drawable.training_plan_improve_squat
+            "Office worker daily mobility" -> R.drawable.training_plan_office_worker_daily_mobility
+            else -> 0
+        }
+    }
+
     fun getTrainingPlans(context: Context): List<TrainingPlan> {
         return TrainingPlanMap.trainingPlanMap.values.map { name ->
             TrainingPlan(name, getDescription(context, name), getRoutines(context, name))

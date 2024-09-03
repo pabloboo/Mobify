@@ -2,9 +2,11 @@ package com.example.mobify.ui.home
 
 import android.content.Context
 import android.content.Intent
+import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.mobify.R
@@ -25,6 +27,12 @@ class TrainingPlanAdapter(private val trainingPlans: List<TrainingPlan>, private
         val trainingPlan = trainingPlans[position]
         val textView: TextView = holder.view.findViewById(R.id.trainingPlanName)
         textView.text = TrainingPlanConstants.getTrainingPlanName(context, trainingPlan.name)
+
+        val imageView: ImageView = holder.view.findViewById(R.id.trainingPlanImage)
+        imageView.setImageResource(TrainingPlanConstants.getTrainingPlanImage(trainingPlan.name))
+        val blueFilter = Color.argb(180, 28, 51, 93)
+        imageView.setColorFilter(blueFilter)
+
         holder.view.setOnClickListener {
             val intent = Intent(context, TrainingPlanDetailsActivity::class.java)
             intent.putExtra("trainingPlan", trainingPlan.name)
