@@ -5,6 +5,7 @@ import android.content.res.Configuration
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
+import android.widget.Button
 import android.widget.ImageButton
 import androidx.activity.addCallback
 import androidx.appcompat.widget.Toolbar
@@ -34,6 +35,12 @@ class SettingsActivity : AppCompatActivity() {
         spanishButton.setOnClickListener {
             setLocale("es")
             restartApp()
+        }
+
+        val changeExerciseDaysButton: Button = findViewById(R.id.changeExerciseDaysButton)
+        changeExerciseDaysButton.setOnClickListener {
+            val intent = Intent(this, ChangeExerciseDaysActivity::class.java)
+            startActivity(intent)
         }
 
         onBackPressedDispatcher.addCallback(this) {

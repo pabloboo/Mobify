@@ -22,6 +22,11 @@ object SharedPreferencesFunctions {
         return sharedPreferences.getBoolean(key, false)
     }
 
+    fun getSharedPreferencesValueBoolean(context: Context, key: String): Boolean {
+        val sharedPreferences = context.getSharedPreferences(SharedPreferencesConstants.SHARED_PREFERENCES_NAME, Context.MODE_PRIVATE)
+        return sharedPreferences.getBoolean(key, false)
+    }
+
     fun setSharedPreferencesValueBoolean(activity: Activity, key: String, value: Boolean) {
         val sharedPreferences = activity.getSharedPreferences(SharedPreferencesConstants.SHARED_PREFERENCES_NAME, Context.MODE_PRIVATE)
         val editor = sharedPreferences.edit()

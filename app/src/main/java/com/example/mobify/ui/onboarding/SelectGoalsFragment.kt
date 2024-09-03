@@ -102,9 +102,8 @@ class SelectGoalsFragment : Fragment(), GoalClickListener {
             }
         }
 
-        SharedPreferencesFunctions.setSharedPreferencesValueBoolean(requireActivity(), SharedPreferencesConstants.ONBOARDING_COMPLETED, true)
-        val intent = Intent(activity, MainActivity::class.java)
-        startActivity(intent)
+        val viewPager = activity?.findViewById<ViewPager2>(R.id.viewPager)
+        viewPager?.currentItem = 4
     }
 
     fun saveAllGoals() {
