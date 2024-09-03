@@ -22,7 +22,8 @@
     <string name="next_side">Siguiente lado</string>
     <string name="exercise">Ejercicio</string>
     <string name="back">Atrás</string>
-    <string name="maximum_goals_selection_error">Sólo puedes seleccionar 2 objetivos</string>
+    <string name="minimum_goals_selection_error">Tienes que seleccionar al menos 1 objetivo</string>
+    <string name="maximum_goals_selection_error">Sólo puedes seleccionar 3 objetivos</string>
     <string name="language_title">Idioma de la aplicación</string>
     <string name="english">Inglés</string>
     <string name="spanish">Español</string>

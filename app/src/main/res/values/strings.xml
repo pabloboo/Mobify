@@ -21,7 +21,8 @@
     <string name="next_side">Next side</string>
     <string name="exercise">Exercise</string>
     <string name="back">Back</string>
-    <string name="maximum_goals_selection_error">You can only select up to 2 goals</string>
+    <string name="minimum_goals_selection_error">You have to select at least 1 goal</string>
+    <string name="maximum_goals_selection_error">You can only select up to 3 goals</string>
     <string name="language_title">Language of the app</string>
     <string name="english">English</string>
     <string name="spanish">Spanish</string>

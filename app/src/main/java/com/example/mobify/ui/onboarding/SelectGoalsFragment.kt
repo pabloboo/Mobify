@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -48,8 +49,6 @@ class SelectGoalsFragment : Fragment(), GoalClickListener {
             nextButton.text = getText(R.string.save)
             nextButton.setOnClickListener {
                 saveAllGoals()
-                val intent = Intent(activity, MainActivity::class.java)
-                startActivity(intent)
             }
         } else {
             backButton.visibility = View.VISIBLE
@@ -59,9 +58,6 @@ class SelectGoalsFragment : Fragment(), GoalClickListener {
             }
             nextButton.setOnClickListener {
                 saveSelectedGoals()
-                SharedPreferencesFunctions.setSharedPreferencesValueBoolean(requireActivity(), SharedPreferencesConstants.ONBOARDING_COMPLETED, true)
-                val intent = Intent(activity, MainActivity::class.java)
-                startActivity(intent)
             }
         }
 
@@ -91,24 +87,49 @@ class SelectGoalsFragment : Fragment(), GoalClickListener {
 
     fun saveSelectedGoals() {
         val selectedGoals = (recyclerView.adapter as GoalsAdapter).getSelectedGoals()
+        val activity = activity ?: return
+
+        if (selectedGoals.isEmpty()) {
+            Toast.makeText(activity, R.string.minimum_goals_selection_error, Toast.LENGTH_SHORT).show()
+            return
+        }
 
         // Save selected goals to SharedPreferences
-        val activity = activity ?: return
         for (goal in selectedGoals) {
             val sharedPreferencesConstant = TrainingPlanMap.invertedMapTrainingPlan[goal]
             if (sharedPreferencesConstant != null) {
                 SharedPreferencesFunctions.setSharedPreferencesValueBoolean(activity, sharedPreferencesConstant, true)
             }
         }
+
+        SharedPreferencesFunctions.setSharedPreferencesValueBoolean(requireActivity(), SharedPreferencesConstants.ONBOARDING_COMPLETED, true)
+        val intent = Intent(activity, MainActivity::class.java)
+        startActivity(intent)
     }
 
     fun saveAllGoals() {
         val activity = activity ?: return
+
+        // Check if at least one goal is selected
+        var selectedGoalsSize = 0
+        for (goal in selectedGoals) {
+            if (goal.value) {
+                selectedGoalsSize++
+            }
+        }
+        if (selectedGoalsSize == 0) {
+            Toast.makeText(activity, R.string.minimum_goals_selection_error, Toast.LENGTH_SHORT).show()
+            return
+        }
+
+        // Save all goals to SharedPreferences
         for (goal in selectedGoals.keys) {
             val sharedPreferencesConstant = TrainingPlanMap.invertedMapTrainingPlan[goal]
             if (sharedPreferencesConstant != null) {
                 SharedPreferencesFunctions.setSharedPreferencesValueBoolean(activity, sharedPreferencesConstant, selectedGoals[goal] ?: false)
             }
         }
+        val intent = Intent(activity, MainActivity::class.java)
+        startActivity(intent)
     }
 }

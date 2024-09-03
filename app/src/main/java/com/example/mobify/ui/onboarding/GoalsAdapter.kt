@@ -32,7 +32,7 @@ class GoalsAdapter(private val goals: Array<String>, private val listener: GoalC
         holder.view.setOnClickListener {
             val isChecked = holder.checkedTextView.isChecked
             Log.d("SelectGoalsFragment", "Selected goals: ${getSelectedGoalsSize()}")
-            if (getSelectedGoalsSize() >= 2 && !isChecked) {
+            if (getSelectedGoalsSize() >= 3 && !isChecked) {
                 Toast.makeText(holder.view.context, R.string.maximum_goals_selection_error, Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
