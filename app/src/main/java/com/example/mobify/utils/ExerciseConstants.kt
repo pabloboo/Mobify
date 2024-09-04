@@ -36,10 +36,10 @@ object ExerciseConstants {
         exercises.add(Exercise(24, context.getString(R.string.flat_back_hamstring_stretch), R.drawable.flat_back_hamstring_stretch, 30, false, 0, 0, context.getString(R.string.flat_back_hamstring_stretch_description)))
 
         // Hamstring flexibility exercises
-        exercises.add(Exercise(25, context.getString(R.string.hamstring_kicks), R.drawable.hamstring_kicks, 0, false, 1, 15, context.getString(R.string.hamstring_kicks_description)))
+        exercises.add(Exercise(25, context.getString(R.string.hamstring_kicks), R.drawable.standing_hamstring_kick, 0, false, 1, 15, context.getString(R.string.hamstring_kicks_description)))
         exercises.add(Exercise(26, context.getString(R.string.toe_touch), R.drawable.toe_touch, 30, false, 0, 0, context.getString(R.string.toe_touch_description)))
         exercises.add(Exercise(27, context.getString(R.string.good_morning), R.drawable.good_morning, 0, false, 1, 10, context.getString(R.string.good_morning_description)))
-        exercises.add(Exercise(28, context.getString(R.string.single_leg_hamstring_stretch), R.drawable.single_leg_hamstring_stretch, 30, true, 0, 0, context.getString(R.string.single_leg_hamstring_stretch_description)))
+        exercises.add(Exercise(28, context.getString(R.string.single_leg_hamstring_stretch), R.drawable.seated_hamstring_stretch, 30, true, 0, 0, context.getString(R.string.single_leg_hamstring_stretch_description)))
         exercises.add(Exercise(29, context.getString(R.string.sit_and_reach_reps), R.drawable.sit_and_reach, 0, false, 1, 10, context.getString(R.string.sit_and_reach_reps_description)))
         exercises.add(Exercise(30, context.getString(R.string.sit_and_reach_hold), R.drawable.sit_and_reach, 30, false, 0, 0, context.getString(R.string.sit_and_reach_hold_description)))
         exercises.add(Exercise(31, context.getString(R.string.crossbody_leg_swings), R.drawable.crossbody_leg_swings, 0, false, 1, 15, context.getString(R.string.crossbody_leg_swings_description)))
