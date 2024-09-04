@@ -60,7 +60,7 @@ object ExerciseConstants {
         exercises.add(Exercise(44, context.getString(R.string.loaded_lat_stretch), R.drawable.loaded_lat_stretch, 0, false, 1, 30, context.getString(R.string.loaded_lat_stretch_description)))
         exercises.add(Exercise(45, context.getString(R.string.bicep_stretch), R.drawable.bicep_stretch, 30, false, 0, 0, context.getString(R.string.bicep_stretch_description)))
         exercises.add(Exercise(46, context.getString(R.string.cherry_pickers), R.drawable.cherry_pickers, 0, false, 1, 20, context.getString(R.string.cherry_pickers_description)))
-        exercises.add(Exercise(47, context.getString(R.string.side_stretch), R.drawable.side_stretch, 30, true, 0, 0, context.getString(R.string.side_stretch_description)))
+        exercises.add(Exercise(47, context.getString(R.string.side_stretch), R.drawable.lateral_stretch, 30, true, 0, 0, context.getString(R.string.side_stretch_description)))
         exercises.add(Exercise(48, context.getString(R.string.broomstick_chest_opener), R.drawable.broomstick_chest_opener, 30, false, 0, 0, context.getString(R.string.broomstick_chest_opener_description)))
 
         // Posture mobility exercises
