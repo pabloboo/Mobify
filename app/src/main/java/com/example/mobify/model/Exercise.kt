@@ -8,5 +8,5 @@ data class Exercise(
     val unilateral: Boolean,
     val sets: Int,
     val reps: Int,
-    val description: String? = null
+    val description: String
 )
