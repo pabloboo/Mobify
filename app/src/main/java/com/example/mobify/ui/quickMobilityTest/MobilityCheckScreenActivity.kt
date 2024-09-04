@@ -83,8 +83,8 @@ class MobilityCheckScreenActivity : AppCompatActivity() {
         for (option in exercise.selectionOptions) {
             val radioButton = RadioButton(this)
             radioButton.text = option
-            radioButton.setTextColor(resources.getColor(R.color.black, null))
-            radioButton.buttonTintList = resources.getColorStateList(R.color.black, null)
+            radioButton.setTextColor(resources.getColor(R.color.primaryTextColor, null))
+            radioButton.buttonTintList = resources.getColorStateList(R.color.primaryTextColor, null)
             difficultyRadioGroup.addView(radioButton)
         }
     }

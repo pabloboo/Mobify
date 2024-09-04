@@ -37,6 +37,7 @@
                 android:textAlignment="center"
                 android:textSize="20sp"
                 android:textColor="@color/white"
+                android:fontFamily="@font/roboto_regular"
                 android:textStyle="bold"/>
 
         </LinearLayout>

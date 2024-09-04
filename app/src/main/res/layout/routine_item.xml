@@ -19,6 +19,7 @@
         android:minWidth="80dp"
         tools:text="1"
         android:textColor="@android:color/white"
+        android:fontFamily="@font/roboto_regular"
         android:textAlignment="center"
         android:textSize="24sp" />
 

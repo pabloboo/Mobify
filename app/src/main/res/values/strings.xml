@@ -16,7 +16,7 @@
     <string name="start_test">Start test</string>
     <string name="quick_mobility_test_onboarding_options_description">Do you want to choose your goals or perform a quick mobility check if you are not clear about them?</string>
     <string name="choose_goals">Choose goals</string>
-    <string name="select_goals_title">Select 1 or 2 goals</string>
+    <string name="select_goals_title">Select between 1 and 3 goals</string>
     <string name="save">Save</string>
     <string name="next_side">Next side</string>
     <string name="exercise">Exercise</string>
@@ -37,6 +37,7 @@
     <string name="exercise_reminder_title">Time to exercise!</string>
     <string name="exercise_reminder_text">Remember to do your mobility routine.</string>
     <string name="change_exercise_days">Change exercise days</string>
+    <string name="switch_theme">Switch app theme</string>
 
     <!-- Quick mobility test -->
     <string name="hip_rotation_test">Hip rotation test</string>

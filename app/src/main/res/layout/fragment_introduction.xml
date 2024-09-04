@@ -27,6 +27,7 @@
                 android:textAlignment="center"
                 android:justificationMode="inter_word"
                 android:textColor="@color/primaryTextColor"
+                android:fontFamily="@font/roboto_regular"
                 android:text="@string/app_introduction"
                 android:layout_gravity="center" />
 
@@ -36,6 +37,7 @@
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/colorAccent"
                 android:text="@string/next"
+                android:fontFamily="@font/roboto_regular"
                 android:layout_gravity="bottom|end"
                 android:layout_marginEnd="15dp"
                 android:layout_marginVertical="@dimen/activity_vertical_margin"

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="colorPrimary">#29689d</color> <!-- Primary buttons, headings, links, and interactive elements -->
+    <color name="colorPrimaryDark">#1b3a5d</color> <!-- Primary text, cards backgrounds, highlighted sections, and icons -->
+    <color name="colorAccent">#9cd9d3</color> <!-- Call to action buttons, progress indicators, items requiring attention -->
+    <color name="backgroundColor">#121212</color> <!-- Primary background and content sections -->
+    <color name="secondaryBackgroundColor">#1e1e1e</color> <!-- Secondary background and content sections -->
+    <color name="primaryTextColor">#e0e0e0</color> <!-- Primary text, titles, and headings -->
+    <color name="secondaryTextColor">#a0a0a0</color> <!-- Secondary text, subtitles, and descriptions -->
+    <color name="successColor">#28a745</color> <!-- Success messages -->
+    <color name="errorColor">#dc3545</color> <!-- Error messages -->
+</resources>

@@ -22,6 +22,7 @@
         android:text="@string/language_title"
         android:textSize="24sp"
         android:textColor="@color/primaryTextColor"
+        android:fontFamily="@font/roboto_regular"
         android:layout_marginVertical="@dimen/activity_vertical_margin"
         app:layout_constraintTop_toBottomOf="@+id/toolbar"
         app:layout_constraintStart_toStartOf="parent"
@@ -47,6 +48,7 @@
         android:text="@string/english"
         android:textSize="18sp"
         android:textColor="@color/primaryTextColor"
+        android:fontFamily="@font/roboto_regular"
         app:layout_constraintTop_toBottomOf="@+id/englishButton"
         app:layout_constraintStart_toStartOf="@+id/englishButton"
         app:layout_constraintEnd_toEndOf="@+id/englishButton" />
@@ -71,6 +73,7 @@
         android:text="@string/spanish"
         android:textSize="18sp"
         android:textColor="@color/primaryTextColor"
+        android:fontFamily="@font/roboto_regular"
         app:layout_constraintTop_toBottomOf="@+id/spanishButton"
         app:layout_constraintStart_toStartOf="@+id/spanishButton"
         app:layout_constraintEnd_toEndOf="@+id/spanishButton" />
@@ -82,10 +85,22 @@
         android:text="@string/change_exercise_days"
         android:textSize="14sp"
         android:textColor="@color/white"
+        android:fontFamily="@font/roboto_regular"
         android:backgroundTint="@color/colorPrimaryDark"
         android:layout_marginVertical="@dimen/activity_vertical_margin"
         app:layout_constraintTop_toBottomOf="@+id/spanishText"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
+    <Switch
+        android:id="@+id/switchThemeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/switch_theme"
+        android:fontFamily="@font/roboto_regular"
+        android:layout_marginVertical="@dimen/activity_vertical_margin"
+        app:layout_constraintTop_toBottomOf="@+id/changeExerciseDaysButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

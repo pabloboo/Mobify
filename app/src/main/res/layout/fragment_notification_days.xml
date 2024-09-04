@@ -19,48 +19,56 @@
             android:text="@string/select_exercise_days"
             android:textSize="18sp"
             android:textColor="@color/primaryTextColor"
+            android:fontFamily="@font/roboto_regular"
             android:textStyle="bold" />
 
         <CheckBox
             android:id="@+id/checkbox_monday"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_regular"
             android:text="@string/monday" />
 
         <CheckBox
             android:id="@+id/checkbox_tuesday"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_regular"
             android:text="@string/tuesday" />
 
         <CheckBox
             android:id="@+id/checkbox_wednesday"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_regular"
             android:text="@string/wednesday" />
 
         <CheckBox
             android:id="@+id/checkbox_thursday"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_regular"
             android:text="@string/thursday" />
 
         <CheckBox
             android:id="@+id/checkbox_friday"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_regular"
             android:text="@string/friday" />
 
         <CheckBox
             android:id="@+id/checkbox_saturday"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_regular"
             android:text="@string/saturday" />
 
         <CheckBox
             android:id="@+id/checkbox_sunday"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_regular"
             android:text="@string/sunday" />
 
         <LinearLayout
@@ -76,6 +84,7 @@
                 android:backgroundTint="@color/white"
                 android:textColor="@color/primaryTextColor"
                 android:text="@string/back"
+                android:fontFamily="@font/roboto_regular"
                 android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
                 android:visibility="gone"
                 android:layout_gravity="bottom|start" />
@@ -86,6 +95,7 @@
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/colorAccent"
                 android:text="@string/next"
+                android:fontFamily="@font/roboto_regular"
                 android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
                 android:layout_gravity="bottom|end" />
 

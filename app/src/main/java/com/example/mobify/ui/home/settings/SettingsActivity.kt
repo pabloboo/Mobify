@@ -7,7 +7,9 @@ import android.os.Bundle
 import android.view.MenuItem
 import android.widget.Button
 import android.widget.ImageButton
+import android.widget.Switch
 import androidx.activity.addCallback
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.appcompat.widget.Toolbar
 import com.example.mobify.MainActivity
 import com.example.mobify.R
@@ -41,6 +43,22 @@ class SettingsActivity : AppCompatActivity() {
         changeExerciseDaysButton.setOnClickListener {
             val intent = Intent(this, ChangeExerciseDaysActivity::class.java)
             startActivity(intent)
+        }
+
+        val switchThemeButton: Switch = findViewById(R.id.switchThemeButton)
+        // Check the current theme and set the switch accordingly
+        val currentNightMode = resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK
+        switchThemeButton.isChecked = currentNightMode == Configuration.UI_MODE_NIGHT_YES
+
+        // Set an OnCheckedChangeListener on the switch
+        switchThemeButton.setOnCheckedChangeListener { _, isChecked ->
+            if (isChecked) {
+                // If the switch is checked, set the app theme to night
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+            } else {
+                // If the switch is not checked, set the app theme to day
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+            }
         }
 
         onBackPressedDispatcher.addCallback(this) {

@@ -15,6 +15,7 @@
             android:layout_height="wrap_content"
             android:textSize="24sp"
             android:textColor="@color/primaryTextColor"
+            android:fontFamily="@font/roboto_regular"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true" />
 
@@ -26,6 +27,7 @@
             android:textSize="20sp"
             android:textAlignment="center"
             android:textColor="@color/primaryTextColor"
+            android:fontFamily="@font/roboto_regular"
             android:textStyle="bold"
             android:layout_centerHorizontal="true" />
 
@@ -36,14 +38,14 @@
             android:layout_below="@id/exerciseNameTextView"
             android:textSize="14sp"
             android:textAlignment="center"
-            android:textColor="@color/primaryTextColor" />
+            android:textColor="@color/primaryTextColor"
+            android:fontFamily="@font/roboto_regular" />
 
         <ImageView
             android:id="@+id/exerciseImageView"
             android:layout_width="match_parent"
             android:layout_height="350dp"
             android:layout_below="@id/exerciseDescriptionTextView"
-            android:layout_marginVertical="@dimen/activity_vertical_margin"
             android:scaleType="fitCenter" />
 
         <TextView
@@ -52,9 +54,9 @@
             android:layout_height="wrap_content"
             android:textSize="48sp"
             android:textColor="@color/primaryTextColor"
+            android:fontFamily="@font/roboto_regular"
             android:layout_below="@id/exerciseImageView"
-            android:layout_centerHorizontal="true"
-            android:layout_marginVertical="@dimen/activity_vertical_margin" />
+            android:layout_centerHorizontal="true" />
 
         <ImageButton
             android:id="@+id/playButton"
@@ -64,7 +66,6 @@
             android:background="@null"
             android:layout_below="@id/exerciseImageView"
             android:layout_centerHorizontal="true"
-            android:layout_marginVertical="@dimen/activity_vertical_margin"
             android:visibility="gone" />
 
         <Button
@@ -73,9 +74,9 @@
             android:layout_height="wrap_content"
             android:backgroundTint="@color/colorAccent"
             android:text="@string/next"
+            android:fontFamily="@font/roboto_regular"
             android:layout_below="@id/countdownTextView"
             android:layout_centerHorizontal="true"
-            android:layout_marginVertical="@dimen/activity_vertical_margin"
             android:visibility="gone" />
 
     </RelativeLayout>

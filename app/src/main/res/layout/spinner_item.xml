@@ -6,4 +6,5 @@
     android:textSize="16sp"
     android:gravity="center"
     android:background="@color/backgroundColor"
-    android:textColor="@color/spinner_text_color" />
+    android:textColor="@color/spinner_text_color"
+    android:fontFamily="@font/roboto_regular" />

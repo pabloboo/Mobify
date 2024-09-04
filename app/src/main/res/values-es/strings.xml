@@ -17,7 +17,7 @@
     <string name="start_test">Comenzar test</string>
     <string name="quick_mobility_test_onboarding_options_description">¿Quieres elegir tus objetivos o realizar una rápida comprobación de movilidad si no los tienes claros?</string>
     <string name="choose_goals">Elegir objetivos</string>
-    <string name="select_goals_title">Selecciona 1 o 2 objetivos</string>
+    <string name="select_goals_title">Selecciona entre 1 y 3 objetivos</string>
     <string name="save">Guardar</string>
     <string name="next_side">Siguiente lado</string>
     <string name="exercise">Ejercicio</string>
@@ -38,6 +38,7 @@
     <string name="exercise_reminder_title">Hora de ejercitarse!</string>
     <string name="exercise_reminder_text">Recuerda hacer tu rutina de movilidad.</string>
     <string name="change_exercise_days">Cambiar días de ejercicio</string>
+    <string name="switch_theme">Cambiar tema de la app</string>
 
     <!-- Quick mobility test -->
     <string name="hip_rotation_test">Test de rotación de cadera</string>
