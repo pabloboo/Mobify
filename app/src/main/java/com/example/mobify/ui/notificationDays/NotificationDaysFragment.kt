@@ -69,12 +69,12 @@ class NotificationDaysFragment : Fragment() {
                     calendar.set(Calendar.HOUR_OF_DAY, 9)
                     calendar.set(Calendar.MINUTE, 0)
                     calendar.set(Calendar.DAY_OF_WEEK, i + 1)
-                    Log.d("Alarm", "Alarma $i configurada para: ${calendar.time}")
 
                     // Check if the current time is after 9 a.m. of the day the alarm is being set for -> If it is, add 7 days to the alarm time
                     if (Calendar.getInstance().after(calendar)) {
                         calendar.add(Calendar.DAY_OF_YEAR, 7)
                     }
+                    Log.d("Alarm", "Alarma $i configurada para: ${calendar.time}")
 
                     val alarmManager = requireActivity().getSystemService(Context.ALARM_SERVICE) as AlarmManager
                     val intent = Intent(requireActivity(), NotificationReceiver::class.java)
