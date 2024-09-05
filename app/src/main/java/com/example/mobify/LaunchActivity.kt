@@ -1,9 +1,12 @@
 package com.example.mobify
 
+import android.app.NotificationChannel
+import android.app.NotificationManager
+import android.content.Context
 import android.content.Intent
 import android.content.res.Configuration
+import android.os.Build
 import android.os.Bundle
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.example.mobify.ui.onboarding.OnboardingActivity
 import com.example.mobify.utils.SharedPreferencesConstants
@@ -21,12 +24,22 @@ class LaunchActivity : AppCompatActivity() {
         val activityIntent = if (completedOnboarding) {
             val language = SharedPreferencesFunctions.getSharedPreferencesValueString(this, SharedPreferencesConstants.LANGUAGE)
             if (language.isNotEmpty()) {
-                Log.d("LaunchActivity", "Language: $language")
                 setLocale(language)
             }
             Intent(this, MainActivity::class.java)
         } else {
             Intent(this, OnboardingActivity::class.java)
+        }
+
+        // Create notification channel
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            val importance = NotificationManager.IMPORTANCE_DEFAULT
+            val channel = NotificationChannel("exercise_channel", "exercise_channel", importance).apply {
+                description = "Exercise reminder notifications"
+            }
+            val notificationManager: NotificationManager =
+                getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+            notificationManager.createNotificationChannel(channel)
         }
 
         startActivity(activityIntent)

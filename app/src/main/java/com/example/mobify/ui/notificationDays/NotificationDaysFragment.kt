@@ -1,7 +1,11 @@
 package com.example.mobify.ui.notificationDays
 
+import android.app.AlarmManager
+import android.app.PendingIntent
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -13,6 +17,7 @@ import com.example.mobify.MainActivity
 import com.example.mobify.R
 import com.example.mobify.utils.SharedPreferencesConstants
 import com.example.mobify.utils.SharedPreferencesFunctions
+import java.util.Calendar
 
 
 class NotificationDaysFragment : Fragment() {
@@ -42,13 +47,13 @@ class NotificationDaysFragment : Fragment() {
         val isOnboadingCompleted = SharedPreferencesFunctions.getSharedPreferencesValueBoolean(requireActivity(), SharedPreferencesConstants.ONBOARDING_COMPLETED)
 
         val daysOfWeek = mapOf(
+            "Sunday" to checkBoxSunday,
             "Monday" to checkBoxMonday,
             "Tuesday" to checkBoxTuesday,
             "Wednesday" to checkBoxWednesday,
             "Thursday" to checkBoxThursday,
             "Friday" to checkBoxFriday,
-            "Saturday" to checkBoxSaturday,
-            "Sunday" to checkBoxSunday
+            "Saturday" to checkBoxSaturday
         )
 
         for ((day, checkBox) in daysOfWeek) {
@@ -56,6 +61,38 @@ class NotificationDaysFragment : Fragment() {
 
             checkBox.setOnCheckedChangeListener { _, isChecked ->
                 SharedPreferencesFunctions.setSharedPreferencesValueBoolean(requireActivity(), day, isChecked)
+                val i = daysOfWeek.keys.indexOf(day)
+
+                // If checkbox is checked, set the alarm
+                if (isChecked) {
+                    val calendar = Calendar.getInstance()
+                    calendar.set(Calendar.HOUR_OF_DAY, 9)
+                    calendar.set(Calendar.MINUTE, 0)
+                    calendar.set(Calendar.DAY_OF_WEEK, i + 1)
+                    Log.d("Alarm", "Alarma $i configurada para: ${calendar.time}")
+
+                    // Check if the current time is after 9 a.m. of the day the alarm is being set for -> If it is, add 7 days to the alarm time
+                    if (Calendar.getInstance().after(calendar)) {
+                        calendar.add(Calendar.DAY_OF_YEAR, 7)
+                    }
+
+                    val alarmManager = requireActivity().getSystemService(Context.ALARM_SERVICE) as AlarmManager
+                    val intent = Intent(requireActivity(), NotificationReceiver::class.java)
+                    val pendingIntent = PendingIntent.getBroadcast(requireActivity(), i, intent, PendingIntent.FLAG_IMMUTABLE)
+
+                    alarmManager.setRepeating(
+                        AlarmManager.RTC_WAKEUP,
+                        calendar.timeInMillis,
+                        AlarmManager.INTERVAL_DAY * 7,
+                        pendingIntent
+                    )
+                } else {
+                    // If checkbox is not checked, cancel the alarm
+                    val intent = Intent(requireActivity(), NotificationReceiver::class.java)
+                    val pendingIntent = PendingIntent.getBroadcast(requireActivity(), i, intent, PendingIntent.FLAG_IMMUTABLE)
+                    val alarmManager = requireActivity().getSystemService(Context.ALARM_SERVICE) as AlarmManager
+                    alarmManager.cancel(pendingIntent)
+                }
             }
         }
 
