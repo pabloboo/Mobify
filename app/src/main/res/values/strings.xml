@@ -38,6 +38,7 @@
     <string name="exercise_reminder_text">Remember to do your mobility routine.</string>
     <string name="change_exercise_days">Change exercise days</string>
     <string name="switch_theme">Switch app theme</string>
+    <string name="day_not_unlocked_error">Complete the previous day first</string>
 
     <!-- Quick mobility test -->
     <string name="hip_rotation_test">Hip rotation test</string>

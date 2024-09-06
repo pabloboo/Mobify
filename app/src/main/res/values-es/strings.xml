@@ -39,6 +39,7 @@
     <string name="exercise_reminder_text">Recuerda hacer tu rutina de movilidad.</string>
     <string name="change_exercise_days">Cambiar días de ejercicio</string>
     <string name="switch_theme">Cambiar tema de la app</string>
+    <string name="day_not_unlocked_error">Completa el día anterior primero</string>
 
     <!-- Quick mobility test -->
     <string name="hip_rotation_test">Test de rotación de cadera</string>

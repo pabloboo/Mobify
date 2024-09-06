@@ -11,6 +11,7 @@ import android.widget.Switch
 import androidx.activity.addCallback
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.appcompat.widget.Toolbar
+import androidx.core.content.ContextCompat
 import com.example.mobify.MainActivity
 import com.example.mobify.R
 import com.example.mobify.utils.SharedPreferencesConstants
@@ -24,8 +25,9 @@ class SettingsActivity : AppCompatActivity() {
 
         val toolbar: Toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
-        val actionBar = supportActionBar
-        actionBar?.setDisplayHomeAsUpEnabled(true)
+        val upArrow = ContextCompat.getDrawable(this, R.drawable.baseline_arrow_back_24)
+        supportActionBar?.setHomeAsUpIndicator(upArrow)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         val englishButton: ImageButton = findViewById(R.id.englishButton)
         englishButton.setOnClickListener {

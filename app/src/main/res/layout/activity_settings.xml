@@ -12,7 +12,9 @@
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="?attr/colorPrimary"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:popupTheme="@style/Theme.Mobify.AppBarOverlay"
+        app:titleTextColor="@color/white"
+        app:subtitleTextColor="@color/white"
         app:layout_constraintTop_toTopOf="parent"/>
 
     <TextView
@@ -33,6 +35,7 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:src="@drawable/flag_english"
+        android:contentDescription="English flag"
         android:scaleType="fitCenter"
         android:background="@android:color/transparent"
         android:layout_marginVertical="@dimen/activity_vertical_margin"
@@ -58,6 +61,7 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:src="@drawable/flag_spanish"
+        android:contentDescription="Spanish flag"
         android:scaleType="fitCenter"
         android:background="@android:color/transparent"
         android:layout_marginVertical="@dimen/activity_vertical_margin"
@@ -99,6 +103,7 @@
         android:text="@string/switch_theme"
         android:fontFamily="@font/roboto_regular"
         android:layout_marginVertical="@dimen/activity_vertical_margin"
+        android:minHeight="48dp"
         app:layout_constraintTop_toBottomOf="@+id/changeExerciseDaysButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"/>

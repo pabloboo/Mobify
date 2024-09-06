@@ -22,18 +22,18 @@ class TrainingPlanDetailsAdapter(private val routines: List<Pair<Routine, Int>>,
 
             var dayUnlocked = false
             if (day == 1 && unlockedDays == 0) { // First day
-                itemView.alpha = 1f
                 dayUnlocked = true
             } else if (day-1 < unlockedDays) { // Day completed
                 dayCardView.setCardBackgroundColor(itemView.context.getColor(R.color.successColor))
+                dayTextView.setTextColor(itemView.context.getColor(R.color.black))
                 dayUnlocked = true
             } else if (day-1 > unlockedDays) { // Day locked
-                itemView.alpha = 0.5f
+                dayCardView.setCardBackgroundColor(itemView.context.getColor(R.color.lockedDayColor))
+                dayTextView.setTextColor(itemView.context.getColor(R.color.black))
                 itemView.setOnClickListener {
-                    Toast.makeText(itemView.context, "Complete the previous day first", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(itemView.context, itemView.context.getString(R.string.day_not_unlocked_error), Toast.LENGTH_SHORT).show()
                 }
             } else if (day-1 == unlockedDays) { // Current day
-                itemView.alpha = 1f
                 dayUnlocked = true
             }
 

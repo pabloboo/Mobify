@@ -5,16 +5,13 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
-import android.view.View
-import android.widget.AdapterView
-import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.RadioButton
 import android.widget.RadioGroup
-import android.widget.Spinner
 import android.widget.TextView
 import androidx.appcompat.widget.Toolbar
+import androidx.core.content.ContextCompat
 import com.example.mobify.R
 import com.example.mobify.model.QuickMobilityTestExercise
 import com.example.mobify.model.QuickMobilityTestResponse
@@ -33,8 +30,9 @@ class MobilityCheckScreenActivity : AppCompatActivity() {
 
         val toolbar: Toolbar = findViewById(R.id.toolbar)
         setSupportActionBar(toolbar)
-        val actionBar = supportActionBar
-        actionBar?.setDisplayHomeAsUpEnabled(true)
+        val upArrow = ContextCompat.getDrawable(this, R.drawable.baseline_arrow_back_24)
+        supportActionBar?.setHomeAsUpIndicator(upArrow)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         quickMobilityTestExercises = QuickMobilityTestExerciseConstants.getQuickMobilityTestExercises(this)
         updateExercise()
@@ -85,8 +83,14 @@ class MobilityCheckScreenActivity : AppCompatActivity() {
             radioButton.text = option
             radioButton.setTextColor(resources.getColor(R.color.primaryTextColor, null))
             radioButton.buttonTintList = resources.getColorStateList(R.color.primaryTextColor, null)
+            radioButton.minHeight = dpToPx(48)
             difficultyRadioGroup.addView(radioButton)
         }
+    }
+
+    private fun dpToPx(dp: Int): Int {
+        val density = resources.displayMetrics.density
+        return (dp * density).toInt()
     }
 
     private fun generateQuickMobilityTestResults(context: Context): String {
