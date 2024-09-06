@@ -1,0 +1,16 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <bitmap
+            android:src="@drawable/ic_sun"
+            android:gravity="center"
+            android:width="5dp"
+            android:height="5dp"/>
+    </item>
+    <item>
+        <bitmap
+            android:src="@drawable/ic_moon"
+            android:gravity="center"
+            android:width="5dp"
+            android:height="5dp"/>
+    </item>
+</layer-list>

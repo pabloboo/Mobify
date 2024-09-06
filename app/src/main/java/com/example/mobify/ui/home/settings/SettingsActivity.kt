@@ -7,9 +7,9 @@ import android.os.Bundle
 import android.view.MenuItem
 import android.widget.Button
 import android.widget.ImageButton
-import android.widget.Switch
 import androidx.activity.addCallback
 import androidx.appcompat.app.AppCompatDelegate
+import androidx.appcompat.widget.SwitchCompat
 import androidx.appcompat.widget.Toolbar
 import androidx.core.content.ContextCompat
 import com.example.mobify.MainActivity
@@ -47,20 +47,27 @@ class SettingsActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        val switchThemeButton: Switch = findViewById(R.id.switchThemeButton)
-        // Check the current theme and set the switch accordingly
+        val switchThemeButton: SwitchCompat = findViewById(R.id.switchThemeButton)
         val currentNightMode = resources.configuration.uiMode and Configuration.UI_MODE_NIGHT_MASK
         switchThemeButton.isChecked = currentNightMode == Configuration.UI_MODE_NIGHT_YES
 
-        // Set an OnCheckedChangeListener on the switch
+        if (switchThemeButton.isChecked) {
+            switchThemeButton.setThumbResource(R.drawable.ic_moon)
+        } else {
+            switchThemeButton.setThumbResource(R.drawable.ic_sun)
+        }
+
         switchThemeButton.setOnCheckedChangeListener { _, isChecked ->
             if (isChecked) {
                 // If the switch is checked, set the app theme to night
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+                switchThemeButton.setThumbResource(R.drawable.ic_moon)
             } else {
                 // If the switch is not checked, set the app theme to day
                 AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+                switchThemeButton.setThumbResource(R.drawable.ic_sun)
             }
+            recreate()
         }
 
         onBackPressedDispatcher.addCallback(this) {

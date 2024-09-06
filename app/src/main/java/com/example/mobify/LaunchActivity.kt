@@ -8,6 +8,7 @@ import android.content.res.Configuration
 import android.os.Build
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import com.example.mobify.ui.onboarding.OnboardingActivity
 import com.example.mobify.utils.SharedPreferencesConstants
 import com.example.mobify.utils.SharedPreferencesFunctions
@@ -25,6 +26,14 @@ class LaunchActivity : AppCompatActivity() {
             val language = SharedPreferencesFunctions.getSharedPreferencesValueString(this, SharedPreferencesConstants.LANGUAGE)
             if (language.isNotEmpty()) {
                 setLocale(language)
+            }
+            val theme = SharedPreferencesFunctions.getSharedPreferencesValueString(this, SharedPreferencesConstants.THEME)
+            if (theme.isNotEmpty()) {
+                if (theme == "night") {
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+                } else if (theme == "day") {
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+                }
             }
             Intent(this, MainActivity::class.java)
         } else {

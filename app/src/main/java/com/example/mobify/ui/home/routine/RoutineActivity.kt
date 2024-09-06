@@ -51,17 +51,6 @@ class RoutineActivity : AppCompatActivity() {
             override fun createFragment(position: Int) = ExerciseFragment(viewPager, routineName, routine.exercises[position], position + 1, itemCount)
         }
 
-        viewPager.setPageTransformer { page, position ->
-            val slideIn = AnimationUtils.loadAnimation(this, R.anim.slide_in_right)
-            val slideOut = AnimationUtils.loadAnimation(this, R.anim.slide_out_left)
-
-            when {
-                position < 0 -> page.startAnimation(slideOut)
-                position > 0 -> page.startAnimation(slideIn)
-                else -> page.clearAnimation()
-            }
-        }
-
         onBackPressedDispatcher.addCallback(this) {
             val intent = Intent(this@RoutineActivity, MainActivity::class.java)
             startActivity(intent)
