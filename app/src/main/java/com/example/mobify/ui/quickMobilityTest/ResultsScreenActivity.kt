@@ -1,5 +1,6 @@
 package com.example.mobify.ui.quickMobilityTest
 
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -32,7 +33,7 @@ class ResultsScreenActivity : AppCompatActivity() {
         val isOnboadingCompleted = SharedPreferencesFunctions.getSharedPreferencesValueBoolean(this, SharedPreferencesConstants.ONBOARDING_COMPLETED)
 
         if (!isOnboadingCompleted) {
-            setSharedPreferencesValues(results!!)
+            setSharedPreferencesValues(this, results!!)
         }
 
         if (!isOnboadingCompleted) {
@@ -52,11 +53,11 @@ class ResultsScreenActivity : AppCompatActivity() {
         }
     }
 
-    private fun setSharedPreferencesValues(results: String) {
-        val hipMobility = results.contains("Hip mobility")
-        val hamstringFlexibility = results.contains("Hamstring flexibility")
-        val shoulderMobility = results.contains("Shoulder mobility")
-        val postureMobility = results.contains("Posture mobility")
+    private fun setSharedPreferencesValues(context: Context, results: String) {
+        val hipMobility = results.contains(context.getString(R.string.hip_mobility))
+        val hamstringFlexibility = results.contains(context.getString(R.string.hamstring_flexibility))
+        val shoulderMobility = results.contains(context.getString(R.string.shoulder_mobility))
+        val postureMobility = results.contains(context.getString(R.string.posture_mobility))
 
         SharedPreferencesFunctions.setSharedPreferencesValueBoolean(this, SharedPreferencesConstants.HIP_MOBILITY_TRAINING_PLAN, hipMobility)
         SharedPreferencesFunctions.setSharedPreferencesValueBoolean(this, SharedPreferencesConstants.HAMSTRING_FLEXIBILITY_TRAINING_PLAN, hamstringFlexibility)

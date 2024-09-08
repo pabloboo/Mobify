@@ -82,7 +82,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/white"
-                android:textColor="@color/primaryTextColor"
+                android:textColor="@color/black"
                 android:text="@string/back"
                 android:fontFamily="@font/roboto_regular"
                 android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
