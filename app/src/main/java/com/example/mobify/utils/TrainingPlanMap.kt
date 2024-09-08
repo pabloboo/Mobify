@@ -13,4 +13,13 @@ object TrainingPlanMap {
 
     val invertedMapTrainingPlan = trainingPlanMap.entries.associateBy({ it.value }) { it.key }
 
+    val trainingPlanToTrainingPlanDaysMap = mapOf(
+        SharedPreferencesConstants.HIP_MOBILITY_TRAINING_PLAN to SharedPreferencesConstants.HIP_MOBILITY_TRAINING_PLAN_DAY,
+        SharedPreferencesConstants.HAMSTRING_FLEXIBILITY_TRAINING_PLAN to SharedPreferencesConstants.HAMSTRING_FLEXIBILITY_TRAINING_PLAN_DAY,
+        SharedPreferencesConstants.SHOULDER_MOBILITY_TRAINING_PLAN to SharedPreferencesConstants.SHOULDER_MOBILITY_TRAINING_PLAN_DAY,
+        SharedPreferencesConstants.POSTURE_MOBILITY_TRAINING_PLAN to SharedPreferencesConstants.POSTURE_MOBILITY_TRAINING_PLAN_DAY,
+        SharedPreferencesConstants.IMPROVE_SQUAT_TRAINING_PLAN to SharedPreferencesConstants.IMPROVE_SQUAT_TRAINING_PLAN_DAY,
+        SharedPreferencesConstants.OFFICE_WORKER_DAILY_MOBILITY_TRAINING_PLAN to SharedPreferencesConstants.OFFICE_WORKER_DAILY_MOBILITY_TRAINING_PLAN_DAY
+    )
+
 }

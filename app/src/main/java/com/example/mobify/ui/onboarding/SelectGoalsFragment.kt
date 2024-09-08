@@ -17,6 +17,7 @@ import com.example.mobify.R
 import com.example.mobify.utils.SharedPreferencesConstants
 import com.example.mobify.utils.SharedPreferencesFunctions
 import com.example.mobify.utils.TrainingPlanMap
+import com.example.mobify.utils.TrainingPlanMap.trainingPlanToTrainingPlanDaysMap
 
 class SelectGoalsFragment : Fragment(), GoalClickListener {
 
@@ -126,6 +127,13 @@ class SelectGoalsFragment : Fragment(), GoalClickListener {
             val sharedPreferencesConstant = TrainingPlanMap.invertedMapTrainingPlan[goal]
             if (sharedPreferencesConstant != null) {
                 SharedPreferencesFunctions.setSharedPreferencesValueBoolean(activity, sharedPreferencesConstant, selectedGoals[goal] ?: false)
+
+                // Restart day count for all goals that are not selected
+                if (selectedGoals[goal] == false) {
+                    trainingPlanToTrainingPlanDaysMap[sharedPreferencesConstant]?.let {
+                        SharedPreferencesFunctions.setSharedPreferencesValueInt(activity, it, 0)
+                    }
+                }
             }
         }
         val intent = Intent(activity, MainActivity::class.java)
