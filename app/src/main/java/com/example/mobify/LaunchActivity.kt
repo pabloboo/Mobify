@@ -43,7 +43,7 @@ class LaunchActivity : AppCompatActivity() {
         // Create notification channel
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             val importance = NotificationManager.IMPORTANCE_DEFAULT
-            val channel = NotificationChannel("exercise_channel", "exercise_channel", importance).apply {
+            val channel = NotificationChannel("daily_reminder_channel", "daily_reminder_channel", importance).apply {
                 description = "Exercise reminder notifications"
             }
             val notificationManager: NotificationManager =

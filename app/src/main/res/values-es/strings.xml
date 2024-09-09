@@ -40,6 +40,10 @@
     <string name="change_exercise_days">Cambiar días de ejercicio</string>
     <string name="switch_theme">Cambiar tema de la app</string>
     <string name="day_not_unlocked_error">Completa el día anterior primero</string>
+    <string name="notification_permission_title">Permisos de notificaciones requeridos</string>
+    <string name="notification_permission_message">Necesitamos su permiso para enviar notificaciones. Por favor, habilite las notificaciones en la siguiente pantalla.</string>
+    <string name="allow">Permitir</string>
+    <string name="cancel">Cancelar</string>
 
     <!-- Quick mobility test -->
     <string name="hip_rotation_test">Test de rotación de cadera</string>

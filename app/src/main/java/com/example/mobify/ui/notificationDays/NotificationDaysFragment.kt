@@ -12,6 +12,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.CheckBox
+import androidx.core.app.NotificationManagerCompat
 import androidx.viewpager2.widget.ViewPager2
 import com.example.mobify.MainActivity
 import com.example.mobify.R
@@ -101,8 +102,14 @@ class NotificationDaysFragment : Fragment() {
         if (isOnboadingCompleted) {
             nextButton.text = getText(R.string.save)
             nextButton.setOnClickListener {
-                val intent = Intent(activity, MainActivity::class.java)
-                startActivity(intent)
+                // If the user doesn't have notifications enabled, show a dialog to enable them
+                val notificationManager = context?.let { NotificationManagerCompat.from(it) }
+                if (notificationManager?.areNotificationsEnabled() == false) {
+                    NotificationFunctions.showNotificationPermissionDialog(context)
+                } else {
+                    val intent = Intent(activity, MainActivity::class.java)
+                    startActivity(intent)
+                }
             }
         } else {
             backButton.visibility = View.VISIBLE

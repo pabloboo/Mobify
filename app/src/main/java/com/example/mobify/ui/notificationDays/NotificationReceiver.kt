@@ -19,14 +19,14 @@ class NotificationReceiver : BroadcastReceiver() {
         val appIntent = Intent(context, LaunchActivity::class.java)
         val appPendingIntent = PendingIntent.getActivity(context, 0, appIntent, PendingIntent.FLAG_UPDATE_CURRENT)
 
-        val notification = NotificationCompat.Builder(context, "exercise_channel")
+        val notification = NotificationCompat.Builder(context, "daily_reminder_channel")
             .setContentTitle(context.getString(R.string.exercise_reminder_title))
             .setContentText(context.getString(R.string.exercise_reminder_text))
             .setSmallIcon(R.drawable.logo)
             .setContentIntent(appPendingIntent)
             .setAutoCancel(true)
             .build()
-        Log.d("Alarm", "Creating notification on channel: exercise_channel")
+        Log.d("Alarm", "Creating notification on channel: daily_reminder_channel")
 
         notificationManager.notify(0, notification)
     }
