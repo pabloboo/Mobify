@@ -77,6 +77,8 @@
     <string name="posture_mobility">Movilidad de postura</string>
     <string name="improve_squat">Mejora la sentadilla</string>
     <string name="office_worker_daily_mobility">Movilidad diaria para trabajadores de oficina</string>
+    <string name="beginner_fullbody_flexibility">Flexibilidad de cuerpo completo para principiantes</string>
+    <string name="beginner_upper_lower_flexibility">Flexibilidad superior-inferior para principiantes</string>
 
     <string name="hip_mobility_description">Este plan de entrenamiento te ayudará a mejorar la movilidad de la cadera. Está diseñado para realizar tres entrenamientos por semana durante cuatro semanas.</string>
     <string name="hamstring_flexibility_description">Este plan de entrenamiento te ayudará a mejorar la flexibilidad de isquiotibiales. Está diseñado para realizar tres entrenamientos por semana durante cuatro semanas.</string>
@@ -84,6 +86,9 @@
     <string name="posture_mobility_description">Este plan de entrenamiento te ayudará a mejorar la movilidad postural. Está diseñado para realizar tres entrenamientos por semana durante cuatro semanas.</string>
     <string name="improve_squat_description">Este plan de entrenamiento te ayudará a mejorar tu sentadilla. Realizalo antes de tu entrenamiento de sentadilla o de patrón de sentadilla.</string>
     <string name="office_worker_daily_mobility_description">Este plan de movilidad está diseñado para personas que pasan mucho tiempo sentadas y buscan mejorar la flexibilidad y la salud de sus cuádriceps, caderas, hombros y espalda. Con solo 8 minutos al día, 3-4 veces por semana, estos ejercicios específicos ayudan a aliviar la tensión muscular, mejorar la postura y prevenir dolores comunes asociados con el sedentarismo. Ideal para incorporar en la rutina diaria, este plan contribuye a mantener una buena movilidad general y bienestar físico.</string>
+    <string name="beginner_fullbody_flexibility_description">Este plan de flexibilidad de cuerpo completo está diseñado para principiantes que buscan mejorar la flexibilidad y la movilidad en todo el cuerpo.\nSe recomienda realizar esta rutina de 3 a 4 veces por semana.\nNo deberías sentir dolor durante los estiramientos, pero es normal sentir cierta incomodidad. Asegúrate de respirar profundamente y enfócate en aumentar gradualmente tu rango de movimiento con el tiempo.</string>
+    <string name="beginner_upper_lower_flexibility_description">Este plan es ideal para principiantes que desean trabajar en su flexibilidad con un enfoque en áreas específicas del cuerpo. La rutina dividida entre la parte superior e inferior permite alternar entre días enfocados en la parte superior e inferior del cuerpo, lo que ayuda a desglosar los estiramientos en sesiones manejables mientras te enfocas en mejorar la flexibilidad.\nRealiza la rutina de la parte superior un día y la rutina de la parte inferior al siguiente, alternando entre ambas. Intenta realizar este plan 3 a 4 veces por semana.\nNo deberías sentir dolor durante los estiramientos, pero es normal sentir cierta incomodidad. Asegúrate de respirar profundamente y enfócate en aumentar gradualmente tu rango de movimiento con el tiempo.</string>
+
 
     <!-- Exercises -->
     <string name="single_leg_rdl">PM rumano a una pierna</string>
@@ -258,4 +263,24 @@
     <string name="prone_scapular_rotation_description">Acostado boca abajo con los brazos extendidos por encima de la cabeza. Eleva los brazos y llévalos en rotación interna hacia la espalda, luego vuelve a la posición inicial mediante rotación externa.</string>
     <string name="kneeling_hip_flexor_stretch_with_knee_flexion">Estiramiento de flexores de cadera con flexión de rodilla</string>
     <string name="kneeling_hip_flexor_stretch_with_knee_flexion_description">Coloca tu rodilla sobre una superficie cómoda. Inclínate hacia adelante y flexiona la rodilla, sujetándola con la mano del mismo lado. Aplica presión como si quisieras extender la rodilla, y ve abriendo más la cadera poco a poco.</string>
+    <string name="shoulder_backbend">Flexión hacia atrás de los hombros</string>
+    <string name="shoulder_backbend_description">Ponte de pie con los pies separados a la altura de las caderas. Extiende los brazos hacia arriba y hacia atrás, arqueando la parte superior de la espalda y los hombros. Mantén la posición durante 10, luego 20 y 30 segundos, incrementando la intensidad gradualmente.</string>
+    <string name="spine_backbend">Flexión hacia atrás de la columna</string>
+    <string name="spine_backbend_description">De pie, con los pies separados a la altura de las caderas, arquea suavemente la columna hacia atrás, levantando el pecho y manteniendo las caderas hacia adelante. Mantén la posición durante 10, luego 20 y 30 segundos.</string>
+    <string name="rear_hand_clasp">Manos entrelazadas detrás de la espalda</string>
+    <string name="rear_hand_clasp_description">Párate erguido y lleva las manos detrás de la espalda, entrelazando los dedos. Estira los brazos hacia abajo y hacia atrás, abriendo el pecho y los hombros. Mantén la postura por 10, 20 y luego 30 segundos.</string>
+    <string name="lying_cross">Cruce de piernas acostado</string>
+    <string name="lying_cross_description">Acostado boca arriba, extiende los brazos a los lados en forma de "T". Cruza una pierna sobre el cuerpo hacia el lado opuesto, dejando que la cadera gire mientras los hombros permanecen en el suelo. Mantén por 10, 20 y 30 segundos.</string>
+    <string name="wrist_biceps_stretch">Estiramiento de muñeca y bíceps</string>
+    <string name="wrist_biceps_stretch_description">De pie, extiende un brazo frente a ti con la palma hacia arriba. Usa la otra mano para tirar suavemente de los dedos hacia abajo y hacia atrás, estirando los músculos de la muñeca y el bíceps. Mantén la posición por 10, 20 y luego 30 segundos.</string>
+    <string name="one_leg_pike">Pike con una pierna</string>
+    <string name="one_leg_pike_description">De pie, coloca un pie sobre una silla y estira la pierna mientras inclinas el torso hacia adelante, intentando tocar la pierna levantada. Siente el estiramiento en los isquiotibiales. Mantén la posición por 10, 20 y luego 30 segundos.</string>
+    <string name="kneeling_lunge">Zancada arrodillada</string>
+    <string name="kneeling_lunge_description">Arrodíllate con una rodilla en el suelo y el otro pie hacia adelante. Empuja las caderas hacia adelante, sintiendo el estiramiento en los flexores de la cadera. Mantén la posición por 10, 20 y luego 30 segundos.</string>
+    <string name="pancake">Pancake (Estiramiento de piernas abiertas)</string>
+    <string name="pancake_description">Siéntate con las piernas abiertas en forma de "V" y lentamente inclina el torso hacia adelante, intentando tocar el suelo con el pecho. Siente el estiramiento en los isquiotibiales y la espalda. Mantén la posición por 10, 20 y luego 30 segundos.</string>
+    <string name="butterfly">Mariposa</string>
+    <string name="butterfly_description">Siéntate con las plantas de los pies juntas y las rodillas hacia los lados. Usa tus manos para empujar suavemente las rodillas hacia abajo, sintiendo el estiramiento en la parte interna de los muslos. Mantén la posición por 10, 20 y luego 30 segundos.</string>
+    <string name="calf_stretch">Estiramiento de gemelos</string>
+    <string name="calf_stretch_description">Coloca las manos sobre una silla para apoyarte y lleva una pierna hacia atrás con el talón apoyado en el suelo. Inclínate hacia adelante sobre la pierna delantera, sintiendo el estiramiento en el gemelo de la pierna trasera. Mantén por 10, 20 y luego 30 segundos.</string>
 </resources>

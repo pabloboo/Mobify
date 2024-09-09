@@ -55,6 +55,8 @@ object SharedPreferencesFunctions {
             "Posture mobility" -> SharedPreferencesConstants.POSTURE_MOBILITY_TRAINING_PLAN_DAY
             "Improve squat" -> SharedPreferencesConstants.IMPROVE_SQUAT_TRAINING_PLAN_DAY
             "Office worker daily mobility" -> SharedPreferencesConstants.OFFICE_WORKER_DAILY_MOBILITY_TRAINING_PLAN_DAY
+            "Beginner fullbody flexibility" -> SharedPreferencesConstants.BEGINNER_FULLBODY_FLEXIBILITY_TRAINING_PLAN_DAY
+            "Beginner upper-lower flexibility" -> SharedPreferencesConstants.BEGINNER_UPPER_LOWER_FLEXIBILITY_TRAINING_PLAN_DAY
             else -> ""
         }
         return getSharedPreferencesValueInt(activity, key)
@@ -69,6 +71,8 @@ object SharedPreferencesFunctions {
             "Posture mobility" -> SharedPreferencesConstants.POSTURE_MOBILITY_TRAINING_PLAN_DAY
             "Improve squat" -> SharedPreferencesConstants.IMPROVE_SQUAT_TRAINING_PLAN_DAY
             "Office worker daily mobility" -> SharedPreferencesConstants.OFFICE_WORKER_DAILY_MOBILITY_TRAINING_PLAN_DAY
+            "Beginner fullbody flexibility" -> SharedPreferencesConstants.BEGINNER_FULLBODY_FLEXIBILITY_TRAINING_PLAN_DAY
+            "Beginner upper-lower flexibility" -> SharedPreferencesConstants.BEGINNER_UPPER_LOWER_FLEXIBILITY_TRAINING_PLAN_DAY
             else -> ""
         }
         setSharedPreferencesValueInt(activity, key, value)

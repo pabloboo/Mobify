@@ -7,69 +7,72 @@
     tools:context=".ui.home.trainingPlanDetails.TrainingPlanDetailsActivity"
     android:background="@color/backgroundColor">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
-        app:popupTheme="@style/Theme.Mobify.AppBarOverlay"
-        app:titleTextColor="@color/white"
-        app:subtitleTextColor="@color/white"
-        app:layout_constraintTop_toTopOf="parent"/>
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar"
-        android:layout_marginTop="?attr/actionBarSize"
-        app:layout_constraintBottom_toBottomOf="parent"
-        android:layout_marginHorizontal="@dimen/activity_horizontal_margin">
-
-        <TextView
-            android:id="@+id/trainingPlanTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textStyle="bold"
-            android:textSize="24sp"
-            android:textAlignment="center"
-            android:textColor="@color/primaryTextColor"
-            android:fontFamily="@font/roboto_regular"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:text="Training Plan Name" />
-
-        <TextView
-            android:id="@+id/trainingPlanDescription"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="18sp"
-            android:textColor="@color/secondaryTextColor"
-            android:fontFamily="@font/roboto_regular"
-            android:layout_marginVertical="@dimen/activity_vertical_margin"
-            android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
-            android:textAlignment="center"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/trainingPlanTitle"
-            app:layout_constraintEnd_toEndOf="parent"
-            tools:text="Training plan description" />
-
-        <HorizontalScrollView
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:scrollbars="none"
-            app:layout_constraintTop_toBottomOf="@+id/trainingPlanDescription"
-            app:layout_constraintBottom_toBottomOf="parent">
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/Theme.Mobify.AppBarOverlay"
+            app:titleTextColor="@color/white"
+            app:subtitleTextColor="@color/white"
+            app:layout_constraintTop_toTopOf="parent"/>
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/routineRecyclerView"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:padding="16dp"
-                android:clipToPadding="false" />
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar">
 
-        </HorizontalScrollView>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/activity_horizontal_margin">
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+                <TextView
+                    android:id="@+id/trainingPlanTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="24sp"
+                    android:textAlignment="center"
+                    android:textColor="@color/primaryTextColor"
+                    android:fontFamily="@font/roboto_regular"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="Training Plan Name" />
+
+                <TextView
+                    android:id="@+id/trainingPlanDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:textColor="@color/secondaryTextColor"
+                    android:fontFamily="@font/roboto_regular"
+                    android:layout_marginVertical="@dimen/activity_vertical_margin"
+                    android:layout_marginHorizontal="@dimen/activity_horizontal_margin"
+                    android:textAlignment="center"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/trainingPlanTitle"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    tools:text="Training plan description" />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none"
+                    app:layout_constraintTop_toBottomOf="@+id/trainingPlanDescription">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/routineRecyclerView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="16dp"
+                        android:clipToPadding="false" />
+
+                </HorizontalScrollView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

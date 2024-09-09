@@ -107,6 +107,18 @@ object ExerciseConstants {
         exercises.add(Exercise(85, context.getString(R.string.prone_scapular_rotation), R.drawable.prone_scapular_rotation, 0, false, 1, 10, context.getString(R.string.prone_scapular_rotation_description)))
         exercises.add(Exercise(86, context.getString(R.string.kneeling_hip_flexor_stretch_with_knee_flexion), R.drawable.kneeling_hip_flexor_stretch_with_knee_flexion, 30, true, 0, 0, context.getString(R.string.kneeling_hip_flexor_stretch_with_knee_flexion_description)))
 
+        // Fullbody, lowerbody and upperbody beginner flexibility routine exercises
+        exercises.add(Exercise(87, context.getString(R.string.shoulder_backbend), R.drawable.shoulder_backbend, 60, false, 0, 0, context.getString(R.string.shoulder_backbend_description)))
+        exercises.add(Exercise(0, context.getString(R.string.spine_backbend), R.drawable.spine_backbend, 60, false, 0, 0, context.getString(R.string.spine_backbend_description)))
+        exercises.add(Exercise(0, context.getString(R.string.rear_hand_clasp), R.drawable.rear_hand_clasp, 60, true, 0, 0, context.getString(R.string.rear_hand_clasp_description)))
+        exercises.add(Exercise(0, context.getString(R.string.lying_cross), R.drawable.lying_cross, 60, true, 0, 0, context.getString(R.string.lying_cross_description)))
+        exercises.add(Exercise(0, context.getString(R.string.wrist_biceps_stretch), R.drawable.wrist_biceps_stretch, 60, true, 0, 0, context.getString(R.string.wrist_biceps_stretch_description)))
+        exercises.add(Exercise(0, context.getString(R.string.one_leg_pike), R.drawable.one_leg_pike, 60, true, 0, 0, context.getString(R.string.one_leg_pike_description)))
+        exercises.add(Exercise(0, context.getString(R.string.kneeling_lunge), R.drawable.kneeling_lunge, 60, true, 0, 0, context.getString(R.string.kneeling_lunge_description)))
+        exercises.add(Exercise(0, context.getString(R.string.pancake), R.drawable.pancake, 60, false, 0, 0, context.getString(R.string.pancake_description)))
+        exercises.add(Exercise(0, context.getString(R.string.butterfly), R.drawable.butterfly, 60, false, 0, 0, context.getString(R.string.butterfly_description)))
+        exercises.add(Exercise(0, context.getString(R.string.calf_stretch), R.drawable.calf_stretch, 60, true, 0, 0, context.getString(R.string.calf_stretch_description)))
+
         return exercises.find { it.id == exerciseId } ?: exercises.find { it.name == exerciseName } ?: Exercise(0, "Unknown", R.drawable.logo, 0, false, 0, 0, "")
     }
 }

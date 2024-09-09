@@ -64,6 +64,11 @@ object RoutineConstants {
 
             "Office worker daily mobility Day 1" -> getOfficeWorkerDailyMobilityDay01(context)
 
+            "Beginner fullbody flexibility Day 1" -> getBeginnerFullbodyFlexibilityDay01(context)
+
+            "Beginner upper-lower flexibility Day 1" -> getBeginnerUpperLowerFlexibilityDay01(context)
+            "Beginner upper-lower flexibility Day 2" -> getBeginnerUpperLowerFlexibilityDay02(context)
+
             else -> null
         }
     }
@@ -718,6 +723,52 @@ object RoutineConstants {
                 ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.elevated_hip_flexor_stretch)),
                 ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.prone_scapular_rotation)),
                 ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.kneeling_hip_flexor_stretch_with_knee_flexion))
+            )
+        )
+    }
+
+    // Beginner Fullbody Flexibility
+    fun getBeginnerFullbodyFlexibilityDay01(context: Context): Routine {
+        return Routine(
+            "Beginner fullbody flexibility Day 1",
+            listOf(
+                ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.shoulder_backbend)),
+                ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.spine_backbend)),
+                ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.rear_hand_clasp)),
+                ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.lying_cross)),
+                ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.wrist_biceps_stretch)),
+                ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.one_leg_pike)),
+                ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.kneeling_lunge)),
+                ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.pancake)),
+                ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.butterfly)),
+                ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.calf_stretch))
+            )
+        )
+    }
+
+    // Beginner Upper-Lower Flexibility
+    fun getBeginnerUpperLowerFlexibilityDay01(context: Context): Routine {
+        return Routine(
+            "Beginner upper-lower flexibility Day 1",
+            listOf(
+                ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.shoulder_backbend)),
+                ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.spine_backbend)),
+                ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.rear_hand_clasp)),
+                ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.lying_cross)),
+                ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.wrist_biceps_stretch))
+            )
+        )
+    }
+
+    fun getBeginnerUpperLowerFlexibilityDay02(context: Context): Routine {
+        return Routine(
+            "Beginner upper-lower flexibility Day 2",
+            listOf(
+                ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.one_leg_pike)),
+                ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.kneeling_lunge)),
+                ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.pancake)),
+                ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.butterfly)),
+                ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.calf_stretch))
             )
         )
     }

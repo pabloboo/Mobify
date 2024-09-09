@@ -76,6 +76,15 @@ object TrainingPlanConstants {
             listOf(
                 Pair(RoutineConstants.getOfficeWorkerDailyMobilityDay01(context), 1)
             )
+        } else if (trainingPlanName == "Beginner fullbody flexibility") {
+            listOf(
+                Pair(RoutineConstants.getBeginnerFullbodyFlexibilityDay01(context), 1)
+            )
+        } else if (trainingPlanName == "Beginner upper-lower flexibility") {
+            listOf(
+                Pair(RoutineConstants.getBeginnerUpperLowerFlexibilityDay01(context), 1),
+                Pair(RoutineConstants.getBeginnerUpperLowerFlexibilityDay02(context), 2)
+            )
         } else {
             emptyList()
         }
@@ -89,6 +98,8 @@ object TrainingPlanConstants {
             "Posture mobility" -> context.getString(R.string.posture_mobility_description)
             "Improve squat" -> context.getString(R.string.improve_squat_description)
             "Office worker daily mobility" -> context.getString(R.string.office_worker_daily_mobility_description)
+            "Beginner fullbody flexibility" -> context.getString(R.string.beginner_fullbody_flexibility_description)
+            "Beginner upper-lower flexibility" -> context.getString(R.string.beginner_upper_lower_flexibility_description)
             else -> ""
         }
     }
@@ -101,6 +112,8 @@ object TrainingPlanConstants {
             "Posture mobility" -> context.getString(R.string.posture_mobility)
             "Improve squat" -> context.getString(R.string.improve_squat)
             "Office worker daily mobility" -> context.getString(R.string.office_worker_daily_mobility)
+            "Beginner fullbody flexibility" -> context.getString(R.string.beginner_fullbody_flexibility)
+            "Beginner upper-lower flexibility" -> context.getString(R.string.beginner_upper_lower_flexibility)
             else -> ""
         }
     }
@@ -113,6 +126,8 @@ object TrainingPlanConstants {
             "Posture mobility" -> R.drawable.training_plan_posture_mobility
             "Improve squat" -> R.drawable.training_plan_improve_squat
             "Office worker daily mobility" -> R.drawable.training_plan_office_worker_daily_mobility
+            "Beginner fullbody flexibility" -> R.drawable.training_plan_beginner_fullbody_flexibility
+            "Beginner upper-lower flexibility" -> R.drawable.training_plan_beginner_upper_lower_flexibility
             else -> 0
         }
     }

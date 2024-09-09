@@ -18,5 +18,9 @@ object SharedPreferencesConstants {
     const val IMPROVE_SQUAT_TRAINING_PLAN_DAY = "improve_squat_training_plan_day"
     const val OFFICE_WORKER_DAILY_MOBILITY_TRAINING_PLAN = "office_worker_daily_mobility_training_plan"
     const val OFFICE_WORKER_DAILY_MOBILITY_TRAINING_PLAN_DAY = "office_worker_daily_mobility_training_plan_day"
+    const val BEGINNER_FULLBODY_FLEXIBILITY_TRAINING_PLAN = "beginner_fullbody_flexibility_training_plan"
+    const val BEGINNER_FULLBODY_FLEXIBILITY_TRAINING_PLAN_DAY = "beginner_fullbody_flexibility_training_plan_day"
+    const val BEGINNER_UPPER_LOWER_FLEXIBILITY_TRAINING_PLAN = "beginner_upper_lower_flexibility_training_plan"
+    const val BEGINNER_UPPER_LOWER_FLEXIBILITY_TRAINING_PLAN_DAY = "beginner_upper_lower_flexibility_training_plan_day"
 
 }

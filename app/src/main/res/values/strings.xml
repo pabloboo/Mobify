@@ -8,7 +8,7 @@
     <string name="action_settings">Settings</string>
     <string name="menu_home">Home</string>
     <string name="menu_training_plans">Goals</string>
-    <string name="quick_mobility_test_introduction">Welcome to the Quick Mobility Check! This quick assessment will help you identify areas of your body that may need more attention in terms of flexibility and mobility.\n\nYou’ll be guided through a series of simple exercises that test the mobility of your hips, hamstrings, shoulders, and posture. Each exercise is easy to perform and only takes a few minutes. Based on your results, we’ll recommend the most suitable flexibility and mobility goals for you to focus on.\n\nLet’s get started and discover how you can improve your movement and overall well-being!</string>
+    <string name="quick_mobility_test_introduction">Welcome to the Quick Mobility Check! This quick assessment will help you identify areas of your body that may need more attention in terms of flexibility and mobility.\nYou’ll be guided through a series of simple exercises that test the mobility of your hips, hamstrings, shoulders, and posture. Each exercise is easy to perform and only takes a few minutes. Based on your results, we’ll recommend the most suitable flexibility and mobility goals for you to focus on.\n\nLet’s get started and discover how you can improve your movement and overall well-being!</string>
     <string name="quick_mobility_test">Quick mobility test</string>
     <string name="next">Next</string>
     <string name="finish">Finish</string>
@@ -76,6 +76,8 @@
     <string name="posture_mobility">Posture mobility</string>
     <string name="improve_squat">Improve squat</string>
     <string name="office_worker_daily_mobility">Office worker daily mobility</string>
+    <string name="beginner_fullbody_flexibility">Beginner fullbody flexibility</string>
+    <string name="beginner_upper_lower_flexibility">Beginner upper-lower flexibility</string>
 
     <string name="hip_mobility_description">This training plan will help you improve your hip mobility. It is designed to do three workouts per week for four weeks.</string>
     <string name="hamstring_flexibility_description">This training plan will help you improve your hamstring flexibility. It is designed to do three workouts per week for four weeks.</string>
@@ -83,6 +85,8 @@
     <string name="posture_mobility_description">This training plan will help you improve your posture and spinal mobility. It is designed to do three workouts per week for four weeks.</string>
     <string name="improve_squat_description">This training plan will help you improve your squat. Do a workout before your squat or squat pattern training.</string>
     <string name="office_worker_daily_mobility_description">This mobility plan is designed for individuals who spend long hours sitting and are looking to improve the flexibility and health of their quads, hips, shoulders, and back. In just 8 minutes a day, 3-4 times per week, these targeted exercises help to relieve muscle tension, improve posture, and prevent common aches associated with a sedentary lifestyle. Perfect for incorporating into your daily routine, this plan helps maintain overall mobility and physical well-being.</string>
+    <string name="beginner_fullbody_flexibility_description">This full-body flexibility plan is designed for beginners to improve flexibility and mobility throughout the entire body.\nIt is recommended to perform this routine 3 to 4 times per week.\nYou shouldn’t feel pain during the stretches, but discomfort is okay. Always breathe deeply and focus on gradually increasing your range of motion over time.</string>
+    <string name="beginner_upper_lower_flexibility_description">This plan is ideal for beginners who want to work on flexibility with a focus on specific areas of the body. The upper-lower split routine allows you to alternate between days targeting the upper body and lower body, which helps to break down the stretches into manageable sessions while focusing on flexibility gains.\nPerform the upper body routine one day and the lower body routine the next, alternating between the two. Aim to do this routine 3 to 4 times a week.\nYou shouldn’t feel pain during the stretches, but discomfort is okay. Always breathe deeply and focus on gradually increasing your range of motion over time.</string>
 
     <!-- Exercises -->
     <string name="single_leg_rdl">Single leg RDL</string>
@@ -257,4 +261,24 @@
     <string name="prone_scapular_rotation_description">While lying face down with your arms extended overhead, lift your arms and move them in an internal rotation towards your back, then return to the starting position through external rotation.</string>
     <string name="kneeling_hip_flexor_stretch_with_knee_flexion">Kneeling Hip Flexor Stretch with Knee Flexion</string>
     <string name="kneeling_hip_flexor_stretch_with_knee_flexion_description">Place your knee on a comfortable surface. Lean forward and bend your knee, holding it with your hand on the same side. Apply pressure as if you were trying to extend the knee, and gradually open up the hip.</string>
+    <string name="shoulder_backbend">Shoulder backbend</string>
+    <string name="shoulder_backbend_description">Stand with your feet hip-width apart. Extend your arms upward and backward, arching your upper back and shoulders. Hold the position for 10, then 20, and finally 30 seconds, gradually increasing the stretch.</string>
+    <string name="spine_backbend">Spine backbend</string>
+    <string name="spine_backbend_description">Stand with your feet hip-width apart, gently arch your spine backward, lifting your chest and keeping your hips forward. Hold the position for 10, then 20, and 30 seconds.</string>
+    <string name="rear_hand_clasp">Rear hand clasp</string>
+    <string name="rear_hand_clasp_description">Stand tall and bring your hands behind your back, clasping your fingers together. Stretch your arms down and backward, opening up your chest and shoulders. Hold for 10, 20, and then 30 seconds.</string>
+    <string name="lying_cross">Lying cross</string>
+    <string name="lying_cross_description">Lying on your back, extend your arms to the sides in a \"T\" shape. Cross one leg over your body to the opposite side, allowing your hips to twist while keeping your shoulders grounded. Hold for 10, 20, and 30 seconds.</string>
+    <string name="wrist_biceps_stretch">Wrist-biceps stretch</string>
+    <string name="wrist_biceps_stretch_description">Standing, extend one arm in front of you with the palm facing up. Use your other hand to gently pull the fingers down and back, stretching the wrist and biceps muscles. Hold for 10, 20, and 30 seconds.</string>
+    <string name="one_leg_pike">One-leg pike</string>
+    <string name="one_leg_pike_description">Standing, place one foot on a chair and stretch your leg as you lean your torso forward, trying to reach the raised leg. Feel the stretch in your hamstrings. Hold for 10, 20, and then 30 seconds.</string>
+    <string name="kneeling_lunge">Kneeling lunge</string>
+    <string name="kneeling_lunge_description">Kneel with one knee on the ground and the other foot forward. Push your hips forward, feeling the stretch in your hip flexors. Hold for 10, 20, and then 30 seconds.</string>
+    <string name="pancake">Pancake</string>
+    <string name="pancake_description">Sit with your legs open in a \"V\" shape and slowly lean your torso forward, aiming to touch the ground with your chest. Feel the stretch in your hamstrings and lower back. Hold for 10, 20, and then 30 seconds.</string>
+    <string name="butterfly">Butterfly</string>
+    <string name="butterfly_description">Sit with the soles of your feet together and your knees falling to the sides. Use your hands to gently push your knees down, feeling the stretch in your inner thighs. Hold for 10, 20, and then 30 seconds.</string>
+    <string name="calf_stretch">Calf stretch</string>
+    <string name="calf_stretch_description">Place your hands on a chair for support and step one leg back with the heel on the ground. Lean forward over your front leg, feeling the stretch in the calf of the back leg. Hold for 10, 20, and then 30 seconds.</string>
 </resources>
