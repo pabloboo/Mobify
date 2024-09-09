@@ -85,6 +85,12 @@ object TrainingPlanConstants {
                 Pair(RoutineConstants.getBeginnerUpperLowerFlexibilityDay01(context), 1),
                 Pair(RoutineConstants.getBeginnerUpperLowerFlexibilityDay02(context), 2)
             )
+        } else if (trainingPlanName == "Toe touching") {
+            listOf(
+                Pair(RoutineConstants.getToeTouchingDay01(context), 1),
+                Pair(RoutineConstants.getToeTouchingDay02(context), 2)
+            )
+
         } else {
             emptyList()
         }
@@ -100,6 +106,7 @@ object TrainingPlanConstants {
             "Office worker daily mobility" -> context.getString(R.string.office_worker_daily_mobility_description)
             "Beginner fullbody flexibility" -> context.getString(R.string.beginner_fullbody_flexibility_description)
             "Beginner upper-lower flexibility" -> context.getString(R.string.beginner_upper_lower_flexibility_description)
+            "Toe touching" -> context.getString(R.string.toe_touching_description)
             else -> ""
         }
     }
@@ -114,6 +121,7 @@ object TrainingPlanConstants {
             "Office worker daily mobility" -> context.getString(R.string.office_worker_daily_mobility)
             "Beginner fullbody flexibility" -> context.getString(R.string.beginner_fullbody_flexibility)
             "Beginner upper-lower flexibility" -> context.getString(R.string.beginner_upper_lower_flexibility)
+            "Toe touching" -> context.getString(R.string.toe_touching)
             else -> ""
         }
     }
@@ -128,6 +136,7 @@ object TrainingPlanConstants {
             "Office worker daily mobility" -> R.drawable.training_plan_office_worker_daily_mobility
             "Beginner fullbody flexibility" -> R.drawable.training_plan_beginner_fullbody_flexibility
             "Beginner upper-lower flexibility" -> R.drawable.training_plan_beginner_upper_lower_flexibility
+            "Toe touching" -> R.drawable.training_plan_toe_touching
             else -> 0
         }
     }

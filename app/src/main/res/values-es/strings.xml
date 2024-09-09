@@ -79,6 +79,7 @@
     <string name="office_worker_daily_mobility">Movilidad diaria para trabajadores de oficina</string>
     <string name="beginner_fullbody_flexibility">Flexibilidad de cuerpo completo para principiantes</string>
     <string name="beginner_upper_lower_flexibility">Flexibilidad superior-inferior para principiantes</string>
+    <string name="toe_touching">Tocar los dedos de los pies</string>
 
     <string name="hip_mobility_description">Este plan de entrenamiento te ayudará a mejorar la movilidad de la cadera. Está diseñado para realizar tres entrenamientos por semana durante cuatro semanas.</string>
     <string name="hamstring_flexibility_description">Este plan de entrenamiento te ayudará a mejorar la flexibilidad de isquiotibiales. Está diseñado para realizar tres entrenamientos por semana durante cuatro semanas.</string>
@@ -88,7 +89,7 @@
     <string name="office_worker_daily_mobility_description">Este plan de movilidad está diseñado para personas que pasan mucho tiempo sentadas y buscan mejorar la flexibilidad y la salud de sus cuádriceps, caderas, hombros y espalda. Con solo 8 minutos al día, 3-4 veces por semana, estos ejercicios específicos ayudan a aliviar la tensión muscular, mejorar la postura y prevenir dolores comunes asociados con el sedentarismo. Ideal para incorporar en la rutina diaria, este plan contribuye a mantener una buena movilidad general y bienestar físico.</string>
     <string name="beginner_fullbody_flexibility_description">Este plan de flexibilidad de cuerpo completo está diseñado para principiantes que buscan mejorar la flexibilidad y la movilidad en todo el cuerpo.\nSe recomienda realizar esta rutina de 3 a 4 veces por semana.\nNo deberías sentir dolor durante los estiramientos, pero es normal sentir cierta incomodidad. Asegúrate de respirar profundamente y enfócate en aumentar gradualmente tu rango de movimiento con el tiempo.</string>
     <string name="beginner_upper_lower_flexibility_description">Este plan es ideal para principiantes que desean trabajar en su flexibilidad con un enfoque en áreas específicas del cuerpo. La rutina dividida entre la parte superior e inferior permite alternar entre días enfocados en la parte superior e inferior del cuerpo, lo que ayuda a desglosar los estiramientos en sesiones manejables mientras te enfocas en mejorar la flexibilidad.\nRealiza la rutina de la parte superior un día y la rutina de la parte inferior al siguiente, alternando entre ambas. Intenta realizar este plan 3 a 4 veces por semana.\nNo deberías sentir dolor durante los estiramientos, pero es normal sentir cierta incomodidad. Asegúrate de respirar profundamente y enfócate en aumentar gradualmente tu rango de movimiento con el tiempo.</string>
-
+    <string name="toe_touching_description">El objetivo de esta rutina es lograr tocar tus dedos de los pies con las piernas rectas. Durante los próximos 28 días, realiza cada día el entrenamiento 1 o el entrenamiento 2; puedes elegir uno y hacerlo todos los días o alternar entre ellos. ¡Toma una foto del antes y el después para que puedas ver el progreso logrado!</string>
 
     <!-- Exercises -->
     <string name="single_leg_rdl">PM rumano a una pierna</string>
@@ -283,4 +284,8 @@
     <string name="butterfly_description">Siéntate con las plantas de los pies juntas y las rodillas hacia los lados. Usa tus manos para empujar suavemente las rodillas hacia abajo, sintiendo el estiramiento en la parte interna de los muslos. Mantén la posición por 10, 20 y luego 30 segundos.</string>
     <string name="calf_stretch">Estiramiento de gemelos</string>
     <string name="calf_stretch_description">Coloca las manos sobre una silla para apoyarte y lleva una pierna hacia atrás con el talón apoyado en el suelo. Inclínate hacia adelante sobre la pierna delantera, sintiendo el estiramiento en el gemelo de la pierna trasera. Mantén por 10, 20 y luego 30 segundos.</string>
+    <string name="bent_knee_to_straight_leg">De rodilla doblada a pierna recta</string>
+    <string name="bent_knee_to_straight_leg_description">Comienza con ambas piernas extendidas frente a ti. Coloca un talón en una superficie deslizante y dobla la otra pierna hacia el costado. Lleva tu tronco hacia tu muslo y usa los cuádriceps para deslizar el pie hacia afuera. Endereza la espalda al inhalar, presiona el talón hacia el suelo y extiende la pierna al exhalar.</string>
+    <string name="standing_split_hamstring_floss">Deslizamiento de isquiotibiales en split de pie</string>
+    <string name="standing_split_hamstring_floss_description">Dobla una rodilla y levanta la otra pierna. Endereza la pierna que está en contacto con el suelo durante dos segundos y mira hacia atrás, idealmente tocando el suelo con las manos. Dobla y repite hasta que se acabe el tiempo.</string>
 </resources>

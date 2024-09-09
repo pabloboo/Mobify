@@ -109,15 +109,19 @@ object ExerciseConstants {
 
         // Fullbody, lowerbody and upperbody beginner flexibility routine exercises
         exercises.add(Exercise(87, context.getString(R.string.shoulder_backbend), R.drawable.shoulder_backbend, 60, false, 0, 0, context.getString(R.string.shoulder_backbend_description)))
-        exercises.add(Exercise(0, context.getString(R.string.spine_backbend), R.drawable.spine_backbend, 60, false, 0, 0, context.getString(R.string.spine_backbend_description)))
-        exercises.add(Exercise(0, context.getString(R.string.rear_hand_clasp), R.drawable.rear_hand_clasp, 60, true, 0, 0, context.getString(R.string.rear_hand_clasp_description)))
-        exercises.add(Exercise(0, context.getString(R.string.lying_cross), R.drawable.lying_cross, 60, true, 0, 0, context.getString(R.string.lying_cross_description)))
-        exercises.add(Exercise(0, context.getString(R.string.wrist_biceps_stretch), R.drawable.wrist_biceps_stretch, 60, true, 0, 0, context.getString(R.string.wrist_biceps_stretch_description)))
-        exercises.add(Exercise(0, context.getString(R.string.one_leg_pike), R.drawable.one_leg_pike, 60, true, 0, 0, context.getString(R.string.one_leg_pike_description)))
-        exercises.add(Exercise(0, context.getString(R.string.kneeling_lunge), R.drawable.kneeling_lunge, 60, true, 0, 0, context.getString(R.string.kneeling_lunge_description)))
-        exercises.add(Exercise(0, context.getString(R.string.pancake), R.drawable.pancake, 60, false, 0, 0, context.getString(R.string.pancake_description)))
-        exercises.add(Exercise(0, context.getString(R.string.butterfly), R.drawable.butterfly, 60, false, 0, 0, context.getString(R.string.butterfly_description)))
-        exercises.add(Exercise(0, context.getString(R.string.calf_stretch), R.drawable.calf_stretch, 60, true, 0, 0, context.getString(R.string.calf_stretch_description)))
+        exercises.add(Exercise(88, context.getString(R.string.spine_backbend), R.drawable.spine_backbend, 60, false, 0, 0, context.getString(R.string.spine_backbend_description)))
+        exercises.add(Exercise(89, context.getString(R.string.rear_hand_clasp), R.drawable.rear_hand_clasp, 60, true, 0, 0, context.getString(R.string.rear_hand_clasp_description)))
+        exercises.add(Exercise(90, context.getString(R.string.lying_cross), R.drawable.lying_cross, 60, true, 0, 0, context.getString(R.string.lying_cross_description)))
+        exercises.add(Exercise(91, context.getString(R.string.wrist_biceps_stretch), R.drawable.wrist_biceps_stretch, 60, true, 0, 0, context.getString(R.string.wrist_biceps_stretch_description)))
+        exercises.add(Exercise(92, context.getString(R.string.one_leg_pike), R.drawable.one_leg_pike, 60, true, 0, 0, context.getString(R.string.one_leg_pike_description)))
+        exercises.add(Exercise(93, context.getString(R.string.kneeling_lunge), R.drawable.kneeling_lunge, 60, true, 0, 0, context.getString(R.string.kneeling_lunge_description)))
+        exercises.add(Exercise(94, context.getString(R.string.pancake), R.drawable.pancake, 60, false, 0, 0, context.getString(R.string.pancake_description)))
+        exercises.add(Exercise(95, context.getString(R.string.butterfly), R.drawable.butterfly, 60, false, 0, 0, context.getString(R.string.butterfly_description)))
+        exercises.add(Exercise(96, context.getString(R.string.calf_stretch), R.drawable.calf_stretch, 60, true, 0, 0, context.getString(R.string.calf_stretch_description)))
+
+        // Toe touching plan exercises
+        exercises.add(Exercise(97, context.getString(R.string.bent_knee_to_straight_leg), R.drawable.bent_knee_to_straight_leg, 30, true, 0, 0, context.getString(R.string.bent_knee_to_straight_leg_description)))
+        exercises.add(Exercise(98, context.getString(R.string.standing_split_hamstring_floss), R.drawable.standing_split_hamstring_floss, 30, true, 0, 0, context.getString(R.string.standing_split_hamstring_floss_description)))
 
         return exercises.find { it.id == exerciseId } ?: exercises.find { it.name == exerciseName } ?: Exercise(0, "Unknown", R.drawable.logo, 0, false, 0, 0, "")
     }

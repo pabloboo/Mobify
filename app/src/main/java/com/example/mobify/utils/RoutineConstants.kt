@@ -69,6 +69,9 @@ object RoutineConstants {
             "Beginner upper-lower flexibility Day 1" -> getBeginnerUpperLowerFlexibilityDay01(context)
             "Beginner upper-lower flexibility Day 2" -> getBeginnerUpperLowerFlexibilityDay02(context)
 
+            "Toe touching Day 1" -> getToeTouchingDay01(context)
+            "Toe touching Day 2" -> getToeTouchingDay02(context)
+
             else -> null
         }
     }
@@ -769,6 +772,41 @@ object RoutineConstants {
                 ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.pancake)),
                 ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.butterfly)),
                 ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.calf_stretch))
+            )
+        )
+    }
+
+    // Toe touching
+    fun getToeTouchingDay01(context: Context): Routine {
+        return Routine(
+            "Toe touching Day 1",
+            listOf(
+                ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.figure_four_stretch)),
+                ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.figure_four_stretch)),
+                ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.couch_stretch)),
+                ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.couch_stretch)),
+                ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.calf_stretch)),
+                ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.bent_knee_to_straight_leg)),
+                ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.bent_knee_to_straight_leg)),
+                ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.toe_touch)),
+                ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.toe_touch)),
+            )
+        )
+    }
+
+    fun getToeTouchingDay02(context: Context): Routine {
+        return Routine(
+            "Toe touching Day 2",
+            listOf(
+                ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.figure_four_stretch)),
+                ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.figure_four_stretch)),
+                ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.couch_stretch)),
+                ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.couch_stretch)),
+                ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.calf_stretch)),
+                ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.standing_split_hamstring_floss)),
+                ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.standing_split_hamstring_floss)),
+                ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.toe_touch)),
+                ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.toe_touch)),
             )
         )
     }

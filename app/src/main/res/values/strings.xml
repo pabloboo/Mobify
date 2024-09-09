@@ -78,6 +78,7 @@
     <string name="office_worker_daily_mobility">Office worker daily mobility</string>
     <string name="beginner_fullbody_flexibility">Beginner fullbody flexibility</string>
     <string name="beginner_upper_lower_flexibility">Beginner upper-lower flexibility</string>
+    <string name="toe_touching">Toe touching</string>
 
     <string name="hip_mobility_description">This training plan will help you improve your hip mobility. It is designed to do three workouts per week for four weeks.</string>
     <string name="hamstring_flexibility_description">This training plan will help you improve your hamstring flexibility. It is designed to do three workouts per week for four weeks.</string>
@@ -87,6 +88,7 @@
     <string name="office_worker_daily_mobility_description">This mobility plan is designed for individuals who spend long hours sitting and are looking to improve the flexibility and health of their quads, hips, shoulders, and back. In just 8 minutes a day, 3-4 times per week, these targeted exercises help to relieve muscle tension, improve posture, and prevent common aches associated with a sedentary lifestyle. Perfect for incorporating into your daily routine, this plan helps maintain overall mobility and physical well-being.</string>
     <string name="beginner_fullbody_flexibility_description">This full-body flexibility plan is designed for beginners to improve flexibility and mobility throughout the entire body.\nIt is recommended to perform this routine 3 to 4 times per week.\nYou shouldn’t feel pain during the stretches, but discomfort is okay. Always breathe deeply and focus on gradually increasing your range of motion over time.</string>
     <string name="beginner_upper_lower_flexibility_description">This plan is ideal for beginners who want to work on flexibility with a focus on specific areas of the body. The upper-lower split routine allows you to alternate between days targeting the upper body and lower body, which helps to break down the stretches into manageable sessions while focusing on flexibility gains.\nPerform the upper body routine one day and the lower body routine the next, alternating between the two. Aim to do this routine 3 to 4 times a week.\nYou shouldn’t feel pain during the stretches, but discomfort is okay. Always breathe deeply and focus on gradually increasing your range of motion over time.</string>
+    <string name="toe_touching_description">The objective of this routine is to be able to touch your toes with straight legs. For the following 28 days do everyday workout 1 or workout 2, you can either choose one and do it every day or change between them. Take a picture of the before and after so you can see the progess made!</string>
 
     <!-- Exercises -->
     <string name="single_leg_rdl">Single leg RDL</string>
@@ -281,4 +283,8 @@
     <string name="butterfly_description">Sit with the soles of your feet together and your knees falling to the sides. Use your hands to gently push your knees down, feeling the stretch in your inner thighs. Hold for 10, 20, and then 30 seconds.</string>
     <string name="calf_stretch">Calf stretch</string>
     <string name="calf_stretch_description">Place your hands on a chair for support and step one leg back with the heel on the ground. Lean forward over your front leg, feeling the stretch in the calf of the back leg. Hold for 10, 20, and then 30 seconds.</string>
+    <string name="bent_knee_to_straight_leg">Bent knee to straight leg</string>
+    <string name="bent_knee_to_straight_leg_description">Start with both legs in front of you. Put one heel in a sliding surface and fold the other leg to the side. Pull your trunk onto your thigh and use the quadriceps to slide your foot away. Straighten the back on breath in, press hill down into floor and extend your leg on breath out.</string>
+    <string name="standing_split_hamstring_floss">Standing split hamstring floss</string>
+    <string name="standing_split_hamstring_floss_description">Bent one knee and raise your other leg. Straighten the leg that is in contact with the floor for two seconds and look down behind you, ideally touching the floor with your hands. Bent and repeat all over until time is over</string>
 </resources>
