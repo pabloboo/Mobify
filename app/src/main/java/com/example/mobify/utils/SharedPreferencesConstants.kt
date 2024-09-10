@@ -6,6 +6,12 @@ object SharedPreferencesConstants {
     const val ONBOARDING_COMPLETED = "onboarding_completed"
     const val LANGUAGE = "language"
     const val THEME = "theme"
+
+    const val TOTAL_EXERCISE_DAYS = "total_exercise_days"
+    const val CURRENT_STREAK = "current_streak"
+    const val LAST_CURRENT_STREAK_DATE = "last_current_streak_date"
+    const val LONGEST_STREAK = "longest_streak"
+
     const val HIP_MOBILITY_TRAINING_PLAN = "hip_mobility_training_plan"
     const val HIP_MOBILITY_TRAINING_PLAN_DAY = "hip_mobility_training_plan_day"
     const val HAMSTRING_FLEXIBILITY_TRAINING_PLAN = "hamstring_flexibility_training_plan"

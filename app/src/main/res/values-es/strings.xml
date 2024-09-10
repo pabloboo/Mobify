@@ -44,6 +44,11 @@
     <string name="notification_permission_message">Necesitamos su permiso para enviar notificaciones. Por favor, habilite las notificaciones en la siguiente pantalla.</string>
     <string name="allow">Permitir</string>
     <string name="cancel">Cancelar</string>
+    <string name="votes_for_your_flexibility">Votos para tu flexibilidad</string>
+    <string name="current_streak">Racha actual</string>
+    <string name="longest_streak">Racha más larga</string>
+    <string name="your_data">TUS DATOS</string>
+    <string name="menu_profile">Perfil</string>
 
     <!-- Quick mobility test -->
     <string name="hip_rotation_test">Test de rotación de cadera</string>

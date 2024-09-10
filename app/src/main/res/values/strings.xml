@@ -43,6 +43,11 @@
     <string name="notification_permission_message">We need your permission to send notifications. Please enable notifications on the next screen.</string>
     <string name="allow">Allow</string>
     <string name="cancel">Cancel</string>
+    <string name="votes_for_your_flexibility">Votes for your flexibility</string>
+    <string name="current_streak">Current streak</string>
+    <string name="longest_streak">Longest streak</string>
+    <string name="your_data">YOUR DATA</string>
+    <string name="menu_profile">Profile</string>
 
     <!-- Quick mobility test -->
     <string name="hip_rotation_test">Hip rotation test</string>

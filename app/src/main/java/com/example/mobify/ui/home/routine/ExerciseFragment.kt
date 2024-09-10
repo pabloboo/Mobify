@@ -16,10 +16,15 @@ import androidx.viewpager2.widget.ViewPager2
 import com.example.mobify.MainActivity
 import com.example.mobify.R
 import com.example.mobify.model.Exercise
+import com.example.mobify.utils.SharedPreferencesConstants
+import com.example.mobify.utils.SharedPreferencesFunctions
 import com.example.mobify.utils.SharedPreferencesFunctions.getUnlockedDays
 import com.example.mobify.utils.SharedPreferencesFunctions.setUnlockedDays
 import com.example.mobify.utils.TrainingPlanConstants
 import com.example.mobify.utils.TrainingPlanConstants.getTrainingPlanNameFromRoutineName
+import java.text.SimpleDateFormat
+import java.util.Date
+import java.util.Locale
 
 class ExerciseFragment(private val viewPager: ViewPager2, private val routineName: String, private val exercise: Exercise, private val exerciseNumber: Int, private val totalExerciseNumber: Int) : Fragment() {
 
@@ -67,6 +72,7 @@ class ExerciseFragment(private val viewPager: ViewPager2, private val routineNam
             nextButton.text = getText(R.string.finish)
             nextButton.setOnClickListener {
                 updateUnlockedDays()
+                updateStatistics()
                 val intent = Intent(requireContext(), MainActivity::class.java)
                 startActivity(intent)
             }
@@ -88,7 +94,7 @@ class ExerciseFragment(private val viewPager: ViewPager2, private val routineNam
         }
     }
 
-    fun updateUnlockedDays() {
+    private fun updateUnlockedDays() {
         val trainingPlanName = getTrainingPlanNameFromRoutineName(routineName)
         val unlockedDays = getUnlockedDays(requireActivity(), trainingPlanName)
         val trainingPlan = TrainingPlanConstants.getTrainingPlans(requireContext()).firstOrNull { it.name == trainingPlanName }
@@ -106,6 +112,28 @@ class ExerciseFragment(private val viewPager: ViewPager2, private val routineNam
                 setUnlockedDays(requireActivity(), trainingPlanName, 0)
             }*/
         }
+    }
+
+    private fun updateStatistics() {
+        val currentStreak = SharedPreferencesFunctions.getSharedPreferencesValueInt(requireActivity(), SharedPreferencesConstants.CURRENT_STREAK)
+        val lastCurrentStreakDate = SharedPreferencesFunctions.getSharedPreferencesValueString(requireActivity(), SharedPreferencesConstants.LAST_CURRENT_STREAK_DATE)
+
+        val dateFormat = SimpleDateFormat("yyyy/MM/dd", Locale.getDefault())
+        val currentDate = dateFormat.format(Date())
+
+        if (currentDate != lastCurrentStreakDate) {
+            val newCurrentStreak = currentStreak + 1
+            SharedPreferencesFunctions.setSharedPreferencesValueInt(requireActivity(), SharedPreferencesConstants.CURRENT_STREAK, newCurrentStreak)
+            SharedPreferencesFunctions.setSharedPreferencesValueString(requireActivity(), SharedPreferencesConstants.LAST_CURRENT_STREAK_DATE, currentDate)
+
+            val longestStreak = SharedPreferencesFunctions.getSharedPreferencesValueInt(requireActivity(), SharedPreferencesConstants.LONGEST_STREAK)
+            if (newCurrentStreak > longestStreak) {
+                SharedPreferencesFunctions.setSharedPreferencesValueInt(requireActivity(), SharedPreferencesConstants.LONGEST_STREAK, newCurrentStreak)
+            }
+        }
+
+        val totalExerciseDays = SharedPreferencesFunctions.getSharedPreferencesValueInt(requireActivity(), SharedPreferencesConstants.TOTAL_EXERCISE_DAYS)
+        SharedPreferencesFunctions.setSharedPreferencesValueInt(requireActivity(), SharedPreferencesConstants.TOTAL_EXERCISE_DAYS, totalExerciseDays + 1)
     }
 
     override fun onResume() {
