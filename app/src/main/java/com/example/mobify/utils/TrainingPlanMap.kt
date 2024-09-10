@@ -11,7 +11,8 @@ object TrainingPlanMap {
         SharedPreferencesConstants.OFFICE_WORKER_DAILY_MOBILITY_TRAINING_PLAN to "Office worker daily mobility",
         SharedPreferencesConstants.BEGINNER_FULLBODY_FLEXIBILITY_TRAINING_PLAN to "Beginner fullbody flexibility",
         SharedPreferencesConstants.BEGINNER_UPPER_LOWER_FLEXIBILITY_TRAINING_PLAN to "Beginner upper-lower flexibility",
-        SharedPreferencesConstants.TOE_TOUCHING_TRAINING_PLAN to "Toe touching"
+        SharedPreferencesConstants.TOE_TOUCHING_TRAINING_PLAN to "Toe touching",
+        SharedPreferencesConstants.THIRTY_DAY_PANCAKE_WITH_PNF_AND_LOADED_STRETCHING_TRAINING_PLAN to "30 day pancake with PNF and loaded stretching"
     )
 
     val invertedMapTrainingPlan = trainingPlanMap.entries.associateBy({ it.value }) { it.key }
@@ -25,7 +26,8 @@ object TrainingPlanMap {
         SharedPreferencesConstants.OFFICE_WORKER_DAILY_MOBILITY_TRAINING_PLAN to SharedPreferencesConstants.OFFICE_WORKER_DAILY_MOBILITY_TRAINING_PLAN_DAY,
         SharedPreferencesConstants.BEGINNER_FULLBODY_FLEXIBILITY_TRAINING_PLAN to SharedPreferencesConstants.BEGINNER_FULLBODY_FLEXIBILITY_TRAINING_PLAN_DAY,
         SharedPreferencesConstants.BEGINNER_UPPER_LOWER_FLEXIBILITY_TRAINING_PLAN to SharedPreferencesConstants.BEGINNER_UPPER_LOWER_FLEXIBILITY_TRAINING_PLAN_DAY,
-        SharedPreferencesConstants.TOE_TOUCHING_TRAINING_PLAN to SharedPreferencesConstants.TOE_TOUCHING_TRAINING_PLAN_DAY
+        SharedPreferencesConstants.TOE_TOUCHING_TRAINING_PLAN to SharedPreferencesConstants.TOE_TOUCHING_TRAINING_PLAN_DAY,
+        SharedPreferencesConstants.THIRTY_DAY_PANCAKE_WITH_PNF_AND_LOADED_STRETCHING_TRAINING_PLAN to SharedPreferencesConstants.THIRTY_DAY_PANCAKE_WITH_PNF_AND_LOADED_STRETCHING_TRAINING_PLAN_DAY
     )
 
 }

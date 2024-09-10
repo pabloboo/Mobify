@@ -84,6 +84,7 @@
     <string name="beginner_fullbody_flexibility">Beginner fullbody flexibility</string>
     <string name="beginner_upper_lower_flexibility">Beginner upper-lower flexibility</string>
     <string name="toe_touching">Toe touching</string>
+    <string name="thirty_day_pancake_with_pnf_and_loaded_stretching">30 day pancake with PNF and loaded stretching</string>
 
     <string name="hip_mobility_description">This training plan will help you improve your hip mobility. It is designed to do three workouts per week for four weeks.</string>
     <string name="hamstring_flexibility_description">This training plan will help you improve your hamstring flexibility. It is designed to do three workouts per week for four weeks.</string>
@@ -94,6 +95,7 @@
     <string name="beginner_fullbody_flexibility_description">This full-body flexibility plan is designed for beginners to improve flexibility and mobility throughout the entire body.\nIt is recommended to perform this routine 3 to 4 times per week.\nYou shouldn’t feel pain during the stretches, but discomfort is okay. Always breathe deeply and focus on gradually increasing your range of motion over time.</string>
     <string name="beginner_upper_lower_flexibility_description">This plan is ideal for beginners who want to work on flexibility with a focus on specific areas of the body. The upper-lower split routine allows you to alternate between days targeting the upper body and lower body, which helps to break down the stretches into manageable sessions while focusing on flexibility gains.\nPerform the upper body routine one day and the lower body routine the next, alternating between the two. Aim to do this routine 3 to 4 times a week.\nYou shouldn’t feel pain during the stretches, but discomfort is okay. Always breathe deeply and focus on gradually increasing your range of motion over time.</string>
     <string name="toe_touching_description">The objective of this routine is to be able to touch your toes with straight legs. For the following 28 days do everyday workout 1 or workout 2, you can either choose one and do it every day or change between them. Take a picture of the before and after so you can see the progess made!</string>
+    <string name="thirty_day_pancake_with_pnf_and_loaded_stretching_description">Achieving a perfect pancake stretch (where your torso can lay flat between your legs in a seated straddle) requires a combination of passive flexibility, active flexibility, and strength in end ranges. Incorporating PNF (Proprioceptive Neuromuscular Facilitation) and loaded stretching will accelerate your progress by enhancing both your passive and active flexibility while developing strength in deeper ranges of motion.\\n\\n Train 4 times per week for best results, each workout lasts 20-30 minutes.\\n\\nOn week 1 you will build the fundations and introduce PNF Stretching. On week 2 you will introduce deeper loaded stretches. On week 3 you will increase intensity for PNF and loaded stretching and on week 4 you will perform peak training.</string>
 
     <!-- Exercises -->
     <string name="single_leg_rdl">Single leg RDL</string>
@@ -197,7 +199,7 @@
     <string name="hamstring_chokes_description">Sit on the ground and bend one leg, bringing your knee toward you. Place your hand behind your hamstring and gently pull your leg toward your chest, feeling a stretch in the back of your thigh. Straighten your leg, extending up toward the celing.</string>
     <string name="roll_down_description">Stand with your feet hip-width apart and slowly roll your upper body forward, one vertebra at a time, until your hands touch the ground as far as you can comfortably go. Roll back up to the starting position in the same controlled manner.</string>
     <string name="crossbody_hamstring_stretch_description">While standing, cross one leg behind the other (keep this leg straight). Reach downward and try to touch the toes of that leg. Slightly bend the other legs so that so can bend down.</string>
-    <string name="crossbody_arm_swings_description">Stand with your feet shoulder width- apart and swing your arms across the front of your body until they reach the opposite side, then swing back in one continuous movement.</string>
+    <string name="crossbody_arm_swings_description">Stand with your feet shoulder widthapart and swing your arms across the front of your body until they reach the opposite side, then swing back in one continuous movement.</string>
     <string name="chair_dips_description">Sit on the edge of a sturdy chair and grip the front edge of the seat with your hands. Move your body off the chair and lower to the ground by bending your elbows, then push yourself back up to the starting position.</string>
     <string name="dip_hold_description">Begin like a chair dip by sitting on the edge of a chair with gands in front of you. Move your body off the chair and lower to the ground by bending your elbow. Hold this position, then push yourself back up.</string>
     <string name="box_shoulder_stretch_description">Place your hands shoulder width apart on a chair or counter in front of you. Then, lower your heand and chest towards the ground, feeling the stretch in your shoulders and upper back. Hold for a few seconds before returning to the starting position.</string>
@@ -292,4 +294,38 @@
     <string name="bent_knee_to_straight_leg_description">Start with both legs in front of you. Put one heel in a sliding surface and fold the other leg to the side. Pull your trunk onto your thigh and use the quadriceps to slide your foot away. Straighten the back on breath in, press hill down into floor and extend your leg on breath out.</string>
     <string name="standing_split_hamstring_floss">Standing split hamstring floss</string>
     <string name="standing_split_hamstring_floss_description">Bent one knee and raise your other leg. Straighten the leg that is in contact with the floor for two seconds and look down behind you, ideally touching the floor with your hands. Bent and repeat all over until time is over</string>
+    <string name="quadruped_hip_circles">Quadruped hip circles</string>
+    <string name="quadruped_hip_circles_description">Begin in a quadruped position, on your hands and knees. Keeping your core engaged and your back straight, lift one leg and draw large circles with your knee. Move slowly and focus on controlling the motion from your hip joint. Perform the circles in both directions, and then switch to the other leg.</string>
+    <string name="low_lunge">Low Lunge</string>
+    <string name="low_lunge_description">Start in a standing position and step one foot forward, lowering your hips towards the ground. Drop your back knee to the floor while keeping your front knee bent at a 90-degree angle. Make sure your front knee is aligned with your ankle. Press your hips forward to stretch the hip flexors. Hold the position and then switch legs.</string>
+    <string name="seated_wide_legged_forward_fold">Seated Wide-Legged Forward Fold (Pancake Prep)</string>
+    <string name="seated_wide_legged_forward_fold_description">Sit with your legs spread wide and hinge forward from your hips.\nLoaded Stretch Variation: Hold a light weight (e.g., 2-5 kg) or a kettlebell in front of you to add gentle pressure as you lean forward.\nPNF Method: Press your hands or elbows into the ground while resisting with your legs (contract), then relax and sink deeper for 10-15 seconds. Repeat for 2-3 cycles.</string>
+    <string name="pigeon_pose">Pigeon Pose (Kapotasana)</string>
+    <string name="pigeon_pose_description">From all fours, slide one knee forward and the opposite leg back, lowering your hips. This opens the hip flexors and glutes.\nPNF Method: Press your front knee into the floor for 5 seconds, then relax and go deeper.</string>
+    <string name="butterfly_stretch_2">Butterfly Stretch (Baddha Konasana)</string>
+    <string name="butterfly_stretch_2_description">Sit with the soles of your feet together and your knees dropping out to the sides.\nPNF Method: Press your knees down with your hands or elbows, resist for 5-10 seconds, then relax and let the knees fall lower. Repeat 2 cycles.</string>
+    <string name="standing_wide_legged_forward_bend">Standing Wide-Legged Forward Bend (Prasarita Padottanasana)</string>
+    <string name="standing_wide_legged_forward_bend_description">Stand with legs wide apart, hinge from your hips, and fold forward. You can place your hands on the floor or blocks.\nLoaded Variation: Hold light dumbbells or a barbell for gentle weight pulling you deeper into the stretch.</string>
+    <string name="active_pancake_lift_offs">Active Pancake Lift-Offs</string>
+    <string name="active_pancake_lift_offs_description">Sit in a wide straddle, with your hands behind you or in front of you. Lift one leg at a time off the ground while keeping it straight. This strengthens hip flexors and improves active range of motion.</string>
+    <string name="supine_twist">Supine Twist (Jathara Parivartanasana)</string>
+    <string name="supine_twist_description">Lying on your back, bring one knee across your body to release the lower back.</string>
+    <string name="pancake_stretch_with_weight">Pancake Stretch with Weight</string>
+    <string name="pancake_stretch_with_weight_description">Sit with legs as wide as possible. Hold a light weight or kettlebell (3-5 kg) in front of you.\nPNF Method: Push your hands into the floor while resisting with your legs for 5-10 seconds. Relax and lean forward deeper for 15-20 seconds. Repeat 2-3 cycles.\nLoaded Stretch: Allow the weight to gently pull your torso forward while keeping your back straight.</string>
+    <string name="deep_frog_stretch">Deep Frog Stretch (Mandukasana)</string>
+    <string name="deep_frog_stretch_description">Kneel with knees spread wide, feet out, and hips lowering towards the floor.\nPNF Method: Press knees into the floor for 5-10 seconds, then relax and sink lower. Repeat 2 cycles.</string>
+    <string name="elevated_pancake_stretch">Elevated Pancake Stretch</string>
+    <string name="elevated_pancake_stretch_description">Sit on a yoga block or pillow to elevate your hips. This helps improve the anterior tilt of your pelvis, allowing a deeper stretch. Hold a weight in front for added load.</string>
+    <string name="cossack_squats">Cossack squats (side-to-side squats)</string>
+    <string name="cossack_squats_description">Stand with feet wide, then squat down to one side while keeping the other leg straight.</string>
+    <string name="butterfly_pose_with_forward_fold">Butterfly pose with forward fold</string>
+    <string name="butterfly_pose_with_forward_fold_description">Sit with the soles of your feet together and let your knees drop out to the sides. Hold your feet with your hands and gently hinge forward from your hips, keeping your back straight as you fold over your legs. Hold the stretch for the desired time, focusing on breathing deeply and relaxing your hips.</string>
+    <string name="dynamic_lunges">Dynamic lunges</string>
+    <string name="dynamic_lunges_description">Step forward with one leg, lowering your hips until both knees are bent at a 90-degree angle. Push back up to the starting position and repeat</string>
+    <string name="cossack_squats_with_weight">Cossack squats with weight</string>
+    <string name="cossack_squats_with_weight_description">Hold a light dumbbell or kettlebell to add load while moving side to side.</string>
+    <string name="active_pancake_holds">Active pancake holds</string>
+    <string name="active_pancake_holds_description">Sit in the pancake position and hover just above the floor, engaging the hip flexors and core to hold your torso up.</string>
+    <string name="leg_raises">Leg raises</string>
+    <string name="leg_raises_description">Do both legs and each leg front and side</string>
 </resources>

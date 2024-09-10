@@ -90,7 +90,25 @@ object TrainingPlanConstants {
                 Pair(RoutineConstants.getToeTouchingDay01(context), 1),
                 Pair(RoutineConstants.getToeTouchingDay02(context), 2)
             )
-
+        } else if (trainingPlanName == "30 day pancake with PNF and loaded stretching") {
+            listOf(
+                Pair(RoutineConstants.get30DayPancakeDay01(context), 1),
+                Pair(RoutineConstants.get30DayPancakeDay02(context), 2),
+                Pair(RoutineConstants.get30DayPancakeDay03(context), 3),
+                Pair(RoutineConstants.get30DayPancakeDay04(context), 4),
+                Pair(RoutineConstants.get30DayPancakeDay05(context), 5),
+                Pair(RoutineConstants.get30DayPancakeDay06(context), 6),
+                Pair(RoutineConstants.get30DayPancakeDay07(context), 7),
+                Pair(RoutineConstants.get30DayPancakeDay08(context), 8),
+                Pair(RoutineConstants.get30DayPancakeDay09(context), 9),
+                Pair(RoutineConstants.get30DayPancakeDay10(context), 10),
+                Pair(RoutineConstants.get30DayPancakeDay11(context), 11),
+                Pair(RoutineConstants.get30DayPancakeDay12(context), 12),
+                Pair(RoutineConstants.get30DayPancakeDay13(context), 13),
+                Pair(RoutineConstants.get30DayPancakeDay14(context), 14),
+                Pair(RoutineConstants.get30DayPancakeDay15(context), 15),
+                Pair(RoutineConstants.get30DayPancakeDay16(context), 16)
+            )
         } else {
             emptyList()
         }
@@ -107,6 +125,7 @@ object TrainingPlanConstants {
             "Beginner fullbody flexibility" -> context.getString(R.string.beginner_fullbody_flexibility_description)
             "Beginner upper-lower flexibility" -> context.getString(R.string.beginner_upper_lower_flexibility_description)
             "Toe touching" -> context.getString(R.string.toe_touching_description)
+            "30 day pancake with PNF and loaded stretching" -> context.getString(R.string.thirty_day_pancake_with_pnf_and_loaded_stretching_description)
             else -> ""
         }
     }
@@ -122,6 +141,7 @@ object TrainingPlanConstants {
             "Beginner fullbody flexibility" -> context.getString(R.string.beginner_fullbody_flexibility)
             "Beginner upper-lower flexibility" -> context.getString(R.string.beginner_upper_lower_flexibility)
             "Toe touching" -> context.getString(R.string.toe_touching)
+            "30 day pancake with PNF and loaded stretching" -> context.getString(R.string.thirty_day_pancake_with_pnf_and_loaded_stretching)
             else -> ""
         }
     }
@@ -137,7 +157,8 @@ object TrainingPlanConstants {
             "Beginner fullbody flexibility" -> R.drawable.training_plan_beginner_fullbody_flexibility
             "Beginner upper-lower flexibility" -> R.drawable.training_plan_beginner_upper_lower_flexibility
             "Toe touching" -> R.drawable.training_plan_toe_touching
-            else -> 0
+            "30 day pancake with PNF and loaded stretching" -> R.drawable.training_plan_thirty_day_pancake_with_pnf_and_loaded_stretching
+            else -> R.drawable.logo
         }
     }
 

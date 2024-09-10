@@ -123,6 +123,25 @@ object ExerciseConstants {
         exercises.add(Exercise(97, context.getString(R.string.bent_knee_to_straight_leg), R.drawable.bent_knee_to_straight_leg, 30, true, 0, 0, context.getString(R.string.bent_knee_to_straight_leg_description)))
         exercises.add(Exercise(98, context.getString(R.string.standing_split_hamstring_floss), R.drawable.standing_split_hamstring_floss, 30, true, 0, 0, context.getString(R.string.standing_split_hamstring_floss_description)))
 
+        // 30 day pancake training plan exercises
+        exercises.add(Exercise(99, context.getString(R.string.quadruped_hip_circles), R.drawable.quadrupled_hip_circles, 30, true, 0, 0, context.getString(R.string.quadruped_hip_circles_description)))
+        exercises.add(Exercise(100, context.getString(R.string.low_lunge), R.drawable.low_lunge, 30, true, 0, 0, context.getString(R.string.low_lunge_description)))
+        exercises.add(Exercise(101, context.getString(R.string.seated_wide_legged_forward_fold), R.drawable.seated_wide_legged_forward_fold, 30, false, 0, 0, context.getString(R.string.seated_wide_legged_forward_fold_description)))
+        exercises.add(Exercise(102, context.getString(R.string.pigeon_pose), R.drawable.pigeon_pose, 30, true, 0, 0, context.getString(R.string.pigeon_pose_description)))
+        exercises.add(Exercise(103, context.getString(R.string.butterfly_stretch_2), R.drawable.butterfly_stretch_2, 30, false, 0, 0, context.getString(R.string.butterfly_stretch_2_description)))
+        exercises.add(Exercise(104, context.getString(R.string.standing_wide_legged_forward_bend), R.drawable.standing_wide_legged_forward_bend, 30, false, 0, 0, context.getString(R.string.standing_wide_legged_forward_bend_description)))
+        exercises.add(Exercise(105, context.getString(R.string.active_pancake_lift_offs), R.drawable.active_pancake_lift_offs, 0, false, 2, 10, context.getString(R.string.active_pancake_lift_offs_description)))
+        exercises.add(Exercise(106, context.getString(R.string.supine_twist), R.drawable.supine_twist, 30, true, 0, 0, context.getString(R.string.supine_twist_description)))
+        exercises.add(Exercise(107, context.getString(R.string.pancake_stretch_with_weight), R.drawable.pancake_stretch_with_weight, 30, false, 0, 0, context.getString(R.string.pancake_stretch_with_weight_description)))
+        exercises.add(Exercise(108, context.getString(R.string.deep_frog_stretch), R.drawable.deep_frog_stretch, 30, false, 0, 0, context.getString(R.string.deep_frog_stretch_description)))
+        exercises.add(Exercise(109, context.getString(R.string.elevated_pancake_stretch), R.drawable.elevated_pancake_stretch, 30, false, 0, 0, context.getString(R.string.elevated_pancake_stretch_description)))
+        exercises.add(Exercise(110, context.getString(R.string.cossack_squats), R.drawable.cossack_squats, 0, false, 2, 8, context.getString(R.string.cossack_squats_description)))
+        exercises.add(Exercise(111, context.getString(R.string.butterfly_pose_with_forward_fold), R.drawable.butterfly_pose_with_forward_fold, 30, false, 0, 0, context.getString(R.string.butterfly_pose_with_forward_fold_description)))
+        exercises.add(Exercise(112, context.getString(R.string.dynamic_lunges), R.drawable.dynamic_lunges, 0, false, 1, 10, context.getString(R.string.dynamic_lunges_description)))
+        exercises.add(Exercise(113, context.getString(R.string.cossack_squats_with_weight), R.drawable.cossack_squats_with_weight, 0, false, 2, 8, context.getString(R.string.cossack_squats_with_weight_description)))
+        exercises.add(Exercise(114, context.getString(R.string.active_pancake_holds), R.drawable.active_pancake_holds, 30, false, 0, 0, context.getString(R.string.active_pancake_holds_description)))
+        exercises.add(Exercise(115, context.getString(R.string.leg_raises), R.drawable.leg_raises, 30, true, 0, 0, context.getString(R.string.leg_raises_description)))
+
         return exercises.find { it.id == exerciseId } ?: exercises.find { it.name == exerciseName } ?: Exercise(0, "Unknown", R.drawable.logo, 0, false, 0, 0, "")
     }
 }

@@ -2,6 +2,7 @@ package com.example.mobify.utils
 
 import android.content.Context
 import com.example.mobify.R
+import com.example.mobify.model.Exercise
 import com.example.mobify.model.Routine
 
 object RoutineConstants {
@@ -71,6 +72,23 @@ object RoutineConstants {
 
             "Toe touching Day 1" -> getToeTouchingDay01(context)
             "Toe touching Day 2" -> getToeTouchingDay02(context)
+
+            "30 day pancake with PNF and loaded stretching Day 1" -> get30DayPancakeDay01(context)
+            "30 day pancake with PNF and loaded stretching Day 2" -> get30DayPancakeDay02(context)
+            "30 day pancake with PNF and loaded stretching Day 3" -> get30DayPancakeDay03(context)
+            "30 day pancake with PNF and loaded stretching Day 4" -> get30DayPancakeDay04(context)
+            "30 day pancake with PNF and loaded stretching Day 5" -> get30DayPancakeDay05(context)
+            "30 day pancake with PNF and loaded stretching Day 6" -> get30DayPancakeDay06(context)
+            "30 day pancake with PNF and loaded stretching Day 7" -> get30DayPancakeDay07(context)
+            "30 day pancake with PNF and loaded stretching Day 8" -> get30DayPancakeDay08(context)
+            "30 day pancake with PNF and loaded stretching Day 9" -> get30DayPancakeDay09(context)
+            "30 day pancake with PNF and loaded stretching Day 10" -> get30DayPancakeDay10(context)
+            "30 day pancake with PNF and loaded stretching Day 11" -> get30DayPancakeDay11(context)
+            "30 day pancake with PNF and loaded stretching Day 12" -> get30DayPancakeDay12(context)
+            "30 day pancake with PNF and loaded stretching Day 13" -> get30DayPancakeDay13(context)
+            "30 day pancake with PNF and loaded stretching Day 14" -> get30DayPancakeDay14(context)
+            "30 day pancake with PNF and loaded stretching Day 15" -> get30DayPancakeDay15(context)
+            "30 day pancake with PNF and loaded stretching Day 16" -> get30DayPancakeDay16(context)
 
             else -> null
         }
@@ -808,6 +826,209 @@ object RoutineConstants {
                 ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.toe_touch)),
                 ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.toe_touch)),
             )
+        )
+    }
+
+    // 30 day pancake with PNF and loaded stretching
+    private fun getWeek1Of30PancakeExercises(context: Context): List<Exercise> {
+        return listOf(
+            // Warm-up
+            ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.crossbody_leg_swings)),
+            ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.cat_cow)),
+            // Main routine
+            ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.seated_wide_legged_forward_fold)),
+            ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.pigeon_pose)),
+            ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.butterfly_stretch_2)),
+            ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.standing_wide_legged_forward_bend)),
+            ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.seated_wide_legged_forward_fold)),
+            ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.pigeon_pose)),
+            ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.butterfly_stretch_2)),
+            ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.standing_wide_legged_forward_bend)),
+            // Cool-down
+            ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.supine_twist))
+        )
+    }
+
+    fun get30DayPancakeDay01(context: Context): Routine {
+        return Routine(
+            "30 day pancake with PNF and loaded stretching Day 1",
+            getWeek1Of30PancakeExercises(context)
+        )
+    }
+
+    fun get30DayPancakeDay02(context: Context): Routine {
+        return Routine(
+            "30 day pancake with PNF and loaded stretching Day 2",
+            getWeek1Of30PancakeExercises(context)
+        )
+    }
+
+    fun get30DayPancakeDay03(context: Context): Routine {
+        return Routine(
+            "30 day pancake with PNF and loaded stretching Day 3",
+            getWeek1Of30PancakeExercises(context)
+        )
+    }
+
+    fun get30DayPancakeDay04(context: Context): Routine {
+        return Routine(
+            "30 day pancake with PNF and loaded stretching Day 4",
+            getWeek1Of30PancakeExercises(context)
+        )
+    }
+
+    private fun getWeek2Of30PancakeExercises(context: Context): List<Exercise> {
+        return listOf(
+            // Warm-up
+            ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.crossbody_leg_swings)),
+            ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.leg_raises)),
+            // Main routine
+            ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.pancake_stretch_with_weight)),
+            ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.deep_frog_stretch)),
+            ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.elevated_pancake_stretch)),
+            ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.cossack_squats)),
+            ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.active_pancake_lift_offs)),
+            ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.pancake_stretch_with_weight)),
+            ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.deep_frog_stretch)),
+            ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.elevated_pancake_stretch)),
+            ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.cossack_squats)),
+            ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.active_pancake_lift_offs)),
+            // Cool-down
+            ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.butterfly_pose_with_forward_fold))
+        )
+    }
+
+    fun get30DayPancakeDay05(context: Context): Routine {
+        return Routine(
+            "30 day pancake with PNF and loaded stretching Day 5",
+            getWeek2Of30PancakeExercises(context)
+        )
+    }
+
+    fun get30DayPancakeDay06(context: Context): Routine {
+        return Routine(
+            "30 day pancake with PNF and loaded stretching Day 6",
+            getWeek2Of30PancakeExercises(context)
+        )
+    }
+
+    fun get30DayPancakeDay07(context: Context): Routine {
+        return Routine(
+            "30 day pancake with PNF and loaded stretching Day 7",
+            getWeek2Of30PancakeExercises(context)
+        )
+    }
+
+    fun get30DayPancakeDay08(context: Context): Routine {
+        return Routine(
+            "30 day pancake with PNF and loaded stretching Day 8",
+            getWeek2Of30PancakeExercises(context)
+        )
+    }
+
+    private fun getWeek3Of30PancakeExercises(context: Context): List<Exercise> {
+        return listOf(
+            // Warm-up
+            ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.crossbody_leg_swings)),
+            ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.dynamic_lunges)),
+            // Main routine
+            ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.pancake_stretch_with_weight)),
+            ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.deep_frog_stretch)),
+            ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.pigeon_pose)),
+            ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.cossack_squats_with_weight)),
+            ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.active_pancake_holds)),
+            ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.pancake_stretch_with_weight)),
+            ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.deep_frog_stretch)),
+            ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.pigeon_pose)),
+            ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.cossack_squats_with_weight)),
+            ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.active_pancake_holds)),
+            // Cool-down
+            ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.pancake_stretch))
+        )
+    }
+
+    fun get30DayPancakeDay09(context: Context): Routine {
+        return Routine(
+            "30 day pancake with PNF and loaded stretching Day 9",
+            getWeek3Of30PancakeExercises(context)
+        )
+    }
+
+    fun get30DayPancakeDay10(context: Context): Routine {
+        return Routine(
+            "30 day pancake with PNF and loaded stretching Day 10",
+            getWeek3Of30PancakeExercises(context)
+        )
+    }
+
+    fun get30DayPancakeDay11(context: Context): Routine {
+        return Routine(
+            "30 day pancake with PNF and loaded stretching Day 11",
+            getWeek3Of30PancakeExercises(context)
+        )
+    }
+
+    fun get30DayPancakeDay12(context: Context): Routine {
+        return Routine(
+            "30 day pancake with PNF and loaded stretching Day 12",
+            getWeek3Of30PancakeExercises(context)
+        )
+    }
+
+    private fun getWeek4Of30PancakeExercises(context: Context): List<Exercise> {
+        return listOf(
+            // Warm-up
+            ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.crossbody_leg_swings)),
+            ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.leg_raises)),
+            // Main routine
+            ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.pancake_stretch_with_weight)),
+            ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.elevated_pancake_stretch)),
+            ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.deep_frog_stretch)),
+            ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.cossack_squats_with_weight)),
+            ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.active_pancake_lift_offs)),
+            ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.active_pancake_holds)),
+            ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.pancake_stretch_with_weight)),
+            ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.elevated_pancake_stretch)),
+            ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.deep_frog_stretch)),
+            ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.cossack_squats_with_weight)),
+            ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.active_pancake_lift_offs)),
+            ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.active_pancake_holds)),
+            ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.pancake_stretch_with_weight)),
+            ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.elevated_pancake_stretch)),
+            ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.deep_frog_stretch)),
+            ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.cossack_squats_with_weight)),
+            ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.active_pancake_lift_offs)),
+            ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.active_pancake_holds)),
+            // Cool-down
+            ExerciseConstants.getExercise(context, exerciseName = context.getString(R.string.seated_wide_legged_forward_fold))
+        )
+    }
+
+    fun get30DayPancakeDay13(context: Context): Routine {
+        return Routine(
+            "30 day pancake with PNF and loaded stretching Day 13",
+            getWeek4Of30PancakeExercises(context)
+        )
+    }
+
+    fun get30DayPancakeDay14(context: Context): Routine {
+        return Routine(
+            "30 day pancake with PNF and loaded stretching Day 14",
+            getWeek4Of30PancakeExercises(context)
+        )
+    }
+
+    fun get30DayPancakeDay15(context: Context): Routine {
+        return Routine(
+            "30 day pancake with PNF and loaded stretching Day 15",
+            getWeek4Of30PancakeExercises(context)
+        )
+    }
+
+    fun get30DayPancakeDay16(context: Context): Routine {
+        return Routine(
+            "30 day pancake with PNF and loaded stretching Day 16",
+            getWeek4Of30PancakeExercises(context)
         )
     }
 

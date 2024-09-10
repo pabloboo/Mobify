@@ -57,6 +57,8 @@ object SharedPreferencesFunctions {
             "Office worker daily mobility" -> SharedPreferencesConstants.OFFICE_WORKER_DAILY_MOBILITY_TRAINING_PLAN_DAY
             "Beginner fullbody flexibility" -> SharedPreferencesConstants.BEGINNER_FULLBODY_FLEXIBILITY_TRAINING_PLAN_DAY
             "Beginner upper-lower flexibility" -> SharedPreferencesConstants.BEGINNER_UPPER_LOWER_FLEXIBILITY_TRAINING_PLAN_DAY
+            "Toe touching" -> SharedPreferencesConstants.TOE_TOUCHING_TRAINING_PLAN_DAY
+            "30 day pancake with PNF and loaded stretching" -> SharedPreferencesConstants.THIRTY_DAY_PANCAKE_WITH_PNF_AND_LOADED_STRETCHING_TRAINING_PLAN_DAY
             else -> ""
         }
         return getSharedPreferencesValueInt(activity, key)
@@ -73,6 +75,8 @@ object SharedPreferencesFunctions {
             "Office worker daily mobility" -> SharedPreferencesConstants.OFFICE_WORKER_DAILY_MOBILITY_TRAINING_PLAN_DAY
             "Beginner fullbody flexibility" -> SharedPreferencesConstants.BEGINNER_FULLBODY_FLEXIBILITY_TRAINING_PLAN_DAY
             "Beginner upper-lower flexibility" -> SharedPreferencesConstants.BEGINNER_UPPER_LOWER_FLEXIBILITY_TRAINING_PLAN_DAY
+            "Toe touching" -> SharedPreferencesConstants.TOE_TOUCHING_TRAINING_PLAN_DAY
+            "30 day pancake with PNF and loaded stretching" -> SharedPreferencesConstants.THIRTY_DAY_PANCAKE_WITH_PNF_AND_LOADED_STRETCHING_TRAINING_PLAN_DAY
             else -> ""
         }
         setSharedPreferencesValueInt(activity, key, value)
